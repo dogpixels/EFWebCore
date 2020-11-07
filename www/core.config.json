@@ -1,0 +1,530 @@
+{
+	"convention": 
+	{
+		"year": "2019",
+		"number": "25",
+		"theme": "Fractures in Time",
+		"location": "Estrel Hotel, Berlin, Germany",
+		"start": "2019-08-14",
+		"end": "2019-08-17",
+		"opening": "2019-08-14T17:00:00+02:00"
+	},
+
+	"defaults":
+	{
+		"pagesDirectory": "pages/",
+		"rootPage": "home",
+		"notFoundPage": "404",
+		"keywords": "",
+		"robots": "index, follow, noodp",
+		"externalTarget": "target=\"_blank\""
+	},
+
+	"menu":
+	{
+		"ifActiveClass": "ef-active",
+		"hrefSuffix": "",
+		"enableLastModified": true,
+		"templates":
+		{
+			"lastModified": " data-lastmodified=\"{timestamp}\"",
+			"nav": "<nav><ul>{categories}</ul></nav>",
+			"category": "<li><h1>{title}</h1><ul>{items}</ul></li>",
+			"item": "<li><a href=\"{href}{hrefSuffix}\" class=\"{ifActiveClass}\"{lastModified}>{menuText}</a></li>"
+		},
+		"categoryOrder": 
+		[
+			"Membership",
+			"Venue",
+			"Program",
+			"Artists",
+			"Website",
+			"Policies"
+		]
+	},
+
+	"staticOut": 
+	{
+		"enabled": true,
+		"path": "_deploy/"
+	},
+
+	"pages":
+	{
+		"home":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Home",
+			"category": "Website",
+			"uri": "home.php",
+			"title": "Welcome!",
+			"description": "Eurofurence {convention.number} will take place from {convention.start} - {convention.end}, {convention.year}. Eurofurence is Europe's largest annual gathering of the European furry community.",
+			"keywords": "",
+			"image": "",
+			"robots": ""
+		},
+		
+		"404": 
+		{
+			"accessible": true,
+			"inMenu": false,
+			"menuText": "",
+			"category": "",
+			"uri": "404.php",
+			"title": "Error: Page Not Found",
+			"description": "",
+			"keywords": "",
+			"image": "",
+			"robots": "noindex,nofollow,noodp"
+		},
+
+		"nosecount":
+		{
+			"accessible": false,
+			"inMenu": false,
+			"menuText": "Nosecount",
+			"category": "Membership",
+			"uri": "nosecount/index.html",
+			"title": "Nosecount",
+			"description": "Check out how many folks already decided to join this years Eurofurence - nice statistics included!",
+			"keywords": "Statistics, Stats, Nosecount, Registration, Reg, Sign-Up",
+			"image": "",
+			"robots": ""
+		},
+		
+		"registration":
+		{
+			"accessible": true,
+			"inMenu": false,
+			"menuText": "Registration",
+			"category": "Membership",
+			"uri": "https://reg.eurofurence.org/",
+			"title": "",
+			"description": "",
+			"keywords": "",
+			"image": "",
+			"robots": ""
+		},
+		
+		"forum":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Forum",
+			"category": "Membership",
+			"uri": "https://forum.eurofurence.org/",
+			"title": "",
+			"description": "",
+			"keywords": "",
+			"image": "",
+			"robots": ""
+		},
+		
+		"jobs":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Jobs",
+			"category": "Membership",
+			"uri": "jobs.php",
+			"title": "Jobs at Eurofurence",
+			"description": "You want to volunteer at Eurofurence and become staff at Europe's biggest furry convention? Read on for currently open positions.",
+			"keywords": "Jobs, Volunteer, Staff, Crew, Help, Gopher",
+			"image": "",
+			"robots": ""
+		},
+		
+		"help":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Contact &amp; Help",
+			"category": "Membership",
+			"uri": "https://help.eurofurence.org/",
+			"title": "",
+			"description": "",
+			"keywords": "",
+			"image": "",
+			"robots": ""
+		},
+		
+		"glympse":
+		{
+			"accessible": false,
+			"inMenu": false,
+			"menuText": "Glympse Map",
+			"category": "Membership",
+			"uri": "glympse.php",
+			"title": "xxxxxxxxxxxxxxxxxxxx",
+			"description": "Follow the surge of furries towards Berlin and back live on Glympse.",
+			"keywords": "Glympse, Live, Travel, Map",
+			"image": "",
+			"robots": ""
+		},
+		
+		"hotel":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Hotel",
+			"category": "Venue",
+			"uri": "hotel.php",
+			"title": "Venue",
+			"description": "This year's venue is the Estrel Hotel in Berlin. It features a large amount of luxurious rooms, restaurants and a lot of convention space to roam.",
+			"keywords": "Hotel, Estrel, Berlin, Convention Center, Accommodation, Venue, Rooms, Restaurants",
+			"image": "hotel.jpg",
+			"robots": ""
+		},
+		
+		"hotel/map":
+		{
+			"accessible": false,
+			"inMenu": false,
+			"menuText": "Map",
+			"category": "Venue",
+			"uri": "hotel.map.php",
+			"title": "Venue - Map",
+			"description": "The function space map! This is your ultimate 'How to get around!'",
+			"keywords": "Hotel, Floor Plan, Navigation, Venue, Berlin, How to get around",
+			"image": "",
+			"robots": ""
+		},
+		
+		"hotel/overflow":
+		{
+			"accessible": false,
+			"inMenu": false,
+			"menuText": "Overflow Hotel Options",
+			"category": "Venue",
+			"uri": "hotel.overflow.php",
+			"title": "Venue - Overflow Options",
+			"description": "Get a room! Even if you didn't catch one at the main hotel, here are some official options for you.",
+			"keywords": "Hotel, Accommodation, Rooms",
+			"image": "",
+			"robots": ""
+		},
+		
+		"charity":
+		{
+			"accessible": false,
+			"inMenu": false,
+			"menuText": "Charity",
+			"category": "Program",
+			"uri": "charity.php",
+			"title": "Charity",
+			"description": "This year all donations, collections and more will go to support {convention.charity}.",
+			"keywords": "Donations, Good cause, Benefaction",
+			"image": "charity.jpg",
+			"robots": ""
+		},
+		
+		"events":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Events",
+			"category": "Program",
+			"uri": "events.php",
+			"title": "Events",
+			"description": "General information for those interested in organizing a panel or event at Eurofurence. The schedule will be posted here shortly before the convention.",
+			"keywords": "Events, Time Table, Schedule, Program",
+			"image": "",
+			"robots": ""
+		},
+		
+		"schedule":
+		{
+			"accessible": false,
+			"inMenu": false,
+			"menuText": "schedule",
+			"category": "Program",
+			"uri": "https://www.eurofurence.org/schedule/",
+			"title": "",
+			"description": "",
+			"keywords": "",
+			"image": "",
+			"robots": ""
+		},
+		
+		"daily":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Daily Eurofurence",
+			"category": "Program",
+			"uri": "daily.php",
+			"title": "The Daily Eurofurence",
+			"description": "The Daily Eurofurence is a printed daily newsletter that is distributed for free during Eurofurence.",
+			"keywords": "Daily, Daily Eurofurence, News, Newspaper, Printed news",
+			"image": "",
+			"robots": ""
+		},
+		
+		"fursuits":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Fursuit Support",
+			"category": "Program",
+			"uri": "fursuits.php",
+			"title": "Fursuit Support",
+			"description": "All information for fursuiters: Everything about the Fursuit lounge, the parade and everything else.",
+			"keywords": "Fursuit Support, Suiter, Fursuit Lounge, Lounge, Headless Lounge",
+			"image": "",
+			"robots": ""
+		},
+		
+		"fursuits/photoshoot":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Fursuit Photoshoot",
+			"category": "Program",
+			"uri": "https://photo.eurofurence.org/",
+			"title": "",
+			"description": "",
+			"keywords": "",
+			"image": "",
+			"robots": ""
+		},
+		
+		"photography":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Photography",
+			"category": "Program",
+			"uri": "photography.php",
+			"title": "Photography",
+			"description": "The Eurofurence photography team takes care of the \"official photography stuff\" that is happening at EF.",
+			"keywords": "Photography, Photo, Pictures",
+			"image": "",
+			"robots": ""
+		},
+		
+		"conbook":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Con Book",
+			"category": "Artists",
+			"uri": "conbook.php",
+			"title": "Con Book",
+			"description": "The con book is the number one guide for every attendee of Eurofurence. Event information, floor plans and more.",
+			"keywords": "Conbook, Con Book, Guide",
+			"image": "conbook.jpg",
+			"robots": ""
+		},
+		
+		"artshow":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Art Show",
+			"category": "Artists",
+			"uri": "artshow.php",
+			"title": "Art Show - General Information",
+			"description": "The Eurofurence Art Show is a large art exhibition. It is your chance to display your works and/or purchase a fine piece of art for your home.",
+			"keywords": "Art Show, Art, Display, Artwork, Prints, Originals, Bidding",
+			"image": "artshow.jpg",
+			"robots": ""
+		},
+		
+		"artshow/bidding":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Art Show Bidding",
+			"category": "Policies",
+			"uri": "artshow.bidding.php",
+			"title": "Art Show - Bidding Process &amp; -rules",
+			"description": "A guide &amp; tips on how to bid on art at the Eurofurence Art Show.",
+			"keywords": "Art Show, Bidding, Rules, Limitations, Artwork, Display, Originals",
+			"image": "artshow.jpg",
+			"robots": ""
+		},
+
+		"artshow/signup":
+		{
+			"accessible": true,
+			"inMenu": false,
+			"menuText": "Art Show Signup",
+			"category": "Artists",
+			"uri": "artshow.signup.php",
+			"title": "Artshow - Sign-Up",
+			"description": "Find out how and when to sign-up in order to exhibit your art in the Eurofurence Art Show.",
+			"keywords": "Art Show, Display, Sign-up, Originals",
+			"image": "artshow.jpg",
+			"robots": ""
+		},
+
+		"artshow/rules":
+		{
+			"accessible": true,
+			"inMenu": false,
+			"menuText": "Art Show Rules",
+			"category": "Artists",
+			"uri": "artshow.rules.php",
+			"title": "Art Show - Rules",
+			"description": "Rules and guidelines for art exhibited in the Eurofurence Art Show.",
+			"keywords": "Art Show, Rules, Limitations, Artwork, Display, Originals",
+			"image": "artshow.jpg",
+			"robots": ""
+		},
+
+		"artshow/guide":
+		{
+			"accessible": true,
+			"inMenu": false,
+			"menuText": "Art Show Guide",
+			"category": "Artists",
+			"uri": "artshow.guide.php",
+			"title": "Art Show - Guide",
+			"description": "A comprehensive guide on how to exhibit art in the Eurofurence Art Show.",
+			"keywords": "Art Show, Guide, Limitations, Artwork, Display, Originals",
+			"image": "artshow.jpg",
+			"robots": ""
+		},
+
+		"dealersden":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Dealers' Den",
+			"category": "Artists",
+			"uri": "dealersden.php",
+			"title": "Dealers' Den",
+			"description": "The Dealers' Den is the place for all you merchants and artists for selling your fine products.",
+			"keywords": "Dealers' Den, Selling, Merchants, Artist, Dealers, Merchandise, Artwork, Sketches, Shirts, Shopping, Souvenirs",
+			"image": "",
+			"robots": ""
+		},
+				
+		"dealersden/alley":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Artist Alley",
+			"category": "Artists",
+			"uri": "dealersden.alley.php",
+			"title": "Artist Alley",
+			"description": "The Artist Alley is an open, first-come-first-serve alternative to the Dealers' Den.",
+			"keywords": "Artist, Alley, Dealers' Den, Selling, Merchants, Dealers, Merchandise, Artwork, Sketches, Shirts, Shopping, Souvenirs",
+			"image": "",
+			"robots": ""
+		},
+		
+		"policies":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Policies",
+			"category": "Policies",
+			"uri": "policies.php",
+			"title": "Policies",
+			"description": "The necessary rules and guidelines you need to know before attending Eurofurence.",
+			"keywords": "Policies, Rules, Waiver, Conditions",
+			"image": "",
+			"robots": ""
+		},
+		
+		"terms":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Terms and Conditions",
+			"category": "Policies",
+			"uri": "https://help.eurofurence.org/legal/terms/",
+			"title": "",
+			"description": "",
+			"keywords": "",
+			"image": "",
+			"robots": ""
+		},
+		
+		"roc":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Rules of Conduct",
+			"category": "Policies",
+			"uri": "https://help.eurofurence.org/legal/roc/",
+			"title": "",
+			"description": "",
+			"keywords": "",
+			"image": "",
+			"robots": ""
+		},
+		
+		"liability":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Liability Waiver",
+			"category": "Policies",
+			"uri": "https://help.eurofurence.org/legal/liability/",
+			"title": "",
+			"description": "",
+			"keywords": "",
+			"image": "",
+			"robots": ""
+		},
+		
+		"imprint":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Imprint",
+			"category": "Website",
+			"uri": "https://help.eurofurence.org/legal/imprint/",
+			"title": "",
+			"description": "",
+			"keywords": "",
+			"image": "",
+			"robots": ""
+		},
+		
+		"website":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "About",
+			"category": "Website",
+			"uri": "website.php",
+			"title": "Website Credits &amp; Support",
+			"description": "The website credits - see who helped and contributed this year.",
+			"keywords": "Website, Credits, Featured Artist, Support, Webmaster, Design, Bug Report",
+			"image": "",
+			"robots": ""
+		},
+		
+		"website/banner":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Banner Exchange",
+			"category": "Website",
+			"uri": "website.banner.php",
+			"title": "Website Banner Exchange Program",
+			"description": "Eurofurence is participating in a banner exchange program to connect furry conventions.",
+			"keywords": "Banner-Exchange, Banner",
+			"image": "",
+			"robots": ""
+		},
+		
+		"archive":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Archive",
+			"category": "Website",
+			"uri": "https://archive.eurofurence.org/",
+			"title": "",
+			"description": "",
+			"keywords": "",
+			"image": "",
+			"robots": ""
+		}
+	}
+}
