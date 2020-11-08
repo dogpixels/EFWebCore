@@ -42,10 +42,15 @@ class EFWebCore
 			$this->config->pages->{$this->path} :
 			$this->config->pages->{$this->config->defaults->notFoundPage};
 
+		// construct description meta tag content
+		$this->current->description = $this->resolve_convention_config($this->current->description);
+		
 		// construct keywords meta tag content
-		$this->current->keywords = 
-			trim($this->config->defaults->keywords, ",") . "," . $this->current->keywords;
-
+		$this->current->keywords = $this->resolve_convention_config
+		(
+			trim($this->config->defaults->keywords . ", " . $this->current->keywords, ", ")
+		);
+		
 		// construct robots meta tag content
 		if (empty($this->current->robots))
 		{
@@ -193,7 +198,7 @@ class EFWebCore
 			// init session-based autoexport control
 			if (!isset($_SESSION["EFWebCoreAutoExport"]))
 			{
-				$_SESSION["EFWebCoreAutoExport"]["order"] = []; //array_keys(get_object_vars($this->config->pages));
+				$_SESSION["EFWebCoreAutoExport"]["order"] = [];
 				$_SESSION["EFWebCoreAutoExport"]["total"] = 0;
 				$_SESSION["EFWebCoreAutoExport"]["next"] = 0;
 
@@ -207,6 +212,7 @@ class EFWebCore
 				}
 			}
 
+			// prepend status line to output buffer after writing to file
 			$ob = 
 				"<h1 id=\"EFWebCoreAutoExport\">EFWebCoreAutoExport: " .
 				round($_SESSION["EFWebCoreAutoExport"]["next"] / $_SESSION["EFWebCoreAutoExport"]["total"] * 100) .
@@ -285,6 +291,23 @@ class EFWebCore
 			}
 		}
 	}
+
+	/**
+	 * Iterates through all config.convention keys and replaces them in a given string
+	 * within curly brackes, e.g. "This is number {number}." -> "This is number 25."
+	 * @param string input string that may contain config.convention keys in curly brackets
+	 * @return string processed input string with all matching keys replaced.
+	 * @since 4.00
+	 */
+	private function resolve_convention_config(string $text) : string
+	{
+		foreach ($this->config->convention as $key => $value)
+		{
+			$text = mb_ereg_replace("\{" . $key . "\}", $value, $text, "r");
+		}
+
+		return $text;
+	}
 }
 
 /**
@@ -306,9 +329,9 @@ function debug($var)
 	
 /**
  * Retrieves the last modify timestamp of a directory, respecting recursion.
- * @since 4.00
  * @param string directory to retrieve last modify time for
  * @return int last modified timestamp of the specified directory
+ * @since 4.00
  */
 function dirmtime(string $path) : int
 {
@@ -348,9 +371,9 @@ function dirmtime(string $path) : int
 
 /**
  * Copies a directory and all its contents recursively.
- * @since 4.00
  * @param string source directory
  * @param string destination directory
+ * @since 4.00
  */
 function dircopy(string $source, string $target)
 {
@@ -389,6 +412,7 @@ function dircopy(string $source, string $target)
  * Determines if an URI is external, e.g. if it starts with "http(s)://" or "www.".
  * @param string URI string, e.g. https://www.eurofurence.org (=> true) or home.php (=> false)
  * @return bool True, if URI starts with http(s):// or www.
+ * @since 4.00
  */
 function is_external(string $uri) : bool
 {
