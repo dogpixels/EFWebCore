@@ -10,6 +10,7 @@
 class EFWebCore
 {
 	public object $current;
+	public string $base;
 
 	private ?object $config;
 	private string $path;
@@ -35,7 +36,10 @@ class EFWebCore
 			$_SERVER["REQUEST_URI"] === "/" ?
 			$this->config->defaults->rootPage :
 			trim(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH), "/");
-				
+		
+		// construct base url
+		$this->base = $this->get_base();
+
 		// select page from config
 		$this->current = 
 			property_exists($this->config->pages, $this->path)?
@@ -84,22 +88,7 @@ class EFWebCore
 		// start output caching
 		ob_start();
 	}
-		
-	/**
-	 * Generate appropriate content for the <base> tag. HTTP/S is prefixed according to how 
-	 * the website was accessed.
-	 * @since 3.00
-	 * @return string content for the href attribute of the <base> tag
-	 */
-	public function get_base() : string
-	{
-		$mode = 
-			((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) ? 
-			'https://' : 'http://';
-
-		return str_replace('index.php', '', $mode . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']);	
-	}
-
+	
 	/**
 	 * Returns the full url to the current page.
 	 * @since 3.12
@@ -107,10 +96,9 @@ class EFWebCore
 	 */
 	public function get_full_url() : string
 	{
-		return $this->get_base() . $this->path;
+		return $this->base . $this->path;
 	}
 
-	
 	/**
 	 * Returns an array of data to populate schema.org breadcrumb lists.
 	 * @since 3.00
@@ -135,7 +123,7 @@ class EFWebCore
 			// append desired data from page object
 			$ret = new stdClass();
 			$ret->name = $this->get_page($path)->menuText;
-			$ret->url = trim($this->get_base() . $path, "/");
+			$ret->url = trim($this->base . $path, "/");
 
 			// appends to results
 			$results[] = $ret;
@@ -293,7 +281,7 @@ class EFWebCore
 				header
 				(
 					"Refresh: 1, url=" .
-					$this->get_base() .
+					$this->base .
 					$_SESSION["EFWebCoreAutoExport"]["order"][$_SESSION["EFWebCoreAutoExport"]["next"]++] . 
 					"?export"
 				);
@@ -306,6 +294,21 @@ class EFWebCore
 
 		// finally, send buffer
 		echo $ob;
+	}
+
+	/**
+	 * Generate appropriate content for the <base> tag. HTTP/S is prefixed according to how 
+	 * the website was accessed.
+	 * @since 3.00
+	 * @return string base url
+	 */
+	private function get_base() : string
+	{
+		$mode = 
+			((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) ? 
+			'https://' : 'http://';
+
+		return str_replace('index.php', '', $mode . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']);	
 	}
 
 	/**
@@ -355,7 +358,14 @@ class EFWebCore
 
 			if (!in_array($source, $exclude) && dirmtime($source) > dirmtime($target))
 			{
-				dircopy($source, $target);
+				if (!is_dir($source))
+				{
+					copy($source, $target);
+				}
+				else
+				{
+					dircopy($source, $target);
+				}
 			}
 		}
 	}
@@ -432,7 +442,6 @@ function dirmtime(string $path) : int
 
 	if (!is_dir($path))
 	{
-		echo "Warning: non-directory passed to dirmtime().";
 		return $last_timestamp;
 	}
 

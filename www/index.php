@@ -22,7 +22,7 @@ header("Content-Type: text/html; charset=UTF-8");
 		<meta name="rating" content="general" />
 		<meta name="theme-color" content="<?= $core->current->themeColor ?>" />
 
-		<base href="<?= $core->get_base(); ?>" />
+		<base href="<?= $core->base; ?>" />
 
 		<link rel="apple-touch-icon" sizes="57x57" href="img/ogp/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="img/ogp/apple-icon-60x60.png">
@@ -110,7 +110,7 @@ header("Content-Type: text/html; charset=UTF-8");
 			"description": "The <?= $core->current->ordinal ?> edition of Europe's largest furry convention, themed '<?= $core->current->theme ?>'",
 			"startDate": "<?= $core->current->start ?>",
 			"endDate": "<?= $core->current->end ?>",
-			"image": "<?= $core->get_base() . $core->current->ogpImage ?>",
+			"image": "<?= $core->base . $core->current->ogpImage ?>",
 			"location": {
 			"@type": "Place",
 			"name": "Estrel Hotel",
@@ -124,14 +124,14 @@ header("Content-Type: text/html; charset=UTF-8");
 		}
 		}}
 		</script>
-		
+
 		<script type="application/ld+json">
 		{
 			"@context": "http://schema.org",
 			"@type": "Organization",
 			"name": "Eurofurence",
 			"url": "https://www.eurofurence.org",
-			"logo": "<?= $core->get_base() ?>apple_favicon.png",
+			"logo": "<?= $core->base ?>apple_favicon.png",
 			"sameAs": [
 				"https://twitter.com/eurofurence",
 				"https://www.facebook.com/Eurofurence",
