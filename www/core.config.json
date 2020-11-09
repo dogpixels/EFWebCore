@@ -3,7 +3,9 @@
 	{
 		"year": "2019",
 		"number": "25",
+		"ordinal": "25th",
 		"theme": "Fractures in Time",
+		"themeColor": "#ff9922",
 		"location": "Estrel Hotel, Berlin, Germany",
 		"charity": "(TBA!)",
 		"goh": "(TBA!)",
@@ -17,7 +19,11 @@
 		"pagesDirectory": "pages/",
 		"rootPage": "home",
 		"notFoundPage": "404",
+		"titlePrefix": "Eurofurence {number}: ",
+		"titleSuffix": "",
 		"keywords": "Eurofurence, Eurofurence {number}, EF {number}, EF{number}",
+		"ogpImagePrefix": "img/ogp/",
+		"ogpImage": "default.jpg",
 		"robots": "index, follow, noodp",
 		"externalTarget": "target=\"_blank\""
 	},
@@ -30,7 +36,7 @@
 		"templates":
 		{
 			"lastModified": " data-lastmodified=\"{timestamp}\"",
-			"nav": "<nav><ul>{categories}</ul></nav>",
+			"nav": "<ul>{categories}</ul>",
 			"category": "<li><h1>{title}</h1><ul>{items}</ul></li>",
 			"item": "<li><a href=\"{href}{hrefSuffix}\" class=\"{ifActiveClass}\"{lastModified}>{menuText}</a></li>"
 		},
@@ -60,10 +66,10 @@
 			"menuText": "Home",
 			"category": "Website",
 			"uri": "home.php",
-			"title": "Welcome!",
+			"title": "Welcome",
 			"description": "Eurofurence {number} will take place from {start} - {end}, {year}. Eurofurence is Europe's largest annual gathering of the European furry community.",
 			"keywords": "",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -74,10 +80,10 @@
 			"menuText": "",
 			"category": "",
 			"uri": "404.php",
-			"title": "Error: Page Not Found",
+			"title": "Page Not Found",
 			"description": "",
 			"keywords": "",
-			"image": "",
+			"ogpImage": "",
 			"robots": "noindex,nofollow,noodp"
 		},
 
@@ -91,7 +97,7 @@
 			"title": "Nosecount",
 			"description": "Check out how many folks already decided to join this years Eurofurence - nice statistics included!",
 			"keywords": "Statistics, Stats, Nosecount, Registration, Reg, Sign-Up",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -105,7 +111,7 @@
 			"title": "",
 			"description": "",
 			"keywords": "",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -119,7 +125,7 @@
 			"title": "",
 			"description": "",
 			"keywords": "",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -133,7 +139,7 @@
 			"title": "Jobs at Eurofurence",
 			"description": "You want to volunteer at Eurofurence and become staff at Europe's biggest furry convention? Read on for currently open positions.",
 			"keywords": "Jobs, Volunteer, Staff, Crew, Help, Gopher",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -147,21 +153,7 @@
 			"title": "",
 			"description": "",
 			"keywords": "",
-			"image": "",
-			"robots": ""
-		},
-		
-		"glympse":
-		{
-			"accessible": false,
-			"inMenu": false,
-			"menuText": "Glympse Map",
-			"category": "Membership",
-			"uri": "glympse.php",
-			"title": "xxxxxxxxxxxxxxxxxxxx",
-			"description": "Follow the surge of furries towards Berlin and back live on Glympse.",
-			"keywords": "Glympse, Live, Travel, Map",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -175,7 +167,7 @@
 			"title": "Venue",
 			"description": "This year's venue is the Estrel Hotel in Berlin. It features a large amount of luxurious rooms, restaurants and a lot of convention space to roam.",
 			"keywords": "Hotel, Estrel, Berlin, Convention Center, Accommodation, Venue, Rooms, Restaurants",
-			"image": "hotel.jpg",
+			"ogpImage": "hotel.jpg",
 			"robots": ""
 		},
 		
@@ -186,13 +178,27 @@
 			"menuText": "Map",
 			"category": "Venue",
 			"uri": "hotel.map.php",
-			"title": "Venue - Map",
+			"title": "Venue Map",
 			"description": "The function space map! This is your ultimate 'How to get around!'",
 			"keywords": "Hotel, Floor Plan, Navigation, Venue, Berlin, How to get around",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
-		
+
+		"hotel/travel":
+		{
+			"accessible": false,
+			"inMenu": false,
+			"menuText": "Travel &amp; Parking",
+			"category": "Venue",
+			"uri": "hotel.travel.php",
+			"title": "Venue - Travel &amp; Parking",
+			"description": "How to travel to Eurofurence by train, by plane and where to leave your car.",
+			"keywords": "Airport, Train-station, Travel, Parking, Arrival, Destination",
+			"ogpImage": "",
+			"robots": ""
+		},
+
 		"hotel/overflow":
 		{
 			"accessible": false,
@@ -203,7 +209,21 @@
 			"title": "Venue - Overflow Options",
 			"description": "Get a room! Even if you didn't catch one at the main hotel, here are some official options for you.",
 			"keywords": "Hotel, Accommodation, Rooms",
-			"image": "",
+			"ogpImage": "",
+			"robots": ""
+		},
+
+		"glympse":
+		{
+			"accessible": false,
+			"inMenu": false,
+			"menuText": "Glympse Map",
+			"category": "Membership",
+			"uri": "glympse.php",
+			"title": "Glympse Map",
+			"description": "Follow the surge of furries towards Berlin and back live on Glympse.",
+			"keywords": "Glympse, Live, Travel, Map",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -217,7 +237,7 @@
 			"title": "Charity",
 			"description": "This year all donations, collections and more will go to support {charity}.",
 			"keywords": "Donations, Good cause, Benefaction",
-			"image": "charity.jpg",
+			"ogpImage": "charity.jpg",
 			"robots": ""
 		},
 
@@ -231,7 +251,7 @@
 			"title": "Guests of Honor",
 			"description": "Again we have some special people amongst us - our Guests of Honor. This year we have {goh}.",
 			"keywords": "Special guests, GOH, Guests of Honor",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -245,7 +265,7 @@
 			"title": "Events",
 			"description": "General information for those interested in organizing a panel or event at Eurofurence. The schedule will be posted here shortly before the convention.",
 			"keywords": "Events, Time Table, Schedule, Program",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -259,7 +279,7 @@
 			"title": "",
 			"description": "",
 			"keywords": "",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -273,7 +293,7 @@
 			"title": "The Daily Eurofurence",
 			"description": "The Daily Eurofurence is a printed daily newsletter that is distributed for free during Eurofurence.",
 			"keywords": "Daily, Daily Eurofurence, News, Newspaper, Printed news",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -287,7 +307,7 @@
 			"title": "Fursuit Support",
 			"description": "All information for fursuiters: Everything about the Fursuit lounge, the parade and everything else.",
 			"keywords": "Fursuit Support, Suiter, Fursuit Lounge, Lounge, Headless Lounge",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -301,7 +321,7 @@
 			"title": "",
 			"description": "",
 			"keywords": "",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -315,7 +335,7 @@
 			"title": "Photography",
 			"description": "The Eurofurence photography team takes care of the \"official photography stuff\" that is happening at EF.",
 			"keywords": "Photography, Photo, Pictures",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -329,7 +349,7 @@
 			"title": "Con Book",
 			"description": "The con book is the number one guide for every attendee of Eurofurence. Event information, floor plans and more.",
 			"keywords": "Conbook, Con Book, Guide",
-			"image": "conbook.jpg",
+			"ogpImage": "conbook.jpg",
 			"robots": ""
 		},
 		
@@ -343,22 +363,9 @@
 			"title": "Art Show - General Information",
 			"description": "The Eurofurence Art Show is a large art exhibition. It is your chance to display your works and/or purchase a fine piece of art for your home.",
 			"keywords": "Art Show, Art, Display, Artwork, Prints, Originals, Bidding",
-			"image": "artshow.jpg",
-			"robots": ""
-		},
-		
-		"artshow/bidding":
-		{
-			"accessible": true,
-			"inMenu": true,
-			"menuText": "Art Show Bidding",
-			"category": "Policies",
-			"uri": "artshow.bidding.php",
-			"title": "Art Show - Bidding Process &amp; -rules",
-			"description": "A guide &amp; tips on how to bid on art at the Eurofurence Art Show.",
-			"keywords": "Art Show, Bidding, Rules, Limitations, Artwork, Display, Originals",
-			"image": "artshow.jpg",
-			"robots": ""
+			"ogpImage": "artshow.jpg",
+			"robots": "",
+			"next": "artshow/signup"
 		},
 
 		"artshow/signup":
@@ -371,8 +378,10 @@
 			"title": "Artshow - Sign-Up",
 			"description": "Find out how and when to sign-up in order to exhibit your art in the Eurofurence Art Show.",
 			"keywords": "Art Show, Display, Sign-up, Originals",
-			"image": "artshow.jpg",
-			"robots": ""
+			"ogpImage": "artshow.jpg",
+			"robots": "",
+			"previous": "artshow",
+			"next": "artshow/rules"
 		},
 
 		"artshow/rules":
@@ -385,8 +394,10 @@
 			"title": "Art Show - Rules",
 			"description": "Rules and guidelines for art exhibited in the Eurofurence Art Show.",
 			"keywords": "Art Show, Rules, Limitations, Artwork, Display, Originals",
-			"image": "artshow.jpg",
-			"robots": ""
+			"ogpImage": "artshow.jpg",
+			"robots": "",
+			"previous": "artshow/signup",
+			"next": "artshow/guide"
 		},
 
 		"artshow/guide":
@@ -399,8 +410,25 @@
 			"title": "Art Show - Guide",
 			"description": "A comprehensive guide on how to exhibit art in the Eurofurence Art Show.",
 			"keywords": "Art Show, Guide, Limitations, Artwork, Display, Originals",
-			"image": "artshow.jpg",
-			"robots": ""
+			"ogpImage": "artshow.jpg",
+			"robots": "",
+			"previous": "artshow/rules",
+			"next": "artshow/bidding"
+		},
+
+		"artshow/bidding":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Art Show Bidding",
+			"category": "Policies",
+			"uri": "artshow.bidding.php",
+			"title": "Art Show - Bidding Process &amp; -rules",
+			"description": "A guide &amp; tips on how to bid on art at the Eurofurence Art Show.",
+			"keywords": "Art Show, Bidding, Rules, Limitations, Artwork, Display, Originals",
+			"ogpImage": "artshow.jpg",
+			"robots": "",
+			"previous": "artshow/guide"
 		},
 
 		"dealersden":
@@ -413,7 +441,7 @@
 			"title": "Dealers' Den",
 			"description": "The Dealers' Den is the place for all you merchants and artists for selling your fine products.",
 			"keywords": "Dealers' Den, Selling, Merchants, Artist, Dealers, Merchandise, Artwork, Sketches, Shirts, Shopping, Souvenirs",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 				
@@ -427,7 +455,7 @@
 			"title": "Artist Alley",
 			"description": "The Artist Alley is an open, first-come-first-serve alternative to the Dealers' Den.",
 			"keywords": "Artist, Alley, Dealers' Den, Selling, Merchants, Dealers, Merchandise, Artwork, Sketches, Shirts, Shopping, Souvenirs",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -441,7 +469,7 @@
 			"title": "Policies",
 			"description": "The necessary rules and guidelines you need to know before attending Eurofurence.",
 			"keywords": "Policies, Rules, Waiver, Conditions",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -455,7 +483,7 @@
 			"title": "",
 			"description": "",
 			"keywords": "",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -469,7 +497,7 @@
 			"title": "",
 			"description": "",
 			"keywords": "",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -483,7 +511,7 @@
 			"title": "",
 			"description": "",
 			"keywords": "",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -497,7 +525,7 @@
 			"title": "",
 			"description": "",
 			"keywords": "",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -511,7 +539,7 @@
 			"title": "Website Credits &amp; Support",
 			"description": "The website credits - see who helped and contributed this year.",
 			"keywords": "Website, Credits, Featured Artist, Support, Webmaster, Design, Bug Report",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -525,7 +553,7 @@
 			"title": "Website Banner Exchange Program",
 			"description": "Eurofurence is participating in a banner exchange program to connect furry conventions.",
 			"keywords": "Banner-Exchange, Banner",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		},
 		
@@ -539,7 +567,7 @@
 			"title": "",
 			"description": "",
 			"keywords": "",
-			"image": "",
+			"ogpImage": "",
 			"robots": ""
 		}
 	}

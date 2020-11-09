@@ -42,15 +42,39 @@ class EFWebCore
 			$this->config->pages->{$this->path} :
 			$this->config->pages->{$this->config->defaults->notFoundPage};
 
+		// construct title meta tag content
+		$this->current->title = $this->resolve_convention_properties
+		(
+			$this->config->defaults->titlePrefix .
+			$this->current->title .
+			$this->config->defaults->titleSuffix
+		);
+
+		// copy all config.convention properties to current page
+		foreach (get_object_vars($this->config->convention) as $key => $value)
+		{
+			$this->current->$key = $value;
+		}
+
 		// construct description meta tag content
-		$this->current->description = $this->resolve_convention_config($this->current->description);
-		
+		$this->current->description = $this->resolve_convention_properties($this->current->description);
+
 		// construct keywords meta tag content
-		$this->current->keywords = $this->resolve_convention_config
+		$this->current->keywords = $this->resolve_convention_properties
 		(
 			trim($this->config->defaults->keywords . ", " . $this->current->keywords, ", ")
 		);
+
+		// construct OGP image
+		$this->current->ogpImage =
+			$this->config->defaults->ogpImagePrefix .
+			(empty($this->current->ogpImage) ? $this->config->defaults->ogpImage : $this->current->ogpImage);
 		
+		// determine OGP image size
+		$ogpImageSize = getimagesize($this->current->ogpImage);
+		$this->current->ogpImageWidth = $ogpImageSize[0];
+		$this->current->ogpImageHeight = $ogpImageSize[1];
+
 		// construct robots meta tag content
 		if (empty($this->current->robots))
 		{
@@ -74,6 +98,50 @@ class EFWebCore
 			'https://' : 'http://';
 
 		return str_replace('index.php', '', $mode . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']);	
+	}
+
+	/**
+	 * Returns the full url to the current page.
+	 * @since 3.12
+	 * @return string full url, e.g. https://www.eurofurence.org/EF25/artshow/bidding
+	 */
+	public function get_full_url() : string
+	{
+		return $this->get_base() . $this->path;
+	}
+
+	
+	/**
+	 * Returns an array of data to populate schema.org breadcrumb lists.
+	 * @since 3.00
+	 * @return array of objects containing page data
+	 */
+	public function get_breadcrumb_data()
+	{
+		$results = [];
+
+		// return empty in case of root page
+		if ($this->path === $this->config->defaults->rootPage)
+		{
+			return $results;
+		}
+
+		$path = "";
+		foreach (explode("/", $this->path) as $key)
+		{
+			// construct key path
+			$path .= $key . "/";
+			
+			// append desired data from page object
+			$ret = new stdClass();
+			$ret->name = $this->get_page($path)->menuText;
+			$ret->url = trim($this->get_base() . $path, "/");
+
+			// appends to results
+			$results[] = $ret;
+		}
+
+		return $results;
 	}
 
 	/**
@@ -299,7 +367,7 @@ class EFWebCore
 	 * @return string processed input string with all matching keys replaced.
 	 * @since 4.00
 	 */
-	private function resolve_convention_config(string $text) : string
+	private function resolve_convention_properties(string $text) : string
 	{
 		foreach ($this->config->convention as $key => $value)
 		{
@@ -307,6 +375,26 @@ class EFWebCore
 		}
 
 		return $text;
+	}
+
+	/**
+	 * Returns the page with the given key, or null on failure.
+	 * @since 4.00
+	 * @return stdObject the page object requested
+	 */
+	private function get_page(string $page_key) : ?stdClass
+	{
+		$page_key = trim($page_key, "/");
+
+		foreach ($this->config->pages as $key => $page)
+		{
+			if ($page_key === $key)
+			{
+				return $page;
+			}
+		}
+
+		return null;
 	}
 }
 
