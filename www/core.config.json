@@ -19,18 +19,20 @@
 		"pagesDirectory": "pages/",
 		"rootPage": "home",
 		"notFoundPage": "404",
+		"notAccessiblePage": "501",
 		"titlePrefix": "Eurofurence {number}: ",
 		"titleSuffix": "",
 		"keywords": "Eurofurence, Eurofurence {number}, EF {number}, EF{number}",
 		"ogpImagePrefix": "img/ogp/",
 		"ogpImage": "default.jpg",
 		"robots": "index, follow, noodp",
-		"externalTarget": "target=\"_blank\""
+		"externalEmbed": false
 	},
 
 	"menu":
 	{
 		"ifActiveClass": "ef-active",
+		"externalTarget": " target=\"_blank\"",
 		"hrefSuffix": "",
 		"enableLastModified": true,
 		"templates":
@@ -38,7 +40,7 @@
 			"lastModified": " data-lastmodified=\"{timestamp}\"",
 			"nav": "<ul>{categories}</ul>",
 			"category": "<li><h1>{title}</h1><ul>{items}</ul></li>",
-			"item": "<li><a href=\"{href}{hrefSuffix}\" class=\"{ifActiveClass}\"{lastModified}>{menuText}</a></li>"
+			"item": "<li><a href=\"{href}{hrefSuffix}\" class=\"{ifActiveClass}\"{externalTarget}{lastModified}>{menuText}</a></li>"
 		},
 		"categoryOrder": 
 		[
@@ -59,6 +61,34 @@
 
 	"pages":
 	{
+		"404": 
+		{
+			"accessible": true,
+			"inMenu": false,
+			"menuText": "",
+			"category": "",
+			"uri": "404.php",
+			"title": "Page Not Found",
+			"description": "",
+			"keywords": "",
+			"ogpImage": "",
+			"robots": "noindex, nofollow, noodp"
+		},
+
+		"501": 
+		{
+			"accessible": true,
+			"inMenu": false,
+			"menuText": "",
+			"category": "",
+			"uri": "501.php",
+			"title": "Page Not Available Yet",
+			"description": "",
+			"keywords": "",
+			"ogpImage": "",
+			"robots": "noindex, nofollow, noodp"
+		},
+
 		"home":
 		{
 			"accessible": true,
@@ -71,21 +101,7 @@
 			"keywords": "",
 			"ogpImage": "",
 			"robots": ""
-		},
-		
-		"404": 
-		{
-			"accessible": true,
-			"inMenu": false,
-			"menuText": "",
-			"category": "",
-			"uri": "404.php",
-			"title": "Page Not Found",
-			"description": "",
-			"keywords": "",
-			"ogpImage": "",
-			"robots": "noindex,nofollow,noodp"
-		},
+		},		
 
 		"nosecount":
 		{

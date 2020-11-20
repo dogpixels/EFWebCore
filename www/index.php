@@ -141,15 +141,40 @@ header("Content-Type: text/html; charset=UTF-8");
 		</script>
 
 		<link rel="stylesheet" href="css/main.css" />
+		<script src="js/newsagent.js"></script>
 	</head>
 
 	<body>
 		<nav>
-			<?= $core->get_menu(); ?>
+			<?= $core->get_menu() ?>
 		</nav>
 		<main>
-			<?php $core->load_content(); ?>
+			<header>
+				<div id="news">loading latest announcements ...</div>
+			</header>
+			<?= $core->get_content() ?>
 		</main>
+
+		<script>
+			window.onload = async () => 
+			{
+				let items = await NewsAgent.get_news().then(i => console.log(i));
+				console.log(items);
+			}
+
+			// console.log(items);
+			
+			// // prepare news div
+			// news.innerText = items.length === 0? "error loading announcements :(" : "";
+
+			// // fill news div
+			// for (let i = 0; i < items.length; i++)
+			// {
+			// 	let item = items[i];
+			// 	news.innerText += `<article><a href="${item.link}" target="_blank"><cite>${item.title}</cite><time>${item.time}</time></a></article>`;
+			// }
+			
+		</script>
 	</body>
 </html>
 

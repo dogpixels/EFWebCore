@@ -18,3 +18,35 @@ html {
 	right: 8px;
 	margin-top: 0;
 }
+
+/* development tests */
+
+body {
+	display: flex;
+}
+a {
+	color: #fff;
+}
+nav, main {
+	border: 1px solid whitesmoke;
+}
+nav {
+
+	padding-right: 10px;
+}
+main {
+	padding-left: 10px;
+}
+
+.new:after {
+	display: block;
+	content: "new";
+	background: #f00;
+	color: #fff;
+	border-radius: 4px;
+	font-size: 0.4em;
+	padding: 1px 3px;
+	position: relative;
+	top: -3px;
+	left: 0;
+}

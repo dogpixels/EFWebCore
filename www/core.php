@@ -12,7 +12,7 @@ class EFWebCore
 	public object $current;
 	public string $base;
 
-	private ?object $config;
+	public ?object $config;
 	private string $path;
 
 	public function __construct(string $configfile)
@@ -41,10 +41,20 @@ class EFWebCore
 		$this->base = $this->get_base();
 
 		// select page from config
-		$this->current = 
-			property_exists($this->config->pages, $this->path)?
-			$this->config->pages->{$this->path} :
-			$this->config->pages->{$this->config->defaults->notFoundPage};
+		if (property_exists($this->config->pages, $this->path))
+		{
+			$this->current = $this->config->pages->{$this->path};
+		}
+		else
+		{
+			$this->handle_not_found();
+		}
+
+		// override with NotAccessiblePage if necessary 
+		if (!$this->current->accessible)
+		{
+			$this->handle_not_accessible();
+		}
 
 		// construct title meta tag content
 		$this->current->title = $this->resolve_convention_properties
@@ -119,6 +129,11 @@ class EFWebCore
 		{
 			// construct key path
 			$path .= $key . "/";
+
+			if (!property_exists($this->config->pages, trim($path, "/")))
+			{
+				$path = $this->config->defaults->notFoundPage;
+			}
 			
 			// append desired data from page object
 			$ret = new stdClass();
@@ -174,7 +189,12 @@ class EFWebCore
 				$item = $this->config->menu->templates->item;
 
 				// insert href
-				$item = mb_ereg_replace("\{href\}", $ext? $page->uri : $key, $item);
+				$item = mb_ereg_replace
+				(
+					"\{href\}",
+					!$this->config->defaults->externalEmbed && $ext? $page->uri : $key,
+					$item
+				);
 
 				// insert hrefSuffix
 				$item = mb_ereg_replace("\{hrefSuffix\}", $this->config->menu->hrefSuffix, $item);
@@ -187,7 +207,15 @@ class EFWebCore
 					$item
 				);
 
-				// isert menuText
+				// insert target property to external targets
+				$item = mb_ereg_replace
+				(
+					"\{externalTarget\}",
+					!$this->config->defaults->externalEmbed && $ext? $this->config->menu->externalTarget : "",
+					$item
+				);				
+
+				// insert menuText
 				$item = mb_ereg_replace("\{menuText\}", $page->menuText, $item);
 
 				// insert lastModified, if enabled
@@ -226,6 +254,57 @@ class EFWebCore
 	public function load_content()
 	{
 		include($this->config->defaults->pagesDirectory . $this->current->uri);
+	}
+
+	/**
+	 * Retrieves the content (by uri) of a page or the current page by default.
+	 * @since 1.0
+	 * @param stdObject page object
+	 */
+	public function get_content($page = null)
+	{
+		// default missing parameters
+		if (is_null($page))
+		{
+			$page = $this->current;
+		}
+
+		// check for accessibility
+		if (!$page->accessible)
+		{
+			$page = $this->config->pages->{$this->config->defaults->notAccessiblePage};
+		}
+
+		// pause output buffering and stash buffer content
+		$ob = ob_get_contents();
+		ob_end_clean();
+
+		// start new output buffer and obtain page content or redirect
+		ob_start();
+		if (!is_external($page->uri))
+		{
+			include($this->config->defaults->pagesDirectory . $page->uri);
+		}
+		else if ($this->config->defaults->externalEmbed)
+		{
+			echo file_get_contents($page->uri);
+		}
+		else
+		{
+			header("Location: " . $page->uri);
+			return "Redirecting to: " . $page->uri;
+		}
+		
+		// end output buffering and store buffer content for returning
+		$ret = ob_get_contents();
+		ob_end_clean();
+
+		// reinstate prior output buffering
+		ob_start();
+		echo $ob;
+
+		// return buffered page content
+		return $ret;
 	}
 
 	/**
@@ -294,6 +373,24 @@ class EFWebCore
 
 		// finally, send buffer
 		echo $ob;
+	}
+
+	/**
+	 * Sets current page to config.notFoundPage and headers to reflect status 404.
+	 */
+	private function handle_not_found()
+	{
+		$this->current = $this->config->pages->{$this->config->defaults->notFoundPage};
+		header('HTTP/1.0 404 Not Found', true, 404);
+	}
+
+	/**
+	 * Sets current page to config.notAccessiblePage and headers to refelect status 501.
+	 */
+	private function handle_not_accessible()
+	{
+		$this->current = $this->config->pages->{$this->config->defaults->notAccessiblePage};
+		header('HTTP/1.0 501 Not Implemented', true, 501);
 	}
 
 	/**
