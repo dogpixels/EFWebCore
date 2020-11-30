@@ -2,35 +2,52 @@ class NewsAgent
 {
 	// static url = "https://forum.eurofurence.org/index.php/board,6.0.html?action=.xml;sa=recent;limit=6";
 	static url = "http://localhost/board,6.0.html.xml";
+	static subjectLength = 32;
 
-	static async get_news()
+	static async fetch()
 	{
-		await fetch(NewsAgent.url)
-		.then(response => response.text())
-		.then(text => (new window.DOMParser()).parseFromString(text, "text/xml"))
-		.then(responseXML => 
-			{
-				let ret = [];
+		let ret = [];
+		
+		const response = await fetch(NewsAgent.url);
+		
+		if (!response.ok)
+		{
+			console.error("[EF-Web NewsAgent] Fetching news from EF Forum failed.");
+			return ret;
+		}
 
-				if (responseXML === null)
-				{
-					return Promise.reject("No response XML received.");
-				}
+		const responseXML = (new window.DOMParser()).parseFromString(await (response).text(), "text/xml");
+		if (responseXML === null)
+		{
+			console.error("[EF-Web NewsAgent] Parsing news from EF Forum failed.");
+			return ret;
+		}
 
-				for (let i = 0; i < responseXML.documentElement.children.length; i++)
-				{
-					let item = responseXML.documentElement.children[i];
+		for (let i = 0; i < responseXML.documentElement.children.length; i++)
+		{
+			const item = responseXML.documentElement.children[i];
 
-					ret.push
-					({
-						time: item.children[0].textContent.substr(0, 17),
-						subject: item.children[2].textContent,
-						link: item.children[8].textContent
-					});
-				}
+			const time_raw = item.children[0].textContent;
+			const subject_raw = item.children[2].textContent;
+			const link_raw = item.children[8].textContent;
 
-				return Promise.resolve(ret);
-			}
-		);
+			// define time
+			let time = time_raw.substr(0, 17); // DD.MM.YYYY, HH:mm:ss => DD.MM.YYYY, HH:mm
+
+			// define subject
+			let subject = 
+				subject_raw.length <= NewsAgent.subjectLength ? 
+				subject_raw : 
+				subject_raw.substr(0, subject_raw.lastIndexOf(" ", NewsAgent.subjectLength)) + "…";
+			
+			// define link
+			let link = link_raw;
+			
+			ret.push({time: time, subject: subject,	link: link});
+		}
+
+		// console.info("[EF-Web NewsAgent] Results:", ret);
+
+		return ret;
 	}
 }

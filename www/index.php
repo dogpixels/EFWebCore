@@ -24,19 +24,19 @@ header("Content-Type: text/html; charset=UTF-8");
 
 		<base href="<?= $core->base; ?>" />
 
-		<link rel="apple-touch-icon" sizes="57x57" href="img/ogp/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="img/ogp/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="img/ogp/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="img/ogp/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="img/ogp/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="img/ogp/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="img/ogp/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="img/ogp/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="img/ogp/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="img/ogp/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="img/ogp/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="img/ogp/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="img/ogp/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="57x57" href="img/icon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="img/icon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/icon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="img/icon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/icon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="img/icon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="img/icon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="img/icon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="img/icon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="img/icon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
@@ -141,7 +141,6 @@ header("Content-Type: text/html; charset=UTF-8");
 		</script>
 
 		<link rel="stylesheet" href="css/main.css" />
-		<script src="js/newsagent.js"></script>
 	</head>
 
 	<body>
@@ -152,28 +151,28 @@ header("Content-Type: text/html; charset=UTF-8");
 			<header>
 				<div id="news">loading latest announcements ...</div>
 			</header>
-			<?= $core->get_content() ?>
+			<div id="content">
+				<?= $core->get_content() ?>
+			</div>
 		</main>
 
+		<script src="js/newsagent.js"></script>
 		<script>
 			window.onload = async () => 
 			{
-				let items = await NewsAgent.get_news().then(i => console.log(i));
+				const items = await NewsAgent.fetch();
 				console.log(items);
-			}
 
-			// console.log(items);
-			
-			// // prepare news div
-			// news.innerText = items.length === 0? "error loading announcements :(" : "";
+				// prepare news div
+				news.innerText = items.length === 0? "error loading announcements :(" : "";
 
-			// // fill news div
-			// for (let i = 0; i < items.length; i++)
-			// {
-			// 	let item = items[i];
-			// 	news.innerText += `<article><a href="${item.link}" target="_blank"><cite>${item.title}</cite><time>${item.time}</time></a></article>`;
-			// }
-			
+				// fill news div
+				for (let i = 0; i < items.length; i++)
+				{
+					const item = items[i];
+					news.innerHTML += `<article><a href="${item.link}" target="_blank"><cite>${item.subject}</cite><time>${item.time}</time></a></article>`;
+				}
+			}			
 		</script>
 	</body>
 </html>
