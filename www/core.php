@@ -154,7 +154,8 @@ class EFWebCore
 	 */
 	public function get_menu() : string
 	{
-		$categorized_pages = [];
+		// copy config.menu.categoryOrder as keys to empty arrays
+		$categorized_pages = array_fill_keys($this->config->menu->categoryOrder, []);
 
 		// sort pages into categories ($categorized_pages)
 		foreach ($this->config->pages as $key => $page)
