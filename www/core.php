@@ -431,7 +431,14 @@ class EFWebCore
 		$file = "index.html";
 
 		// write output cache to file
-		if (file_put_contents($path . $file, ob_get_contents()) === false)
+		// Note: using str_replace() due to the lack of mb_str_replace() assumes that
+		// $this->base and $this->config->staticOut->targetBase will never contain
+		// multibyte characters.
+		if (file_put_contents
+		(
+			$path . $file,
+			str_replace($this->base, $this->config->staticOut->targetBase, ob_get_contents())
+		) === false)
 		{
 			debug("[warning] config.staticOut enabled, but file write failed.");
 		}

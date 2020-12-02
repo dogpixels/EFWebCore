@@ -56,6 +56,7 @@
 	"staticOut": 
 	{
 		"enabled": true,
+		"targetBase": "https://wwwtest.eurofurence.org/",
 		"path": "_deploy/"
 	},
 
