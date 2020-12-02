@@ -34,6 +34,14 @@ class NewsAgent
 			// define time
 			let time = time_raw.substr(0, 17); // DD.MM.YYYY, HH:mm:ss => DD.MM.YYYY, HH:mm
 
+			let timestamp = Date.UTC(
+				+time.substr(6, 4),		// year
+				+time.substr(3, 2) - 1,	// month
+				+time.substr(0, 2),		// day
+				+time.substr(12, 2),	// hour
+				+time.substr(15, 2)		// minute
+			) /1000 ;
+
 			// define subject
 			let subject = 
 				subject_raw.length <= NewsAgent.subjectLength ? 
@@ -43,7 +51,7 @@ class NewsAgent
 			// define link
 			let link = link_raw;
 			
-			ret.push({time: time, subject: subject,	link: link});
+			ret.push({time: time, timestamp: timestamp, subject: subject, link: link});
 		}
 
 		// console.info("[EF-Web NewsAgent] Results:", ret);
