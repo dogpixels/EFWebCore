@@ -1,0 +1,9 @@
+{
+	"conventionalCommits.scopes": [
+		"core-menu-generator",
+		"config",
+		"css",
+		"newsagent.js",
+		"core-static-generator"
+	]
+}
