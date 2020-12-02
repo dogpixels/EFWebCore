@@ -1,7 +1,6 @@
 class NewsAgent
 {
-	// static url = "https://forum.eurofurence.org/index.php/board,6.0.html?action=.xml;sa=recent;limit=6";
-	static url = "http://localhost/board,6.0.html.xml";
+	static url = "https://forum.eurofurence.org/index.php/board,6.0.html?action=.xml;sa=recent;limit=6";
 	static subjectLength = 32;
 
 	static async fetch()
@@ -43,7 +42,7 @@ class NewsAgent
 			) /1000 ;
 
 			// define subject
-			let subject = 
+			let subject =
 				subject_raw.length <= NewsAgent.subjectLength ? 
 				subject_raw : 
 				subject_raw.substr(0, subject_raw.lastIndexOf(" ", NewsAgent.subjectLength)) + "…";
@@ -57,5 +56,21 @@ class NewsAgent
 		// console.info("[EF-Web NewsAgent] Results:", ret);
 
 		return ret;
+	}
+}
+
+// must be here because EF severs don't allow inline scripts
+window.onload = async () => 
+{
+	const items = await NewsAgent.fetch();
+
+	// prepare news div
+	news.innerText = items.length === 0? "error loading announcements :(" : "";
+
+	// fill news div
+	for (let i = 0; i < items.length; i++)
+	{
+		const item = items[i];
+		news.innerHTML += `<article><a href="${item.link}" target="_blank" data-lastmodified="${item.timestamp}"><cite>${item.subject}</cite><time>${item.time}</time></a></article>`;
 	}
 }
