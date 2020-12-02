@@ -39,7 +39,7 @@ class NewsAgent
 				+time.substr(0, 2),		// day
 				+time.substr(12, 2),	// hour
 				+time.substr(15, 2)		// minute
-			) /1000 ;
+			) / 1000;
 
 			// define subject
 			let subject =
