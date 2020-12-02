@@ -149,7 +149,7 @@ header("Content-Type: text/html; charset=UTF-8");
 		</nav>
 		<main>
 			<header>
-				<div id="news">loading latest announcements ...</div>
+				<div id="news">loading latest announcements …</div>
 			</header>
 			<div id="content">
 				<?= $core->get_content() ?>
@@ -157,23 +157,6 @@ header("Content-Type: text/html; charset=UTF-8");
 		</main>
 
 		<script src="js/newsagent.js"></script>
-		<script>
-			window.onload = async () => 
-			{
-				const items = await NewsAgent.fetch();
-				console.log(items);
-
-				// prepare news div
-				news.innerText = items.length === 0? "error loading announcements :(" : "";
-
-				// fill news div
-				for (let i = 0; i < items.length; i++)
-				{
-					const item = items[i];
-					news.innerHTML += `<article><a href="${item.link}" target="_blank"><cite>${item.subject}</cite><time>${item.time}</time></a></article>`;
-				}
-			}			
-		</script>
 	</body>
 </html>
 
