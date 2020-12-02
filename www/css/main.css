@@ -27,6 +27,16 @@ html {
 	left: 5px;
 	padding: 0 4px;
 }
+#EFWebCoreAutoExport {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99999;
+	padding: 10px;
+	background: #000;
+	color: #fff;
+}
 
 body {
 	display: flex;
