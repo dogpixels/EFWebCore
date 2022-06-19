@@ -419,8 +419,7 @@ class EFWebCore
 	{
 		// construct target path
 		$path = 
-		$this->config->staticOut->path .
-		($this->path === $this->config->defaults->rootPage ? "" : $this->path . "/");
+		$this->config->staticOut->path . $this->path . "/";
 
 		// ensure target path exists
 		if (!file_exists($path))
@@ -473,6 +472,12 @@ class EFWebCore
 					dircopy($source, $target);
 				}
 			}
+		}
+
+		// if home, copy pages/home/index.html to pages/index.html to catch ways to access this page, / and /home.
+		if ($this->path === $this->config->defaults->rootPage)
+		{
+			copy($path . $file, $this->config->staticOut->path . $file);
 		}
 	}
 
