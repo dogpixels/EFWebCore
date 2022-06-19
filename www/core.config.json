@@ -1,17 +1,17 @@
 {
 	"convention": 
 	{
-		"year": "2019",
-		"number": "25",
-		"ordinal": "25th",
-		"theme": "Fractures in Time",
+		"year": "2300",
+		"number": "100",
+		"ordinal": "100th",
+		"theme": "This is a Test",
 		"themeColor": "#ff9922",
 		"location": "Estrel Hotel, Berlin, Germany",
 		"charity": "(TBA!)",
 		"goh": "(TBA!)",
-		"start": "2019-08-14",
-		"end": "2019-08-17",
-		"opening": "2019-08-14T17:00:00+02:00"
+		"start": "2300-12-30",
+		"end": "2300-12-31",
+		"opening": "2300-12-31T17:00:00+02:00"
 	},
 
 	"defaults":
@@ -56,7 +56,7 @@
 	"staticOut": 
 	{
 		"enabled": true,
-		"targetBase": "https://wwwtest.eurofurence.org/",
+		"targetBase": "https://wwwtest.eurofurence.org/ef27/",
 		"path": "_deploy/"
 	},
 
