@@ -1,7 +1,7 @@
-# Website Base
+# Eurofurence Website Base
 
 Version: 1.0
-Last update: 26.10.2020
+Last update: 14.06.2022
 
 ## Requirements
 
@@ -11,4 +11,9 @@ Last update: 26.10.2020
 
 ## Installation
 
-* navigate a cli to the root directory and run `docker-compose up -d`.
+* Navigate a cli to the root directory and run `docker-compose up -d`.
+
+## Usage
+
+* To use the static site generation feature, enable "staticOut" option in core.config.json.
+* To automate an export of all pages, call any page with ?export attached to the url.

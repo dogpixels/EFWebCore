@@ -310,7 +310,7 @@ class EFWebCore
 
 	/**
 	 * If config.staticOut is enabled, write output cache to file under
-	 * config.staticOut.path. If $_GET["export"] is set, then 
+	 * config.staticOut.path. If $_GET["export"] is set, then automate each visiting page.
 	 * @since 4.00
 	 */
 	public function end()
