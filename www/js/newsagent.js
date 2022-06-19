@@ -60,7 +60,7 @@ class NewsAgent
 }
 
 // must be here because EF severs don't allow inline scripts
-window.onload = async () => 
+window.addEventListener("load", async () => 
 {
 	const items = await NewsAgent.fetch();
 
@@ -73,4 +73,6 @@ window.onload = async () =>
 		const item = items[i];
 		news.innerHTML += `<article><a href="${item.link}" target="_blank" data-lastmodified="${item.timestamp}"><cite>${item.subject}</cite><time>${item.time}</time></a></article>`;
 	}
-}
+
+	document.body.dispatchEvent(new CustomEvent("newsLoaded"));
+});
