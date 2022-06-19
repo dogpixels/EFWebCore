@@ -29,6 +29,7 @@ class EFWebCore
 
 		// ensure correct path settings format
 		$this->config->staticOut->path = trim($this->config->staticOut->path, "/") . "/";
+		$this->config->staticOut->targetBase = trim($this->config->staticOut->targetBase, "/") . "/";
 		$this->config->defaults->pagesDirectory = trim($this->config->defaults->pagesDirectory, "/") . "/";
 
 		// determine page property key
