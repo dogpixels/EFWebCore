@@ -1,8 +1,7 @@
-<?php 
-include("core.php");
-$core = new EFWebCore("core.config.json");
-
-header("Content-Type: text/html; charset=UTF-8");
+<?php
+	header("Content-Type: text/html; charset=UTF-8");
+	include("core.php");
+	$core = new EFWebCore("core.config.json");
 ?>
 
 <!DOCTYPE html>
@@ -140,24 +139,80 @@ header("Content-Type: text/html; charset=UTF-8");
 		}
 		</script>
 
+		<link rel="stylesheet" href="css/uikit.min.css" />
 		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/responsive.css" />
+		<link rel="stylesheet" href="css/theme.css" />
 	</head>
 
 	<body>
-		<nav>
-			<?= $core->get_menu() ?>
-		</nav>
-		<main>
-			<header>
-				<div id="news">loading latest announcements …</div>
-			</header>
-			<div id="content">
-				<?= $core->get_content() ?>
-			</div>
-		</main>
+		<header>
+			<h1><span class="ef-logo"></span>Eurofurence <?= $core->current->number ?></h1>
+		</header>
+		<div class="flex-container">
+			<input type="checkbox" id="nav-state" />
+			<label for="nav-state" id="nav-button"></label>
+			<nav>
+				<?= $core->get_menu() ?>
+			</nav>
 
+			<main class="flex-1">
+				<div id="news" class="js-disabled">JavaScript required to view the latest announcements from Eurofurence.</div>
+				<div id="content">
+					<?= $core->get_content() ?>
+				</div>
+			</main>
+		</div>
+		
+		<footer>
+			<section>
+				<h3>Eurofurence <?= $core->current->number ?></h3>
+				<span><?= $core->current->theme ?></span>
+				<p>
+					Estrel Hotel, Berlin, Germany<br />
+					<?= $core->current->start ?> &ndash; <?= $core->current->end ?>
+				</p>
+			</section>
+			
+			<section>
+				<h3>Find us on</h3>
+				<div class="uk-button-group">
+					<!-- <a href="home" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Homepage" uk-icon="home"></a> -->
+					<a target="_blank" href="https://app.eurofurence.org/" class="uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="iOS & Android" uk-icon="phone"></a>
+					<a target="_blank" href="https://www.twitter.com/eurofurence" class="uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Twitter" uk-icon="twitter"></a> 
+					<a target="_blank" href="https://www.facebook.com/eurofurence" class="uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Facebook" uk-icon="facebook"></a> 
+					<a target="_blank" href="https://vimeo.com/eurofurence" class="uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Vimeo" uk-icon="vimeo"></a>
+					<a target="_blank" href="https://discord.com/invite/VMESBMM" class="uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Discord" uk-icon="discord"></a>
+				</div>
+			</section>
+
+			<section>
+				<h3>Convention Network</h3>
+				<div id="links" class="js-disabled">
+					JavaScript required to view links to other conventions.
+				</div>
+			</section>
+
+			<section>
+				<h3>Help</h3>
+				<ul class="uk-list">
+					<li><a href="https://help.eurofurence.org/contact" target="_blank"><span uk-icon="icon:mail" class="ef-uk-icon-lift"></span>Contact Us</a></li>
+					<li><a href="https://help.eurofurence.org/faq" target="_blank"><span uk-icon="icon:question" class="ef-uk-icon-lift"></span>Frequently Asked Questions (FAQ)</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Legal</h3>
+				<ul class="uk-list">
+					<li><a href="https://help.eurofurence.org/legal/imprint" target="_blank"><span uk-icon="icon:bookmark" class="ef-uk-icon-lift"></span>Imprint &amp; Legal Notice</a></li>
+					<li><a href="https://help.eurofurence.org/legal/privacy" target="_blank"><span uk-icon="icon:lock" class="ef-uk-icon-lift"></span>Privacy Statement</a></li>
+					<li><a href="website"><span uk-icon="icon:heart" class="ef-uk-icon-lift"></span>Site Attributions</a></li>
+				</ul>
+			</section>
+		</footer>
+		<script src="js/uikit.min.js"></script>
+		<script src="js/uikit-icons.min.js"></script>
 		<script src="js/newsagent.js"></script>
 	</body>
 </html>
-
 <?php $core->end(); ?>

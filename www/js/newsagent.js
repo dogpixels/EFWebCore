@@ -62,16 +62,36 @@ class NewsAgent
 // must be here because EF severs don't allow inline scripts
 window.addEventListener("load", async () => 
 {
-	const items = await NewsAgent.fetch();
+	// indicate loading activity
+	news.classList.remove("js-disabled");
+	news.innerText = "loading latest announcements …";
 
-	// prepare news div
-	news.innerText = items.length === 0? "error loading announcements :(" : "";
-
-	// fill news div
-	for (let i = 0; i < items.length; i++)
+	// fetch news
+	try
 	{
-		const item = items[i];
-		news.innerHTML += `<article><a href="${item.link}" target="_blank" data-lastmodified="${item.timestamp}"><cite>${item.subject}</cite><time>${item.time}</time></a></article>`;
+		const items = await NewsAgent.fetch();
+
+		// prepare news div
+		if (items.length !== 0)
+		{
+			news.innerText = "";
+		}
+		else
+		{
+			news.innerText = "<error loading announcements>";
+		}
+
+		// fill news div
+		for (let i = 0; i < items.length; i++)
+		{
+			const item = items[i];
+			news.innerHTML += `<article><a href="${item.link}" target="_blank" data-lastmodified="${item.timestamp}"><cite>${item.subject}</cite><time>${item.time}</time></a></article>`;
+		}
+	}
+	catch(ex)
+	{
+		console.warn(ex);
+		news.innerText = "<error loading announcements>";
 	}
 
 	document.body.dispatchEvent(new CustomEvent("newsLoaded"));

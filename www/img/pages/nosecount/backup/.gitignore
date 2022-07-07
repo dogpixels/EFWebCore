@@ -1,0 +1,6 @@
+.idea
+archive
+# Will be created during generation and contains only generated files
+svg
+view.html
+*.local.php

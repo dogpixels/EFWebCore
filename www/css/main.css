@@ -5,57 +5,8 @@ html {
 	background: #333;
 	color: #fff;
 }
-
-.debug {
-	display: block;
-	position: relative;
-	padding: 8px;
-	font-family: monospace;
-	border: 1px solid orange;
-}
-.debug > h3 {
-	position: absolute;
-	right: 8px;
-	margin-top: 0;
-}
-.debug:before {
-	content: "debug";
-	color: orange;
-	background: #333;
-	position: absolute;
-	top: -.6em;
-	left: 5px;
-	padding: 0 4px;
-}
-#EFWebCoreAutoExport {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 99999;
-	padding: 10px;
-	background: #000;
+h1, h2, h3, h4, h5, h6 {
 	color: #fff;
-}
-
-body {
-	display: flex;
-}
-nav, main {
-	border: 1px solid whitesmoke;
-}
-main {
-	flex: 1;
-	min-width: 0;
-}
-nav {
-	padding-right: 20px;
-}
-#content {
-	padding: 20px 10px;
-}
-#content img {
-	max-width: 100%;
 }
 
 a {
@@ -64,7 +15,7 @@ a {
 a:hover {
 	color: orange;
 }
-a[href^="http"]:after {
+a[href^="http"]:not(.uk-icon-button):after {
     display: inline-block;
     width: 14px;
     height: 10px;
@@ -75,6 +26,67 @@ a[href^="http"]:after {
     background-repeat: no-repeat;
 	background-size: contain;
 }
+
+/* flex layout utility */
+.flex-container {
+	display: flex;
+}
+.flex-1 {
+	flex: 1;
+}
+
+/* body area */
+header h1 {
+	font-size: 4em;
+	letter-spacing: 2px;
+	overflow: hidden;
+}
+.ef-logo {
+	display: inline-block;
+	position: relative;
+	top: 2px;
+	width: 0.8em;
+	height: 0.8em;
+	margin: 0 8px;
+	background: url("../img/logo.png") no-repeat;
+	background-size: contain;
+}
+nav {
+	overflow: hidden;
+	white-space: nowrap;
+}
+nav > * {
+	padding-right: 20px;
+}
+nav h1 {
+	margin: 0 4px 0;
+}
+nav li {
+	list-style: none;
+}
+main {
+	border-left: 1px solid white;
+	padding: 0 20px;
+	overflow: hidden;
+}
+#content * {
+	max-width: 100%;
+}
+
+/* news */
+#news {
+	display: flex;
+	height: calc(2em + 14px);
+	background-color: #000;
+}
+#news article a {
+	display: inline-block;
+	border: 1px solid gray;
+	padding: 4px 8px;
+}
+#news cite, #news time {
+	display: block;
+}
 #news a {
 	position: relative;
 }
@@ -83,9 +95,56 @@ a[href^="http"]:after {
 	left: auto;
 	right: 0;
 	bottom: 4px;
-
 }
 
+/* footer */
+footer {
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+footer > section {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	padding: 30px 20px;
+	text-align: left;
+}
+footer section ~ section::before {
+	display: inline-block;
+	position: absolute;
+	top: 30px;
+	left: -2px;
+	height: 150px;
+	content: " ";
+	border-left: 1px solid #e4e4e4;
+	vertical-align: middle;
+  }
+footer .uk-button-group {
+	display: inline-flex;
+	vertical-align: middle;
+	position: relative;
+}
+footer .uk-button-group a ~ a{
+	margin-left: 6px; 
+}
+
+/* uikit overrides */
+span.uk-icon {
+	margin-right: 0.25em;
+}
+span.ef-uk-icon-lift {
+	position: relative;
+	top: -1px;
+}
+
+/* convention links */
+#links {
+	display: block;
+	width: 200px;
+	height: 80px;
+}
+
+/* new contents marker */
 .new:after {
 	display: block;
 	content: "new";
@@ -99,15 +158,51 @@ a[href^="http"]:after {
 	left: 0;
 }
 
-/* news */
-#news {
-	display: flex;
+/* js-disabled */
+.js-disabled {
+	font-family: monospace;
+	padding: 3px 8px;
+	font-weight: 600;
+	background-color: #000;
+	color: white;
 }
-#news article  a {
-	display: inline-block;
-	border: 1px solid gray;
-	padding: 4px 8px;
-}
-#news cite, #news time {
+
+/* administrative */
+.debug {
 	display: block;
+	position: relative;
+	padding: 8px;
+	font-family: monospace;
+	border: 1px solid orange;
+	color: #fff;
+	background: transparent;
+	font-size: 0.75em;
+	line-height: 1em;
+	overflow: visible;
+}
+.debug > h3 {
+	font-size: 1em;
+	position: absolute;
+	right: 8px;
+	margin-top: 0;
+}
+.debug:before {
+	content: "debug";
+	color: #000;
+	background: orange;
+	position: absolute;
+	top: -.75em;
+	left: 6px;
+	padding: 1px 4px;
+	border-radius: 2px;
+}
+#EFWebCoreAutoExport {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9;
+	padding: 10px;
+	background: #000;
+	color: #fff;
 }
