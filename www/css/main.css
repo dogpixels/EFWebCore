@@ -136,6 +136,9 @@ span.ef-uk-icon-lift {
 	position: relative;
 	top: -1px;
 }
+[class*="uk-column-"] > * {
+	break-inside: avoid-column;
+}
 
 /* convention links */
 #links {
