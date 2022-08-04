@@ -7,10 +7,11 @@
 		"theme": "Lorem Ipsum Dolor Sit Amet",
 		"themeColor": "#ff9922",
 		"location": "Estrel Hotel, Berlin, Germany",
-		"charity": "(TBA!)",
-		"goh": "(TBA!)",
+		"dates": "December 30th to 31st, 2300",
 		"start": "2300-12-30",
 		"end": "2300-12-31",
+		"charity": "(TBA!)",
+		"goh": "(TBA!)",
 		"opening": "2300-12-31T17:00:00+02:00"
 	},
 
