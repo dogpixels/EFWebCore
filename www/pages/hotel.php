@@ -1,14 +1,14 @@
 <h1>Our Venue - Estrel Hotel Berlin</h1>
-<section class="just">
-	<div class="two_columns just">
-		<div class="retain">
+<section>
+	<div class="uk-column-1-2@l">
+		
 			<p><strong>Our venue this year is once more the amazing Estrel Hotel in Berlin. It features a large amount of rooms, restaurants, and a lot of convention space to roam around it. The Estrel offers a welcoming, home away from home atmosphere all set up for Eurofurence.</strong></p>
 			<p>The Estrel Hotel Berlin is the biggest convention center and hotel in Europe. Home to 1,125 comfortable rooms and luxury suites, the Estrel offers us all the convention space we need and then some. Arriving at the hotel you enter through the spacious lobby which makes you feel right at home. The lobby has plenty of space to lounge around, meet up with friends, have a drink or just enjoy all the fursuits passing by. The Estrel has everything you need located within the hotel and convention center so that you’ll never need to stray far from the action.</p>
 			<p>Directly connected to the hotel is the Estrel convention center. Are you worried EF will run out of space? Worry not! This convention center features a main hall that alone will host 6000 people comfortably. In addition to the main hall, the Estrel has 60 more convention rooms for a grand total of 15,000 m² convention space. Each convention room features all the latest techniques and climate control so it’ll be no problem to attend events in fursuit. As if all of this wasn’t enough space, the hotel also connects to the Estrel Festival Center which hosts daily live shows.</p>
-			<img src="img/pages/hotel/header.jpg" alt="" />
-		</div>
+			<img src="pages/hotel/header.jpg" alt="" />
+		
 	
-		<div class="retain left">
+		<div>
 			<h3>Estrel Hotel Berlin</h3>
 			<p>
 				Sonnenallee 225<br/>
@@ -27,7 +27,7 @@
 				<li>1,125 rooms and suites</li>
 				<li>3 restaurants, 3 bars, and an outside garden with a snack pavilion</li>
 				<li>Wellness center with sauna and a fitness center available 24h</li>
-				<li>In­hotel ATM, laundry service and bicycle hire</li>
+				<li>In-hotel ATM, laundry service and bicycle hire</li>
 				<li>Safes available at front desk</li>
 			<ul>
 		</div>
@@ -40,11 +40,11 @@
 <section>
 	<h2>Hotel Rooms</h2>
 
-	<div class="two_columns left">
-		<div class="retain bordered mirror uk-card uk-card-default uk-margin-bottom retain" uk-scrollspy="cls:uk-animation-fade">
-			<h3 class="underlined noborder caps">Standard Room</h3>
+	<div class="uk-column-1-2@l uk-margin-bottom">
+		<div class="uk-card uk-card-default uk-margin-bottom" uk-scrollspy="cls:uk-animation-fade">
 			<div class="uk-card-body">
-				<ul class="listitems">
+				<h3 class="uk-card-title">Standard Room</h3>
+				<ul>
 					<li>27 m²</li>
 					<li>Writing Desk</li>
 					<li>Phone with answering machine</li>
@@ -59,35 +59,33 @@
 			</div>
 			<div class="uk-card-footer">
 				<strong>Price:</strong>
-				<ul class="listitems">
+				<ul>
 					<li>Single person &euro;&nbsp;115,00/Night</li>
 					<li>Two persons &euro;&nbsp;140,00/Night</li>
 					<li>Three persons &euro;&nbsp;215,00/Night</li>
 				</ul>
 			</div>
-			<h3 class="underlined upsidedown shadowed caps">Standard Room</h3>
 		</div>
-		<div class="retain bordered mirror">
-			<h3 class="underlined noborder caps">Deluxe Room</h3>
+		<div class="uk-card uk-card-default uk-margin-bottom" uk-scrollspy="cls:uk-animation-fade">
 			<div class="uk-card-body">
-				<ul class="listitems">
-				<li>Same as Standard Room, but 34 m²</li>
+				<h3 class="uk-card-title">Deluxe Room</h3>
+				<ul>
+					<li>Same as Standard Room, but 34 m²</li>
 				</ul>
 			</div>
 			<div class="uk-card-footer">
 				<strong>Price:</strong>
-				<ul class="listitems">
+				<ul>
 					<li>Single person &euro;&nbsp;130,00/Night</li>
 					<li>Two persons &euro;&nbsp;160,00/Night</li>
 					<li>Three persons &euro;&nbsp;230,00/Night</li>
 				</ul>
 			</div>
-			<h3 class="underlined upsidedown shadowed caps">Deluxe Room</h3>
 		</div>
-		<div class="retain bordered mirror">
-			<h3 class="underlined noborder caps">Junior Suite</h3>
+		<div class="uk-card uk-card-default uk-margin-bottom" uk-scrollspy="cls:uk-animation-fade">
 			<div class="uk-card-body">
-				<ul class="listitems">
+				<h3 class="uk-card-title">Junior Suite</h3>
+				<ul>
 					<li>49 m² to 54 m²</li>
 					<li>Same furniture as Deluxe room, but also includes:</li>
 					<li>Safe</li>
@@ -96,18 +94,17 @@
 			</div>
 			<div class="uk-card-footer">
 				<strong>Price:</strong>
-				<ul class="listitems">
+				<ul>
 					<li>Single person &euro;&nbsp;178,00/Night</li>
 					<li>Two persons &euro;&nbsp;198,00/Night</li>
 					<li>Three persons &euro;&nbsp;260,00/Night</li>
 				</ul>
 			</div>
-			<h3 class="underlined upsidedown shadowed caps">Junior Suite</h3>
 		</div>
-		<div class="retain bordered mirror">
-			<h3 class="underlined noborder caps">Deluxe Suite</h3>
+		<div class="uk-card uk-card-default uk-margin-bottom" uk-scrollspy="cls:uk-animation-fade">
 			<div class="uk-card-body">
-				<ul class="listitems">
+				<h3 class="uk-card-title">Deluxe Suite</h3>
+				<ul>
 					<li>57 m² to 85 m²</li>
 					<li>Same furnishings as Junior suite, but also includes:</li>
 					<li>shower and bath tub</li>
@@ -116,19 +113,18 @@
 			</div>
 			<div class="uk-card-footer">
 				<strong>Price:</strong>
-				<ul class="listitems">
+				<ul>
 					<li>Single person &euro;&nbsp;198,00/Night</li>
 					<li>Two persons &euro;&nbsp;228,00/Night</li>
 					<li>Three persons &euro;&nbsp;290,00/Night</li>
 				</ul>
 			</div>
-			<h3 class="underlined upsidedown shadowed caps">Deluxe Suite</h3>
 		</div>
 	</div>
 
 	<div>
 		<h2>About the Prices</h2>
-		<ul class="listitems">
+		<ul>
 			<li>All prices here are only provided as a convenience service for your reference. We accept no liability in case of discrepancies to the rates listed in the actual hotel reservation confirmation.</li>
 			<li>Prices are always per room, not per person</li>
 			<li>Prices listed include sales tax, the Berlin city tax, and full breakfast</li>
@@ -141,53 +137,67 @@
 
 <hr />
 
-<section class="just">
+<section>
 	<h2>Restaurants</h2>
 	<p>Next to offering us all this space, the Estrel is also home to several restaurants offering a wide variety of food. With three restaurants to choose from, you’re sure to find something to your liking.</p>
-	<p class="uk-visible@m"><img src="img/pages/hotel/restaurants.jpg" alt="Restaurants inside the hotel" /></p>
+	<p class="uk-visible@m"><img src="pages/hotel/restaurants.jpg" alt="Restaurants inside the hotel" /></p>
 
-	<div class="four_columns uk-grid-small uk-grid-match uk-child-width-1-2@l uk-child-width-1-4@xl" uk-grid>
-		<div class="retain bordered uk-card uk-card-default uk-card-body" uk-scrollspy="cls:uk-animation-fade">
-			<h3 class="underlined noborder caps uk-card-title">The Leaf</h3>
-			<p>The leaf is housed in an open mezzanine located in the hotel atrium. Here you can start your day with our breakfast buffet serving fresh breakfast rolls, a variety of healthy muesli cereals, fresh fruit and delicious egg dishes.</p>
+	<div class="uk-grid-small uk-grid-match uk-child-width-1-2@l uk-child-width-1-4@xl" uk-grid>
+		<div>
+			<div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls:uk-animation-fade">
+				<h3 class="uk-card-title">The Leaf</h3>
+				<p>The leaf is housed in an open mezzanine located in the hotel atrium. Here you can start your day with our breakfast buffet serving fresh breakfast rolls, a variety of healthy muesli cereals, fresh fruit and delicious egg dishes.</p>
+			</div>
 		</div>
-		<div class="retain bordered uk-card uk-card-default uk-card-body" uk-scrollspy="cls:uk-animation-fade">
-			<h3 class="underlined noborder caps uk-card-title">Grill</h3>
-			<p>Our elegant restaurant "Grill" features premium steak quality. We serve a large selection of grilled specialties. Our offering includes fish, burgers and of course first-class beef steaks.</p>
-			<p><i>Opening hours:</i> Monday to Sunday 12pm to 5pm and 6pm to 10:30pm</p>
+		<div>
+			<div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls:uk-animation-fade">
+				<h3 class="uk-card-title">Grill</h3>
+				<p>Our elegant restaurant "Grill" features premium steak quality. We serve a large selection of grilled specialties. Our offering includes fish, burgers and of course first-class beef steaks.</p>
+				<p><i>Opening hours:</i> Monday to Sunday 12pm to 5pm and 6pm to 10:30pm</p>
+			</div>
 		</div>
-		<div class="retain bordered uk-card uk-card-default uk-card-body" uk-scrollspy="cls:uk-animation-fade">
-			<h3 class="underlined noborder caps uk-card-title">Portofino</h3>
-			<p>Unwind in the company of old friends. The Portofino's relaxed atmosphere is underscored by Mediterranean cuisine and the taste of "La Dolce Vita". Our seasonal menu features traditional Italian dishes created with great care before your eyes by our skilled chefs in the show kitchen.</p>
-			<p><i>Opening hours:</i> Monday to Saturday 11:30 am to midnight</p>
+		<div>
+		<div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls:uk-animation-fade">
+				<h3 class="uk-card-title">Portofino</h3>
+				<p>Unwind in the company of old friends. The Portofino's relaxed atmosphere is underscored by Mediterranean cuisine and the taste of "La Dolce Vita". Our seasonal menu features traditional Italian dishes created with great care before your eyes by our skilled chefs in the show kitchen.</p>
+				<p><i>Opening hours:</i> Monday to Saturday 11:30 am to midnight</p>
+			</div>
 		</div>
-		<div class="retain bordered uk-card uk-card-default uk-card-body" uk-scrollspy="cls:uk-animation-fade">
-			<h3 class="underlined noborder caps uk-card-title">Estrel-Stube</h3>
-			<p>Our rustic Estrel-Stube offers you hearty German cuisine. Take a seat on our wooden terrace and enjoy a culinary stroll through the country’s most famous dishes. Whether you’re in the mood for beef goulash with mushrooms and "Spätzle" noodles to "Leberkäse", you’ll find our menu choices simply scrumptious.</p>
-			<p><i>Opening hours:</i> Monday to Sunday 5:00 pm to midnight</p>
+		<div>
+			<div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls:uk-animation-fade">
+				<h3 class="uk-card-title">Estrel-Stube</h3>
+				<p>Our rustic Estrel-Stube offers you hearty German cuisine. Take a seat on our wooden terrace and enjoy a culinary stroll through the country’s most famous dishes. Whether you’re in the mood for beef goulash with mushrooms and "Spätzle" noodles to "Leberkäse", you’ll find our menu choices simply scrumptious.</p>
+				<p><i>Opening hours:</i> Monday to Sunday 5:00 pm to midnight</p>
+			</div>
 		</div>
 	</div>
 </section>
 
 <hr />
 
-<section class="just">
+<section>
 	<h2>Bars</h2>
 	<p>So, where to go after dinner? You won't need to look far! The Estrel has three bars ready to offer you a cold drink.</p>
-	<p class="uk-visible@m"><img src="img/pages/hotel/bars.jpg" alt="Estrel main bar" /></p>
+	<p class="uk-visible@m"><img src="pages/hotel/bars.jpg" alt="Estrel main bar" /></p>
 
-	<div class="three_columns uk-grid-small uk-grid-match uk-child-width-1-3@m" uk-grid>	
-		<div class="retain bordered uk-card uk-card-default uk-card-body" uk-scrollspy="cls:uk-animation-fade">
-			<h3 class="underlined noborder caps uk-card-title">Atriumbar</h3>
-			<p>The Atriumbar is the prime meeting spot in our bright, light-filled hotel lobby. The bar serves light snacks and non-alcoholic beverages as well as more potent liquors and mixes.</p>
+	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@m" uk-grid>	
+		<div>
+			<div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls:uk-animation-fade">
+				<h3 class="uk-card-title">Atriumbar</h3>
+				<p>The Atriumbar is the prime meeting spot in our bright, light-filled hotel lobby. The bar serves light snacks and non-alcoholic beverages as well as more potent liquors and mixes.</p>
+			</div>
 		</div>
-		<div class="retain bordered uk-card uk-card-default uk-card-body" uk-scrollspy="cls:uk-animation-fade">
-			<h3 class="underlined noborder caps uk-card-title">Pianobar</h3>
-			<p>Let yourself unwind and enjoy the Pianobar, found by walking through the Atrium from the hotel lobby. The Pianobar features live piano music and is open from 6pm until 10:30pm.</p>
+		<div>
+			<div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls:uk-animation-fade">
+				<h3 class="uk-card-title">Pianobar</h3>
+				<p>Let yourself unwind and enjoy the Pianobar, found by walking through the Atrium from the hotel lobby. The Pianobar features live piano music and is open from 6pm until 10:30pm.</p>
+			</div>
 		</div>
-		<div class="retain bordered uk-card uk-card-default uk-card-body" uk-scrollspy="cls:uk-animation-fade">
-			<h3 class="underlined noborder caps uk-card-title">Smokers' Lounge &amp; Bar</h3>
-			<p>Provides a relaxed atmosphere for smokers and non-smokers alike. The smokers' lounge is open from 7am until 11pm. The bar at the lounge opens at 6pm.</p>
+		<div>
+			<div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls:uk-animation-fade">
+				<h3 class="uk-card-title">Smokers' Lounge &amp; Bar</h3>
+				<p>Provides a relaxed atmosphere for smokers and non-smokers alike. The smokers' lounge is open from 7am until 11pm. The bar at the lounge opens at 6pm.</p>
+			</div>
 		</div>
 	</div>
 </section>
@@ -197,7 +207,7 @@
 <section>
 	<h2>Exterior Hotel Area</h2>
 	<p>The Estrel entrance is opposite our Summer Garden on the water – the premiere outdoor meeting spot on Sonnenallee. The Summer Garden is home to majestic, shady chestnut trees, a terrace-shaped stairway offering amphitheatre-like seating, a fountain, a snack pavilion and a landing pier. We will also host the daily campfire there, where folks can relax and enjoy a nice beer.</p>
-	<p class="uk-visible@m"><img src="img/pages/hotel/summergarden.jpg" alt="Hotel Exterior" /></p>
+	<p class="uk-visible@m"><img src="pages/hotel/summergarden.jpg" alt="Hotel Exterior" /></p>
 </section>
 
 <hr />

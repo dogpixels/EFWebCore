@@ -8,8 +8,8 @@
 
 <hr />
 
-<section class="two_columns">
-	<div class="retain">
+<section class="uk-column-1-2@l">
+	<div>
 		<h2>Artist Signup</h2>
 		
 		<p>To register as an artist for the EF Art Show, please read the following document,
@@ -26,10 +26,10 @@
 		
 		<p><strong>By registering, you agree to observe the rules in their entirety.</strong></p>
 		
-		<p><strong>The deadline for applications is the <em>31st of March</em>.</strong> Applications after
+		<p><strong>The deadline for applications is the <em>31st of March, <?= $this->current->year ?></em>.</strong> Applications after
 		that date are possible, but there may not be any free space in the show.</p>
 	</div>
-	<div class="retain">
+	<div>
 		<h2>Artist Rules</h2>
 		
 		<p>Here are the full rules for the show. Yes, some of them are rather strict. We're sorry, there are legal considerations that govern some of them. We'll do our best to accommodate you nonetheless.</p>
@@ -38,7 +38,7 @@
 		  <li><a href="artshow/rules">Artist Rules</a></li>
 		</ul>
 	</div>
-	<div class="retain">
+	<div>
 		<h2>Artist Guide</h2>
 		
 		<p>This chapter will provide you with all the information that has not been covered by the signup
@@ -50,7 +50,7 @@
 		  <li><a href="artshow/guide">Artist Guide</a></li>
 		</ul>	
 	</div>
-	<div class="retain">
+	<div>
 		<h2>Bidder Information</h2>
 		
 		<p>Here, you will find the information for bidding on a piece in the Art Show.</p> 
@@ -70,7 +70,7 @@
 		  <li><a href="artshow/bidding">Art Show Bidding Rules</a></li>
 		</ul>
 	</div>
-	<div class="retain">
+	<div>
 		<p><strong>By bidding in the Art Show, you agree to these rules.</strong> Of course, you can visit the Art Show just for pleasure, and are not required to become a bidder.</p>	
 	</div>
 </section>

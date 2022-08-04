@@ -5,19 +5,19 @@
 
 <hr />
 
-<section class="two_columns just">
-	<div class="retain">
+<section class="uk-column-1-2@l">
+	<div>
 		<h3>Group pictures</h3>
 		<p>Usually, there are two group pictures scheduled: one for fursuiters only (as in: no bare human skin visible) and one for all attendees, either with or without fursuit. We will do our best to schedule both pictures at a time when there are little to no other events going on and we will have a tight schedule: Arrive on location, line up, click and exit all within the scheduled timeslot. So everybody who wants to join in should plan for that! We can not delay the actual "click" longer than a few seconds after the line up is done reasonably well or we would be there for hours. So if the schedule says "between 12:30 and 13:00" that means that the actual picture will be taken sometime within that half hour, as early as possible, so be there!</p>
 	</div>
 
-	<div class="retain">
+	<div>
 		<h3>Fursuit Photoshoot</h3>
 		<p>The fursuit photoshoot at EF is done a bit different than at other conventions: We don't just pop up a camera on a tripod and yell "next" every few seconds... we actually build up a themed set and have each suiter - or group - pose in several ways to get out more than one picture. Pictures are sorted and manually post-processed in Photoshop after the con to give studio quality results and hide minor costume malfunctions.</p>
 		<p>The downside of having decent pictures instead of "cookie-cutter" pictures is evident: it takes several minutes for every suiter so while we would love to, we simply cannot provide a timeslot for every suiter that attends EF and thus we have to do sign-ups.</p>
 	</div>
 
-	<div class="retain">
+	<div>
 		<h3>Fursuit Photoshoot Timeslot System</h3>
 		<p>To make the decision who gets a slot a bit more fair, we decided to divide the registration into equal blocks over several days. This way people can stand in shorter lines at more convenient times.</p>
 		<p>The actual sign-up times will be included in the convention schedule. Please note that every sign-up time will be for a matching timeslot only and since there are different lengths for the group slots and for the individual slots we can only offer you selection of the "hour", not the "minute" part, first come, first serve.</p>

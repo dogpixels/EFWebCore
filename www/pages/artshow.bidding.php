@@ -5,34 +5,26 @@
 
 <hr />
 
-<section class="two_columns just">
-	<div class="retain">
-		<h2><a class="anchor" id="bidnumber"></a>Register for a Bidder Number</h2>
-		
+<section class="uk-column-1-2@l">
+	<div>
+		<h2>Register for a Bidder Number</h2>
 		<p>The Eurofurence Art Show does not sell or buy art. It acts solely as mediator 
 		for sales from sellers to buyers. For this purpose, buyers need to register with 
 		their name, EF badge number, and contact details. The name and contact will be 
 		passed on to the seller for every confirmed sale, and the seller's contact data 
 		(as provided by artist or agent) will be passed to the buyer with the final 
 		receipts.</p> 
-		
 		<p>Please don't wait until the last second to register &mdash; we can handle only so many 
 		bidders per hour. Registration will be available during opening times, but not while 
 		closing, and not during the auction, so please make sure you are registered 
 		<i>beforehand</i>.</p>
-		
 		<p>Naturally, it is not necessary to register as a bidder to just visit the show.</p>
-		
 	</div>
-	<div class="retain">
-	
-		<h2><a class="anchor" id="howtobid"></a>How to bid</h2>
-		
+	<div>
+		<h2>How to bid</h2>
 		<p>At the Art Show registration, buyers will receive a copy of these rules and a sheet 
 		with bid stickers, which contain an anonymous bidder number.</p>
-		
-		<p><b>To bid on an exhibit</b>:</p>
-		
+		<p><strong>To bid on an exhibit</strong>:</p>
 		<ul>
 		  <li>The buyer writes his bid on a sticker.</li>
 		  <li>The bid must be in whole Euros.</li>
@@ -43,14 +35,11 @@
 		  <li>The buyer sticks the bid sticker to the bidsheet, in the first free bidding field.</li>
 		  <li>If there is no free bidding field left, the exhibit will go to auction, see below.</li>
 		</ul>
-		
 		<p>A buyer may get new bid stickers any time if he needs more stickers than available on a 
 		sheet. He/she can bid as often as desired on any "for sale" exhibit (if no bidding fields 
 		are left, further bidding must be taken to auction). There are exhibits which are not for 
 		sale, and cannot be bid on.</p>	
-		
-		<p><b>Important</b>:</p>
-		
+		<p><strong>Important</strong>:</p>
 		<ul>
 		  <li>A bid is a valid offer to buy, and must be honored.</li>
 		  <li>A bid sticker must not be removed from a bidsheet, or changed after bidding. In case of 
@@ -61,72 +50,52 @@
 		  exhibit for the purpose of raising the price, or bidding in another's name against that 
 		  person's will is prohibited.</li>
 		</ul>
-		
 	</div>
-	<div class="retain">  
-	
-		<h2><a class="anchor" id="closing"></a>Closing the Art Show</h2>
-		
+	<div>  
+		<h2>Closing the Art Show</h2>
 		<p>When the Art Show closes for good, every buyer gets the opportunity for final bids, until 
 		the exhibit in question goes to auction, or no more bids are offered. For this purpose, 
 		the Art Show team will close the show panel by panel (in the order of panel numbers) and 
 		call for final bids which must be placed on the spot. Once no more bids are offered, the 
 		panel counts as closed, the bidsheets are marked off, and no further changes are allowed.</p>
-		
 		<p>That means: It is useless to wait with bids until the show closes, or to "guard" an exhibit 
 		at closing time. To secure an exhibit, bid early, bid often to outdo competitors!</p>
-		
-		<p><b>Warning</b>: If people crowd the show, security may deem it necessary to close the room 
+		<p><strong>Warning</strong>: If people crowd the show, security may deem it necessary to close the room 
 		and restrict admittance to prevent damage to the exhibits, or even worse, damage to the 
 		health of attendees. This may prevent you from placing final bids. We're sorry for this 
 		possible inconvenience.</p> 
-		
 		<p>If you have no more bids to place during closing, please leave the show to prevent crowding.</p>
-		
 	</div>
-	<div class="retain">
-	
-		<h2><a class="anchor" id="auction"></a>Art Auction</h2>
-		
+	<div>
+		<h2>Art Auction</h2>
 		<p>The auction is the final opportunity to buy disputed exhibits which have generated so much interest
 		that the bidsheet is filled with bids. It is a voice auction, moderated by an auctioneer. Buyers can 
 		bid with their bidder number or their EF badge number. There is no upper limits to bids, but remember 
 		that you need to pay for the item at the convention in cash (see "Sales").</p>
-		
 		<p>If you have bid on a piece that went to auction, make sure you attend this event, no matter 
 		whether your bid was the last on the bidsheet or not. Anybody may bid on any piece, not just 
 		the previous bidders, so you may lose the object of your desire! If no further bids are made 
 		beyond the bidsheet's, the exhibit goes to the last bidder on the bidsheet.</p>
-		
 		<p>Depending on the number of auctioned exhibits, this event may take some time. General audience 
 		and adult items are auctioned at the same event; there is no separate adult auction.</p>
-		
 	</div>
-	<div class="retain">
-	
-		<h2><a class="anchor" id="pickup"></a>Sales and Artwork Pickup</h2>
-		
+	<div>
+		<h2>Sales and Artwork Pickup</h2>
 		<p>Final winners of the art are announced by bulletin. The lists can be found in some appropriate 
 		place (most likely in front of the Art Show).</p>
-		
 		<p>Buyers must pick up their purchase at the designated art pickup times, and pay cash. Credit 
 		cards or cheques of any kind are not accepted. We will try to keep the lines as short as 
-		possible.</p>
-		
+		possible.</p>	
 		<p>If you do not pick up your items, we will try to contact you, but please save us this effort. 
 		Neither we nor the artist will be very pleased. Remember, it may not be possible (or safe) 
-		to send the art you bought by mail. The artists rely on you! Check the winners' lists!</p>
-		
+		to send the art you bought by mail. The artists rely on you! Check the winners' lists!</p>	
 		<p>If you are sure you have won a piece, but don't find your number on the winners' list or
 		are told at the counter that you haven't won it, speak up, so we can counter-check. The
 		Art Show involves a lot of manual work, with a lot of numbers. While we try to double- and
 		triple-check, mistakes are still possible.</p>
-		
 	</div>
-	<div class="retain">
-	
-		<h2><a class="anchor" id="tips"></a>Tips on bidding</h2>
-		
+	<div>
+		<h2>Tips on bidding</h2>
 		<ul>
 		  <li>The Art Show offers you "helper sheets" where you can write down the items you have bid on,
 		  the panels where they hang, and the amount you have bid. This is useful to keep an overview over
@@ -134,8 +103,8 @@
 		  <li>Keep in mind that you may win all the pieces you bid on, and have the necessary cash funds
 		  available.</li>
 		  <li>The Art Show supplies wood boards you can carry in the show, and write on, as well as pens.</li>
-		  <li>If you place a bid, <b>first</b> write the bid amount on the sticker (you have that wood
-		  board, remember) and <b>then</b> pull off the sticker and paste it to the bidsheet. It is difficult
+		  <li>If you place a bid, <strong>first</strong> write the bid amount on the sticker (you have that wood
+		  board, remember) and <strong>then</strong> pull off the sticker and paste it to the bidsheet. It is difficult
 		  to write on the panels if you first paste the bare sticker, and then try to scribble a number,
 		  because the panels have lots of holes.</li>
 		  <li>Write legible. Should go without saying.</li>
@@ -156,7 +125,6 @@
 		  <li>And once again, because it is important: <strong>Do not lose your bid stickers!</strong>
 		  Someone else may find it and use it to bid in your name.</li>
 		</ul>
-		
 	</div>
 </section>
 

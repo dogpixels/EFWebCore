@@ -1,72 +1,79 @@
-<section class="just">
-	<h1>Featured Artist: Caraid</h1>
-	<div class="artistabout">
-		<div class="artleft_web">
-			<a href="img/pages/website/caraid_01.jpg" data-lightbox="website" data-title="&quot;Breathe&quot;" rel="lightbox"><img class="as_prev" src="img/pages/website/caraid_01_s.jpg" alt="'Breathe' - artwork by Caraid" /></a>
-		</div>
-		<div class="artright_web">
-			Caraid is an artist from the Netherlands. Growing up, she decided to put her imaginative skills and affinity for drawing to good use in what was first a dedicated hobby and later became her career. While at work as a game artist she started dabbling in furry art in her spare time and joined the fandom under her current name in 2015. Despite being a relatively new face she quickly found herself in the company of some of the kindest, most generous and most interesting people she'd ever met and decided that she was here to stay.
-			<br/>
-			<ul>
-				<li><a href="http://www.furaffinity.net/user/caraid/" title="Visit Caraid's gallery on FurAffinity" target="_blank">Caraid's gallery on FurAffinity</a></li>
-				<li><a href="https://twitter.com/CaraidArt" title="Follow Caraid on Twitter" target="_blank">Caraid on Twitter</a></li>
+<section>
+	<h1>
+		Featured Artist: ArtYeen
+		<a target="_blank" href="https://www.twitter.com/artyeen" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="ArtYeen @ Twitter" uk-icon="twitter"></a>
+	</h1>
+	<p class="uk-text-italic">she/they, coffee &amp; tea fuelled part-time artist, creating art of different styles, themes and media</p>
+	
+	<div id="artyeen-gallery">
+		<div uk-slideshow="autoplay: true; autoplay-interval: 3000; animation: pull; ratio: 3:1">
+			<ul class="uk-slideshow-items">
+				<?php
+				for ($i = 0; $i <= 6; $i++) { ?>
+					<li>
+						<div uk-lightbox>
+							<a href="pages/website/featured/<?= $i ?>.jpg">
+								<img src="pages/website/featured/<?= $i ?>_thumb.jpg" alt="Image by ArtYeen">
+							</a>
+						</div>
+					</li>
+				<?php } ?>
 			</ul>
-			<div>
-				<a href="img/pages/website/caraid_02.jpg" data-lightbox="website" data-title="&quot;Comfortable&quot;" rel="lightbox"><img class="as_prev" src="img/pages/website/caraid_02_s.jpg" alt="'Comfortable' - artwork by Caraid" /></a>
-			</div>
-		</div>	
+		</div>
 	</div>
 </section>
-<hr/>
-<section>
-	<h2>Special Thanks</h2>
-</section>
-<section class="three_columns">
-	<div class="ef-website-team boxshadowed bordered retain">
-		<a href="https://jcdump.com/" target="_blank">
-			<img class="ef-avatar" src="img/pages/website/avatar_jc.jpg" alt="Avatar of JC" />
-			<h3>J.C.</h3>
-			<span>Artwork (turtle) on main page</span>
-		</a>
+
+<hr />
+
+<section id="ef-badger" class="uk-column-1-2@l">
+	<div>
+		<h2>Eurofurence Badger Addon</h2>
+		<p>This brand-new browser addon will enhance your visit to the Eurofurence website by adding <span class="ef-badger-demo-new">new</span> badges to pages that have been updated since you last viewed them!</p>
+		<p>Available for <a href="https://addons.mozilla.org/firefox/addon/eurofurence-badger/" target="_blank">Mozilla Firefox</a> and <a href="https://chrome.google.com/" target="_blank">Google Chrome</a>.</p>
+	</div>
+	<div>
+		<h2>Third Party Attributions</h2>
+		<ul>
+			<li><a href="https://getuikit.com" target="_blank">UIkit</a> by <a href="https://yootheme.com/" target="_blank">YOOtheme GmbH</a> (<a href="https://github.com/uikit/uikit/blob/develop/LICENSE.md" target="_blank">license</a>)</li>
+			<li><a href="https://fonts.google.com/specimen/Permanent+Marker" target="_blank">Permanent Marker</a> by <a href="https://fontdiner.com/" target="_blank">Font Diner, Inc</a> (<a href="fonts/PermanentMarker-Regular.LICENSE.txt" target="_blank">license</a>)</li>
+		</ul>
 	</div>
 </section>
-<hr/>
-<section>
-	<h2>Third Party Attributions</h2>
-	<ul>
-		<li><a href="https://getuikit.com" target="_blank">UIkit by YOOtheme GmbH, getuikit.com</a> (<a href="https://github.com/uikit/uikit/blob/develop/LICENSE.md" target="_blank">license</a>)</li>
-	</ul>
-</section>
-<hr/>
+
+<hr />
+
 <section>
 	<h2>Website Team</h2>
 	<p>Please direct any comments, ideas or critique about our website to the following folks:</p>
-</section>
-<section class="three_columns">
-<?php
-	$members = [
-		// ['Name', 'Title', 'Image', 'Link'],
-		['Streifi', 'Director, Design, Code &amp; SEO', 'streifi.png', 'https://www.twitter.com/StreifiGreif'],
-		['draconigen', 'Director &amp; Code', 'draconigen.png', 'https://www.twitter.com/realDraconigen'],
-		['Fenmar', 'Archive &amp; JavaScript', 'fenmar.png', 'https://fenmar.de/'],
-		['Fenrikur', 'Nosecounter', 'fenrikur.png', 'https://twitter.com/Fenrikur/'],
-		['Vinaru', 'Banner Exchange', 'vinaru.png', 'https://twitter.com/Vinaru'],
-		['Sithy', 'Writer', 'sithy.png', 'https://twitter.com/MxSithy'],
-	];
 
-	foreach ($members as $m) { ?>
-		<div class="ef-website-team boxshadowed bordered retain">
-			<a href="<?= $m[3] ?>" target="_blank">
-				<img class="ef-avatar" src="img/pages/website/<?= $m[2] ?>" alt="" />
-				<h3><?= $m[0] ?></h3>
-				<span><?= $m[1] ?></span>
+	<div class="ef-people uk-grid-match" uk-grid>
+	<?php
+		$members = [
+			// ['Name', 'Title', 'Image', 'Link'],
+			['draconigen', 'Director, Main Website, Help Center', 'draconigen.png', 'https://www.dogpixels.net/draconigen/'],
+			['fafnyr', 'Vice Director &amp; System Administration', 'fafnyr.png', 'https://www.furaffinity.net/user/fafnyr/'],
+			['Fenrikur', 'Nosecounter', 'fenrikur.png', 'https://twitter.com/Fenrikur/'],
+			['Sithy', 'Writing', 'sithy.png', 'https://twitter.com/MxSithy'],
+			['Vinaru', 'Banner Exchange &amp; Graphics', 'vinaru.png', 'https://twitter.com/Vinaru'],
+			['Fenmar', 'Archive', 'fenmar.png', 'https://fenmar.de/'],
+			['Sebin', 'Feedback Management', 'sebin.png', 'https://twitter.com/SebinNyshkim'],
+		];
+
+		foreach ($members as $m) { ?>
+			<a href="<?= $m[3] ?>" target="_blank" class="ef-hide-ext uk-width-medium">
+				<div>
+					<img src="pages/website/<?= $m[2] ?>" alt="<?= $m[2] ?>" />
+					<h3><?= $m[0] ?></h3>
+					<span><?= $m[1] ?></span>
+				</div>
 			</a>
-		</div>
-	<?php }
-?>
+		<?php } ?>
+	</div>
 </section>
-<hr/>
-<section>
+
+<hr />
+
+<section class="uk-margin-top">
 	<h2>Tech Support &amp; Bug Report</h2>
 	
 	<p>Layout broken? Pages display weird content? You don't like the colors? We're grateful for every bug report (and feedback) you file in.<br/>

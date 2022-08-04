@@ -6,11 +6,8 @@
 	<p>If you're still unsure about your idea, have never held a panel before or need any advice please don't hesitate to contact us. We will help you to get your idea on the road. Some of many good ideas for topics are:</p>
 </section>
 
-<br />
-
-<section class="two_columns just">
-
-	<div class="retain">
+<section class="uk-column-1-2@l">
+	<div>
 		<h3>Everything Furry</h3>
 		<ul>
 			<li>The Fandom (history, projects and the future)</li>
@@ -19,7 +16,7 @@
 		</ul>
 	</div>
 
-	<div class="retain">
+	<div>
 		<h3>Art &amp; Writing</h3>
 		<ul>
 			<li>Drawing (techniques, the right medium and inspiration)</li>
@@ -29,7 +26,7 @@
 		</ul>
 	</div>
 
-	<div class="retain">
+	<div>
 		<h3>Fursuiting</h3>
 		<ul>
 			<li>Acting &amp; Personality (i.e. how to make your suit unique and interesting covering design and performance)</li>
@@ -37,7 +34,7 @@
 		</ul>
 	</div>
 
-	<div class="retain">
+	<div>
 		<h3>Theme &amp; Other</h3>
 		<ul>
 			<li>Wildlife (knowledge, projects and all about our four-legged brothers)</li>
@@ -45,8 +42,9 @@
 			<li>Virtual Worlds (from FurryMuck to Second Life - How we express our alter ego on the Internet)</li>
 		</ul>
 	</div>
-
 </section>
+
+<hr />
 
 <section>
 	<div>
