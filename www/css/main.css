@@ -15,7 +15,7 @@ a {
 a:hover {
 	color: orange;
 }
-a[href^="http"]:not(.uk-icon-button):after {
+a[href^="http"]:not([class^="ef-hide-ext"]):after {
     display: inline-block;
     width: 14px;
     height: 10px;
@@ -48,7 +48,7 @@ header h1 {
 	width: 0.8em;
 	height: 0.8em;
 	margin: 0 8px;
-	background: url("../img/logo.png") no-repeat;
+	background: url(../img/logo.png) no-repeat;
 	background-size: contain;
 }
 nav {
@@ -62,6 +62,7 @@ nav h1 {
 	margin: 0 4px 0;
 }
 nav li {
+	position: relative;
 	list-style: none;
 }
 main {
@@ -69,20 +70,19 @@ main {
 	padding: 0 20px;
 	overflow: hidden;
 }
-#content * {
-	max-width: 100%;
-}
 
 /* news */
 #news {
 	display: flex;
-	height: calc(2em + 14px);
-	background-color: #000;
+	margin-bottom: 1em;
 }
 #news article a {
 	display: inline-block;
 	border: 1px solid gray;
 	padding: 4px 8px;
+}
+#news article a ~ a {
+	border-left: 1px solid gray;
 }
 #news cite, #news time {
 	display: block;
@@ -118,7 +118,7 @@ footer section ~ section::before {
 	content: " ";
 	border-left: 1px solid #e4e4e4;
 	vertical-align: middle;
-  }
+}
 footer .uk-button-group {
 	display: inline-flex;
 	vertical-align: middle;
@@ -145,6 +145,20 @@ span.ef-uk-icon-lift {
 	display: block;
 	width: 200px;
 	height: 80px;
+}
+
+/* utility classes */
+.ef-people img {
+	display: inline;
+	float: left;
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	margin-right: 12px;
+}
+
+.ef-people h3 {
+	margin: 0;
 }
 
 /* new contents marker */
