@@ -169,8 +169,8 @@
 				<h3>Eurofurence <?= $core->current->number ?></h3>
 				<span><?= $core->current->theme ?></span>
 				<p>
-					Estrel Hotel, Berlin, Germany<br />
-					<?= $core->current->start ?> &ndash; <?= $core->current->end ?>
+					<?= $core->current->location ?><br />
+					<?= $core->current->dates ?>
 				</p>
 			</section>
 			
@@ -178,11 +178,11 @@
 				<h3>Find us on</h3>
 				<div class="uk-button-group">
 					<!-- <a href="home" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Homepage" uk-icon="home"></a> -->
-					<a target="_blank" href="https://app.eurofurence.org/" class="uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="iOS & Android" uk-icon="phone"></a>
-					<a target="_blank" href="https://www.twitter.com/eurofurence" class="uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Twitter" uk-icon="twitter"></a> 
-					<a target="_blank" href="https://www.facebook.com/eurofurence" class="uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Facebook" uk-icon="facebook"></a> 
-					<a target="_blank" href="https://vimeo.com/eurofurence" class="uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Vimeo" uk-icon="vimeo"></a>
-					<a target="_blank" href="https://discord.com/invite/VMESBMM" class="uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Discord" uk-icon="discord"></a>
+					<a target="_blank" href="https://app.eurofurence.org/" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="iOS & Android" uk-icon="phone"></a>
+					<a target="_blank" href="https://www.twitter.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Twitter" uk-icon="twitter"></a>
+					<a target="_blank" href="https://www.facebook.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Facebook" uk-icon="facebook"></a>
+					<a target="_blank" href="https://vimeo.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Vimeo" uk-icon="vimeo"></a>
+					<a target="_blank" href="https://discord.com/invite/VMESBMM" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Discord" uk-icon="discord"></a>
 				</div>
 			</section>
 
