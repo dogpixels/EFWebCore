@@ -57,6 +57,14 @@ class NewsAgent
 
 		return ret;
 	}
+
+	static fill(items) {
+		for (let i = 0; i < items.length; i++)
+		{
+			const item = items[i];
+			news.innerHTML += `<article><a href="${item.link}" target="_blank" data-lastmodified="${item.timestamp}"><cite>${item.subject}</cite><time>${item.time}</time></a></article>`;
+		}
+	}
 }
 
 // must be here because EF severs don't allow inline scripts
@@ -70,7 +78,7 @@ window.addEventListener("load", async () =>
 	try
 	{
 		const items = await NewsAgent.fetch();
-
+		
 		// prepare news div
 		if (items.length !== 0)
 		{
@@ -82,11 +90,7 @@ window.addEventListener("load", async () =>
 		}
 
 		// fill news div
-		for (let i = 0; i < items.length; i++)
-		{
-			const item = items[i];
-			news.innerHTML += `<article><a href="${item.link}" target="_blank" data-lastmodified="${item.timestamp}"><cite>${item.subject}</cite><time>${item.time}</time></a></article>`;
-		}
+		NewsAgent.fill(items);
 	}
 	catch(ex)
 	{
@@ -96,3 +100,50 @@ window.addEventListener("load", async () =>
 
 	document.body.dispatchEvent(new CustomEvent("newsLoaded"));
 });
+
+/* for testing purposes only
+
+setTimeout(() => {
+	news.innerText = "";
+	NewsAgent.fill(
+	[
+		{
+		  "time": "28.02.2022, 16:05",
+		  "timestamp": 1646064300,
+		  "subject": "Never gonna give you up…",
+		  "link": "https://www.dogpixels.net/draconigen/"
+		},
+		{
+		  "time": "26.02.2022, 23:08",
+		  "timestamp": 1645916880,
+		  "subject": "Never gonna let you down…",
+		  "link": "https://www.dogpixels.net/draconigen/"
+		},
+		{
+		  "time": "26.02.2022, 19:37",
+		  "timestamp": 1645904220,
+		  "subject": "Never gonna run around and desert you…",
+		  "link": "https://www.dogpixels.net/draconigen/"
+		},
+		{
+		  "time": "25.01.2022, 21:18",
+		  "timestamp": 1643145480,
+		  "subject": "Never gonna make you cry…",
+		  "link": "https://www.dogpixels.net/draconigen/"
+		},
+		{
+		  "time": "22.01.2021, 19:05",
+		  "timestamp": 1611342300,
+		  "subject": "Never gonna say goodbye",
+		  "link": "https://www.dogpixels.net/draconigen/"
+		},
+		{
+		  "time": "01.05.2020, 09:45",
+		  "timestamp": 1588326300,
+		  "subject": "Never gonna tell a lie and hurt you…",
+		  "link": "https://www.dogpixels.net/draconigen/"
+		}
+	])
+}, 1000);
+
+*/
