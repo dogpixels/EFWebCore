@@ -82,6 +82,7 @@ class EFWebCore
 
 		// construct OGP image
 		$this->current->ogpImage =
+			$this->base . 
 			$this->config->defaults->ogpImagePrefix .
 			(empty($this->current->ogpImage) ? $this->config->defaults->ogpImage : $this->current->ogpImage);
 		
