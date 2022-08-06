@@ -161,20 +161,6 @@ span.ef-uk-icon-lift {
 	margin: 0;
 }
 
-/* new contents marker */
-.new:after {
-	display: block;
-	content: "new";
-	background: #f00;
-	color: #fff;
-	border-radius: 4px;
-	font-size: 0.4em;
-	padding: 1px 3px;
-	position: relative;
-	top: -3px;
-	left: 0;
-}
-
 /* js-disabled */
 .js-disabled {
 	font-family: monospace;
