@@ -221,23 +221,6 @@ class EFWebCore
 				// insert menuText
 				$item = mb_ereg_replace("\{menuText\}", $page->menuText, $item);
 
-				// insert lastModified, if enabled
-				if ($this->config->menu->enableLastModified && !$ext)
-				{
-					$lastModified = mb_ereg_replace
-					(
-						"\{timestamp\}",
-						filemtime($this->config->defaults->pagesDirectory . $page->uri),
-						$this->config->menu->templates->lastModified
-					);
-				
-					$item = mb_ereg_replace("\{lastModified\}", $lastModified, $item);
-				}
-				else
-				{
-					$item = mb_ereg_replace("\{lastModified\}", "", $item);
-				}
-
 				// append item to items html string
 				$items .= $item;
 			}
@@ -321,6 +304,33 @@ class EFWebCore
 		if ($this->config->staticOut->enabled)
 		{
 			$this->write_static_output();
+		}
+
+		if ($this->config->staticOut->lastModifiedEnabled)
+		{
+			// read last modified map file
+			$map = json_decode(file_get_contents($this->config->staticOut->lastModifiedMapFile), false);
+			if (is_null($map)) 
+			{
+				die("Failed to parse " . $this->config->staticOut->lastModifiedMapFile . ", reason: " . json_last_error_msg());
+			}
+
+			// read last modified timestamp from file system
+			$timestamp = filemtime($this->config->defaults->pagesDirectory . $this->config->pages->{$this->path}->uri);
+
+			// if timestamp not yet present or outdated, update it
+			if 
+			(
+				!property_exists($map, $this->path) ||
+				$map->{$this->path} !== $timestamp
+			)
+			{
+				$map->{$this->path} = $timestamp;
+				if (file_put_contents($this->config->staticOut->lastModifiedMapFile, json_encode($map, JSON_PRETTY_PRINT)) === false)
+				{
+					debug("[warning] staticOut.lastModifiedEnabled behavior enabled, but writing to {$this->config->staticOut->lastModifiedMapFile} failed.");
+				}
+			}
 		}
 
 		// end output buffering and obtain buffer content

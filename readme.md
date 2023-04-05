@@ -1,7 +1,7 @@
 # Eurofurence Website Base
 
-Version: 1.0
-Last update: 14.06.2022
+Version: 1.1
+Last update: 05.04.2023
 
 ## Requirements
 

@@ -35,13 +35,11 @@
 		"ifActiveClass": "ef-active",
 		"externalTarget": " target=\"_blank\"",
 		"hrefSuffix": "",
-		"enableLastModified": true,
 		"templates":
 		{
-			"lastModified": " data-lastmodified=\"{timestamp}\"",
 			"nav": "<ul>{categories}</ul>",
 			"category": "<li><h1>{title}</h1><ul>{items}</ul></li>",
-			"item": "<li><a href=\"{href}{hrefSuffix}\" class=\"{ifActiveClass}\"{externalTarget}{lastModified}>{menuText}</a></li>"
+			"item": "<li><a href=\"{href}{hrefSuffix}\" class=\"{ifActiveClass}\"{externalTarget}>{menuText}</a></li>"
 		},
 		"categoryOrder": 
 		[
@@ -58,7 +56,9 @@
 	{
 		"enabled": true,
 		"targetBase": "https://www.eurofurence.org/ef100",
-		"path": "_deploy/"
+		"path": "_deploy/",
+		"lastModifiedEnabled": true,
+		"lastModifiedMapFile": "modified.json"
 	},
 
 	"pages":
