@@ -189,8 +189,12 @@
 
 			<section>
 				<h3>Convention Network</h3>
-				<div id="links" class="js-disabled">
-					JavaScript required to view links to other conventions.
+				<div id="links">
+					<div uk-slideshow="autoplay: true; autoplay-interval: 3000; animation: pull; ratio: 5:2">
+						<ul class="uk-slideshow-items js-disabled" id="partners">
+							</li>JavaScript required to view links to other conventions.</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 
@@ -214,6 +218,7 @@
 		<script src="js/uikit.min.js"></script>
 		<script src="js/uikit-icons.min.js"></script>
 		<script src="js/newsagent.js"></script>
+		<script src="js/partners.js"></script>
 	</body>
 </html>
 <?php $core->end(); ?>

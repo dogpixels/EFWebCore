@@ -1,67 +1,120 @@
 {
-	"banner-path": "img/partners/{name}/{file}",
-	"conventions": [
-		{
-			"name": "CesFur",
-			"country": "cz",
-			"bannersource": "https://www.cesfur.org/data/images/cesfur_banner.jpg",
-			"website": "https://www.cesfur.org/"
-		},
-		
-		{
-			"name": "Gdakon",
-			"country": "pl",
-			"banner-source": "https://static.gdakon.org/banner_200_80.jpg",
-			"website": "https://gdakon.org/"
-		},
-		
-		{
-			"name": "NordicFuzzCon",
-			"country": "se",
-			"banner-source": "https://www.nordicfuzzcon.org/content/website/general/NFCBanner.gif",
-			"website": "https://www.nordicfuzzcon.org/"
-		},
-		
-		{
-			"name": "RusFurence",
-			"country": "ru",
-			"banner-source": "https://rusfurence.ru/banner_200x80.jpg",
-			"website": "https://www.rusfurence.ru/"
-		},
-		
-		{
-			"name": "Furnion",
-			"country": "es",
-			"banner-source": "https://www.furrnion.org/banner-furrnion.gif",
-			"website": "https://www.furrnion.org/"
-		},
-		
-		{
-			"name": "Bayern-Furs",
-			"country": "de",
-			"banner-source": "https://www.bayern-furs.de/images/bf_banner_ef.png",
-			"website": "https://www.bayern-furs.de/"
-		},
-		
-		{
-			"name": "EAST",
-			"country": "de",
-			"banner-source": "https://static.sachsenfurs.de/east_200_80.jpg",
-			"website": "https://sachsenfurs.de/en/east"
-		},
-		
-		{
-			"name": "Infurnity",
-			"country": "tw",
-			"banner-source": "https://infurnity.com/wp-content/uploads/2020/02/200x80banner.png",
-			"website": "https://infurnity.com/"
-		},
-
-		{
-			"name": "Furry BlackLight",
-			"country": "fr",
-			"banner-source": "https://fblacklight.org/banner/banner_exchange_w_EF.jpg",
-			"website": "https://fblacklight.org/"
-		}
-	]
+    "path": "img\/cons\/{key}",
+    "conventions": {
+        "cesfur": {
+            "enable": false,
+            "source": "https:\/\/www.cesfur.org\/data\/images\/cesfur_banner.jpg",
+            "target": "https:\/\/www.cesfur.org\/",
+            "country": "cz",
+            "data": {
+                "timestamp": 1614878058,
+                "status": 404,
+                "hash": "d41d8cd98f00b204e9800998ecf8427e"
+            }
+        },
+        "gdakon": {
+            "enable": true,
+            "source": "https:\/\/static.gdakon.org\/banner_200_80.jpg",
+            "target": "https:\/\/gdakon.org\/",
+            "country": "pl",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 200,
+                "hash": "dcb901a06100cd3a9c0251a991f7c93d"
+            },
+            "file": "img\/cons\/gdakon.jpg"
+        },
+        "nordicfuzzcon": {
+            "enable": false,
+            "source": "https:\/\/www.nordicfuzzcon.org\/content\/website\/general\/NFCBanner.gif",
+            "target": "https:\/\/www.nordicfuzzcon.org\/",
+            "country": "se",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 404,
+                "hash": "d41d8cd98f00b204e9800998ecf8427e"
+            }
+        },
+        "rusfurence": {
+            "enable": false,
+            "source": "https:\/\/rusfurence.ru\/banner_200x80.jpg",
+            "target": "https:\/\/www.rusfurence.ru\/",
+            "country": "ru",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 0,
+                "hash": "d41d8cd98f00b204e9800998ecf8427e"
+            }
+        },
+        "furrnion": {
+            "enable": false,
+            "source": "https:\/\/www.furrnion.org\/banner-furrnion.gif",
+            "target": "https:\/\/www.furrnion.org\/",
+            "country": "es",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 404,
+                "hash": "d41d8cd98f00b204e9800998ecf8427e"
+            }
+        },
+        "bayern-furs": {
+            "enable": true,
+            "source": "https:\/\/www.bayern-furs.de\/images\/bf_banner_ef.png",
+            "target": "https:\/\/www.bayern-furs.de\/",
+            "country": "de",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 200,
+                "hash": "6fece737e6cd5b276b11be3a16a27ff9"
+            },
+            "file": "img\/cons\/bayern-furs.png"
+        },
+        "east": {
+            "enable": true,
+            "source": "https:\/\/static.sachsenfurs.de\/east_200_80.jpg",
+            "target": "https:\/\/sachsenfurs.de\/en\/east",
+            "country": "de",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 200,
+                "hash": "c706c20f2b99757bf9fd4fa14916353e"
+            },
+            "file": "img\/cons\/east.jpg"
+        },
+        "infurnity": {
+            "enable": false,
+            "source": "https:\/\/infurnity.com\/wp-content\/uploads\/2020\/02\/200x80banner.png",
+            "target": "https:\/\/infurnity.com\/",
+            "country": "tw",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 404,
+                "hash": "d41d8cd98f00b204e9800998ecf8427e"
+            }
+        },
+        "fblacklight": {
+            "enable": true,
+            "source": "https:\/\/data.fblacklight.org\/uploads\/banner_exchange_w_EF_5cd4a81ad7.jpg",
+            "target": "https:\/\/fblacklight.org\/",
+            "country": "fr",
+            "data": {
+                "timestamp": 1684878798,
+                "status": 200,
+                "hash": "82c337afbbad6c9c5627f901ecfdcac9"
+            },
+            "file": "img\/cons\/fblacklight.jpg"
+        },
+        "silverfang": {
+            "enable": true,
+            "source": "https:\/\/con.silverfang.net\/wp-content\/themes\/con\/banner200x80.png",
+            "target": "https:\/\/con.silverfang.net\/",
+            "country": "us",
+            "data": {
+                "timestamp": 1684880319,
+                "status": 200,
+                "hash": "2141f550d06105565c87eedbfc2e7a1d"
+            },
+            "file": "img\/cons\/silverfang.png"
+        }
+    }
 }
