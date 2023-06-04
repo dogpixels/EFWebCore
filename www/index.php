@@ -107,9 +107,15 @@
 			"@type": "Event",
 			"name": "Eurofurence <?= $core->current->number ?>",
 			"url": "https://www.eurofurence.org",
+			"organizer": {
+				"@name": "Eurofurence e.V.",
+				"url": "https://www.eurofurence.de/"
+			},
 			"description": "The <?= $core->current->ordinal ?> edition of Europe's largest furry convention, themed '<?= $core->current->theme ?>'",
 			"startDate": "<?= $core->current->start ?>",
 			"endDate": "<?= $core->current->end ?>",
+			"eventStatus": "https://schema.org/EventScheduled",
+			"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
 			"image": "<?= $core->base . $core->current->ogpImage ?>",
 			"location": {
 			"@type": "Place",
