@@ -45,6 +45,7 @@ class EFWebCore
 		if (property_exists($this->config->pages, $this->path))
 		{
 			$this->current = $this->config->pages->{$this->path};
+			$this->current->key = $this->path;
 		}
 		else
 		{
@@ -308,11 +309,22 @@ class EFWebCore
 
 		if ($this->config->staticOut->lastModifiedEnabled)
 		{
+			// do not trigger on error pages, to avoid adding missing resources to lastModifiedMapFile
+			if (in_array($this->current->key, 
+					[
+						$this->current->key === $this->config->defaults->notFoundPage,
+						$this->current->key === $this->config->defaults->notAccessiblePage
+					]
+				))
+			{
+				return;
+			}
+
 			// read last modified map file
 			$map = json_decode(file_get_contents($this->config->staticOut->lastModifiedMapFile), false);
 			if (is_null($map)) 
 			{
-				die("Failed to parse " . $this->config->staticOut->lastModifiedMapFile . ", reason: " . json_last_error_msg());
+				debug("[warning] Failed to parse " . $this->config->staticOut->lastModifiedMapFile . ", reason: " . json_last_error_msg());
 			}
 
 			// read last modified timestamp from file system
@@ -394,6 +406,7 @@ class EFWebCore
 	private function handle_not_found()
 	{
 		$this->current = $this->config->pages->{$this->config->defaults->notFoundPage};
+		$this->current->key = $this->config->defaults->notFoundPage;
 		header('HTTP/1.0 404 Not Found', true, 404);
 	}
 
@@ -403,6 +416,7 @@ class EFWebCore
 	private function handle_not_accessible()
 	{
 		$this->current = $this->config->pages->{$this->config->defaults->notAccessiblePage};
+		$this->current->key = $this->config->defaults->notAccessiblePage;
 		header('HTTP/1.0 501 Not Implemented', true, 501);
 	}
 
