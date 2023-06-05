@@ -1,18 +1,18 @@
 {
 	"convention": 
 	{
-		"year": "2300",
-		"number": "100",
+		"year": "2000",
+		"number": "-1",
 		"ordinal": "100th",
 		"theme": "Lorem Ipsum Dolor Sit Amet",
-		"themeColor": "#ff9922",
-		"location": "Estrel Hotel, Berlin, Germany",
-		"dates": "December 30th to 31st, 2300",
-		"start": "2300-12-30",
-		"end": "2300-12-31",
+		"themeColor": "#005953",
+		"location": "CCH Hamburg, Germany",
+		"dates": "December 30th to 31st, 2000",
+		"start": "2000-12-30",
+		"end": "2000-12-31",
 		"charity": "(TBA!)",
 		"goh": "(TBA!)",
-		"opening": "2300-12-31T17:00:00+02:00"
+		"opening": "2000-12-31T17:00:00+02:00"
 	},
 
 	"defaults":
