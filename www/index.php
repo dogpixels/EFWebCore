@@ -156,70 +156,77 @@
 		<header>
 			<h1><span class="ef-logo"></span>Eurofurence <?= $core->current->number ?></h1>
 		</header>
-		<div class="flex-container">
-			<input type="checkbox" id="nav-state" />
-			<label for="nav-state" id="nav-button"></label>
-			<nav>
-				<?= $core->get_menu() ?>
-			</nav>
 
-			<main class="flex-1">
-				<div id="news" class="js-disabled">JavaScript required to view the latest announcements from Eurofurence.</div>
-				<div id="content">
-					<?= $core->get_content() ?>
-				</div>
-			</main>
-		</div>
+		<input type="checkbox" id="nav-state" />
+		<label for="nav-state" id="nav-button"></label>
+		<nav id="nav">
+			<a href="home" id="ef-homelink">&lt; Home Page</a>
+			<hr />
+			<?= $core->get_menu() ?>
+			<hr />
+			<h3>News</h3>
+			<div id="news" class="uk-grid-small uk-child-width-1-3@s uk-child-width-1-6@m uk-grid-divider" uk-grid>
+				<div>JavaScript required to view the latest announcements from Eurofurence.</div>
+			</div>
+		</nav>
+
+		<main id="main"<?= ($core->current->menuText === 'Home'? ' class="ef-landingpage"' : '') ?>>
+			<div id="content">
+				<?= $core->get_content() ?>
+			</div>
+		</main>
 		
 		<footer>
-			<section>
-				<h3>Eurofurence <?= $core->current->number ?></h3>
-				<span><?= $core->current->theme ?></span>
-				<p>
-					<?= $core->current->location ?><br />
-					<?= $core->current->dates ?>
-				</p>
-			</section>
-			
-			<section>
-				<h3>Find us on</h3>
-				<div class="uk-button-group">
-					<!-- <a href="home" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Homepage" uk-icon="home"></a> -->
-					<a target="_blank" href="https://app.eurofurence.org/" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="iOS & Android" uk-icon="phone"></a>
-					<a target="_blank" href="https://www.twitter.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Twitter" uk-icon="twitter"></a>
-					<a target="_blank" href="https://www.facebook.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Facebook" uk-icon="facebook"></a>
-					<a target="_blank" href="https://vimeo.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Vimeo" uk-icon="vimeo"></a>
-					<a target="_blank" href="https://discord.com/invite/VMESBMM" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Discord" uk-icon="discord"></a>
+			<div class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-expand@l uk-grid-divider" uk-grid>
+				<div>
+					<h3>Eurofurence <?= $core->current->number ?></h3>
+					<span><?= $core->current->theme ?></span>
+					<p>
+						<?= $core->current->location ?><br />
+						<?= $core->current->dates ?>
+					</p>
 				</div>
-			</section>
-
-			<section>
-				<h3>Convention Network</h3>
-				<div id="links">
-					<div uk-slideshow="autoplay: true; autoplay-interval: 3000; animation: pull; ratio: 5:2">
-						<ul class="uk-slideshow-items js-disabled" id="partners">
-							</li>JavaScript required to view links to other conventions.</li>
-						</ul>
+				
+				<div>
+					<h3>Find us on</h3>
+					<div class="uk-button-group">
+						<!-- <a href="home" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Homepage" uk-icon="home"></a> -->
+						<a target="_blank" href="https://app.eurofurence.org/" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="iOS & Android" uk-icon="phone"></a>
+						<a target="_blank" href="https://www.twitter.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Twitter" uk-icon="twitter"></a>
+						<a target="_blank" href="https://www.facebook.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Facebook" uk-icon="facebook"></a>
+						<a target="_blank" href="https://vimeo.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Vimeo" uk-icon="vimeo"></a>
+						<a target="_blank" href="https://discord.com/invite/VMESBMM" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Discord" uk-icon="discord"></a>
 					</div>
 				</div>
-			</section>
 
-			<section>
-				<h3>Help</h3>
-				<ul class="uk-list">
-					<li><a href="https://help.eurofurence.org/contact" target="_blank"><span uk-icon="icon:mail" class="ef-uk-icon-lift"></span>Contact Us</a></li>
-					<li><a href="https://help.eurofurence.org/faq" target="_blank"><span uk-icon="icon:question" class="ef-uk-icon-lift"></span>Frequently Asked Questions (FAQ)</a></li>
-				</ul>
-			</section>
+				<div>
+					<h3>Convention Network</h3>
+					<div id="links">
+						<div uk-slideshow="autoplay: true; autoplay-interval: 3000; animation: pull; ratio: 5:2">
+							<ul class="uk-slideshow-items js-disabled" id="partners">
+								</li>JavaScript required to view links to other conventions.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 
-			<section>
-				<h3>Legal</h3>
-				<ul class="uk-list">
-					<li><a href="https://help.eurofurence.org/legal/imprint" target="_blank"><span uk-icon="icon:bookmark" class="ef-uk-icon-lift"></span>Imprint &amp; Legal Notice</a></li>
-					<li><a href="https://help.eurofurence.org/legal/privacy" target="_blank"><span uk-icon="icon:lock" class="ef-uk-icon-lift"></span>Privacy Statement</a></li>
-					<li><a href="website"><span uk-icon="icon:heart" class="ef-uk-icon-lift"></span>Site Attributions</a></li>
-				</ul>
-			</section>
+				<div>
+					<h3>Help</h3>
+					<ul class="uk-list">
+						<li><a href="https://help.eurofurence.org/contact" target="_blank"><span uk-icon="icon:mail" class="ef-uk-icon-lift"></span>Contact Us</a></li>
+						<li><a href="https://help.eurofurence.org/faq" target="_blank"><span uk-icon="icon:question" class="ef-uk-icon-lift"></span>Frequently Asked Questions (FAQ)</a></li>
+					</ul>
+				</div>
+
+				<div>
+					<h3>Legal</h3>
+					<ul class="uk-list">
+						<li><a href="https://help.eurofurence.org/legal/imprint" target="_blank"><span uk-icon="icon:bookmark" class="ef-uk-icon-lift"></span>Imprint &amp; Legal Notice</a></li>
+						<li><a href="https://help.eurofurence.org/legal/privacy" target="_blank"><span uk-icon="icon:lock" class="ef-uk-icon-lift"></span>Privacy Statement</a></li>
+						<li><a href="website"><span uk-icon="icon:heart" class="ef-uk-icon-lift"></span>Site Attributions</a></li>
+					</ul>
+				</div>
+			</div>
 		</footer>
 		<script src="js/uikit.min.js"></script>
 		<script src="js/uikit-icons.min.js"></script>

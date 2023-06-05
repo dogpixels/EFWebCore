@@ -62,7 +62,7 @@ class NewsAgent
 		for (let i = 0; i < items.length; i++)
 		{
 			const item = items[i];
-			news.innerHTML += `<article><a href="${item.link}" target="_blank" data-lastmodified="${item.timestamp}"><cite>${item.subject}</cite><time>${item.time}</time></a></article>`;
+			news.innerHTML += `<div role="listitem"><a href="${item.link}" target="_blank" data-lastmodified="${item.timestamp}"><cite>${item.subject}</cite><time>${item.time}</time></a></div>`;
 		}
 	}
 }

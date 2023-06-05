@@ -1,42 +1,6 @@
-:root {
-	--menu-button-size: calc(2em + 14px);
-}
-
-nav {
-	transition: max-width .2s;
-	z-index: 7;
-}
-#news {
-	transition: margin-left .2s;
-}
-#nav-state {
-	position: fixed;
-	left: -100vw;
-	top: -100vh;
-}
-#nav-button {
-	position: absolute;
-	left: -100vw;
-	width: var(--menu-button-size, 100);
-	height: var(--menu-button-size, 100);
-	z-index: 9;
-	background: #000 url(../img/menu-button-retina.png) center center/contain no-repeat;
-	cursor: pointer;
-	border-radius: 100%;
-}
-#nav-state:checked ~ nav {
-	max-width: 100%;
-	width: 100%;
-}
-
 @media (max-width: 1080px) {
-	header {
-		position: fixed;
-		top: 0;
-		z-index: 8;
-		width: 100%;
-		height: var(--menu-button-size, 100);
-		background-color: #000;
+	:root {
+		--header-height: 46px;
 	}
 	header h1 {
 		padding-left: .25em;
@@ -44,35 +8,7 @@ nav {
 		font-size: 2em;
 		letter-spacing: normal;
 	}
-	#nav-button {
-		position: fixed;
-		top: 0;
-		left: 0;
-	}
-	nav {
-		position: fixed;
-		top: 0;
-		left: 0;
-		max-width: 0;
-		margin-top: var(--menu-button-size, 100);
-		background-color: rgba(0, 0, 0, 0.9);
-		height: 100vh;
-		overflow: scroll;
-	}
-	main {
-		margin-top: var(--menu-button-size, 100);
-		border-left: none;
-		padding: 8px;
-	}
 	footer > section {
 		padding: 8px;
-	}
-}
-
-
-/* footer */
-@media (max-width: 1330px) {
-	footer {
-		text-align: left;
 	}
 }

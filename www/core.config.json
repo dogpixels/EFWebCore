@@ -37,8 +37,8 @@
 		"hrefSuffix": "",
 		"templates":
 		{
-			"nav": "<ul>{categories}</ul>",
-			"category": "<li><h1>{title}</h1><ul>{items}</ul></li>",
+			"nav": "<div role=\"list\" class=\"uk-grid-small uk-child-width-1-3@s uk-child-width-1-6@m uk-grid-divider\" uk-grid>{categories}</div>",
+			"category": "<div role=\"listitem\"><h3>{title}</h3><ul>{items}</ul></div>",
 			"item": "<li><a href=\"{href}{hrefSuffix}\" class=\"{ifActiveClass}\"{externalTarget}>{menuText}</a></li>"
 		},
 		"categoryOrder": 
