@@ -13,12 +13,6 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 }
 
-a {
-	color: #fff;
-}
-a:hover {
-	color: #ffa500;
-}
 a[href^="http"]:not([class^="ef-hide-ext"]):after {
     display: inline-block;
     width: 14px;
