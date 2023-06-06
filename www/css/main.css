@@ -66,8 +66,9 @@ header h1 {
 /* navigation */
 nav {
 	position: fixed;
+	top: var(--header-height);
+	padding: 20px 20px calc(var(--header-height) + 20px);
 	z-index: 7;
-	padding: 0 20px 100px;
 	width: 100%;
 	height: 100vh;
 	left: -100vw;
