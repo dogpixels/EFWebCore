@@ -174,58 +174,59 @@
 			"ogpImage": "",
 			"robots": ""
 		},
+
 		
-		"hotel":
+		"venue":
 		{
 			"accessible": true,
 			"inMenu": true,
-			"menuText": "Hotel",
+			"menuText": "The CCH Hamburg",
 			"category": "Venue",
-			"uri": "hotel.php",
+			"uri": "venue.php",
 			"title": "Venue",
-			"description": "This year's venue is the Estrel Hotel in Berlin. It features a large amount of luxurious rooms, restaurants and a lot of convention space to roam.",
-			"keywords": "Hotel, Estrel, Berlin, Convention Center, Accommodation, Venue, Rooms, Restaurants",
-			"ogpImage": "hotel.jpg",
+			"description": "This year's venue is the Congress Center Hamburg (CCH). Come in and find out about the enormous venue we're about to fill with animal noises and fur.",
+			"keywords": "Venue, CCH, Hamburg, Convention Center, Accommodation",
+			"ogpImage": "venue.jpg",
 			"robots": ""
 		},
 		
-		"hotel/map":
+		"venue/map":
 		{
 			"accessible": false,
 			"inMenu": false,
 			"menuText": "Map",
 			"category": "Venue",
-			"uri": "hotel.map.php",
+			"uri": "venue.map.php",
 			"title": "Venue Map",
 			"description": "The function space map! This is your ultimate 'How to get around!'",
-			"keywords": "Hotel, Floor Plan, Navigation, Venue, Berlin, How to get around",
-			"ogpImage": "",
+			"keywords": "Floor Plan, Navigation, Venue, Hamburg, How to get around",
+			"ogpImage": "venue.jpg",
 			"robots": ""
 		},
 
-		"hotel/travel":
+		"venue/travel":
 		{
 			"accessible": false,
 			"inMenu": false,
 			"menuText": "Travel &amp; Parking",
 			"category": "Venue",
-			"uri": "hotel.travel.php",
+			"uri": "venue.travel.php",
 			"title": "Venue - Travel &amp; Parking",
 			"description": "How to travel to Eurofurence by train, by plane and where to leave your car.",
 			"keywords": "Airport, Train-station, Travel, Parking, Arrival, Destination",
 			"ogpImage": "",
 			"robots": ""
 		},
-
-		"hotel/overflow":
+		
+		"hotels":
 		{
 			"accessible": false,
 			"inMenu": false,
-			"menuText": "Overflow Hotel Options",
+			"menuText": "Hotel Options",
 			"category": "Venue",
-			"uri": "hotel.overflow.php",
-			"title": "Venue - Overflow Options",
-			"description": "Get a room! Even if you didn't catch one at the main hotel, here are some official options for you.",
+			"uri": "hotels.php",
+			"title": "Venue - Nearby Hotel Options",
+			"description": "Get a room! Here are some official options for you.",
 			"keywords": "Hotel, Accommodation, Rooms",
 			"ogpImage": "",
 			"robots": ""
