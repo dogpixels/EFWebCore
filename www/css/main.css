@@ -12,6 +12,15 @@ html {
 h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 }
+.uk-modal,
+.uk-modal h1,
+.uk-modal h2,
+.uk-modal h3,
+.uk-modal h4,
+.uk-modal h5,
+.uk-modal h6 {
+	color: #333;
+}
 
 a[href^="http"]:not([class^="ef-hide-ext"]):after {
     display: inline-block;
@@ -91,9 +100,16 @@ nav li {
 /* body area */
 main {
 	margin-top: var(--header-height);
+	min-height: calc(100vh - var(--header-height));
 	border-left: 1px solid white;
 	padding: 0 20px;
 	overflow: hidden;
+}
+[class^="uk-card-media-"] a:hover img,
+[uk-lightbox] a:hover img,
+[uk-toggle]:hover {
+	filter: brightness(0.75);
+	cursor: pointer;
 }
 
 /* news */
