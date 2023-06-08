@@ -12,7 +12,6 @@
 		
 		<ul>
 			<li><a href="https://help.eurofurence.org/legal/terms" target="_blank">Terms and Conditions</a></li>
-			<li><a href="https://help.eurofurence.org/legal/liability" target="_blank">Liability Waiver</a></li>
 			<li><a href="https://help.eurofurence.org/legal/roc" target="_blank">Rules of Conduct</a></li>
 		</ul>
 		
