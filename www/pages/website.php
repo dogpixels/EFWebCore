@@ -1,26 +1,7 @@
 <section>
 	<h1>
-		Featured Artist: ArtYeen
-		<a target="_blank" href="https://www.twitter.com/artyeen" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="ArtYeen @ Twitter" uk-icon="twitter"></a>
+		Featured Artist: To be Announced
 	</h1>
-	<p class="uk-text-italic">she/they, coffee &amp; tea fuelled part-time artist, creating art of different styles, themes and media</p>
-	
-	<div id="artyeen-gallery">
-		<div uk-slideshow="autoplay: true; autoplay-interval: 3000; animation: pull; ratio: 3:1">
-			<ul class="uk-slideshow-items">
-				<?php
-				for ($i = 0; $i <= 6; $i++) { ?>
-					<li>
-						<div uk-lightbox>
-							<a href="pages/website/featured/<?= $i ?>.jpg">
-								<img src="pages/website/featured/<?= $i ?>_thumb.jpg" alt="Image by ArtYeen">
-							</a>
-						</div>
-					</li>
-				<?php } ?>
-			</ul>
-		</div>
-	</div>
 </section>
 
 <hr />
@@ -35,7 +16,6 @@
 		<h2>Third Party Attributions</h2>
 		<ul>
 			<li><a href="https://getuikit.com" target="_blank">UIkit</a> by <a href="https://yootheme.com/" target="_blank">YOOtheme GmbH</a> (<a href="https://github.com/uikit/uikit/blob/develop/LICENSE.md" target="_blank">license</a>)</li>
-			<li><a href="https://fonts.google.com/specimen/Permanent+Marker" target="_blank">Permanent Marker</a> by <a href="https://fontdiner.com/" target="_blank">Font Diner, Inc</a> (<a href="fonts/PermanentMarker-Regular.LICENSE.txt" target="_blank">license</a>)</li>
 		</ul>
 	</div>
 </section>
@@ -52,17 +32,18 @@
 			// ['Name', 'Title', 'Image', 'Link'],
 			['draconigen', 'Director, Main Website, Help Center', 'draconigen.png', 'https://www.dogpixels.net/draconigen/'],
 			['fafnyr', 'Vice Director &amp; System Administration', 'fafnyr.png', 'https://www.furaffinity.net/user/fafnyr/'],
-			['Fenrikur', 'Nosecounter', 'fenrikur.png', 'https://twitter.com/Fenrikur/'],
-			['Sithy', 'Writing', 'sithy.png', 'https://twitter.com/MxSithy'],
-			['Vinaru', 'Banner Exchange &amp; Graphics', 'vinaru.png', 'https://twitter.com/Vinaru'],
 			['Fenmar', 'Archive', 'fenmar.png', 'https://fenmar.de/'],
+			['Fenrikur', 'Nosecounter', 'fenrikur.png', 'https://twitter.com/Fenrikur/'],
+			['Fleeks', 'Logo Design', 'fleeks.png', 'https://fleeks.art/'],
 			['Sebin', 'Feedback Management', 'sebin.png', 'https://twitter.com/SebinNyshkim'],
+			['Sithy', 'Writing', 'sithy.png', 'https://twitter.com/MxSithy'],
+			['Vinaru', 'Banner Exchange', 'vinaru.png', 'https://twitter.com/Vinaru'],
 		];
 
 		foreach ($members as $m) { ?>
 			<a href="<?= $m[3] ?>" target="_blank" class="ef-hide-ext uk-width-medium">
 				<div>
-					<img src="pages/website/<?= $m[2] ?>" alt="<?= $m[2] ?>" />
+					<img src="img/pages/website/<?= $m[2] ?>" alt="<?= $m[2] ?>" />
 					<h3><?= $m[0] ?></h3>
 					<span><?= $m[1] ?></span>
 				</div>
