@@ -101,8 +101,7 @@ nav li {
 main {
 	margin-top: var(--header-height);
 	min-height: calc(100vh - var(--header-height));
-	border-left: 1px solid white;
-	padding: 0 20px;
+	padding: 20px;
 	overflow: hidden;
 }
 [class^="uk-card-media-"] a:hover img,
