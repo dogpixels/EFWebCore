@@ -101,7 +101,6 @@ nav li {
 	list-style: none;
 }
 
-
 /* body area */
 main {
 	margin-top: var(--header-height);
@@ -114,6 +113,9 @@ main {
 [uk-toggle]:hover {
 	filter: brightness(0.75);
 	cursor: pointer;
+}
+.ef-table-borders th, .ef-table-borders td {
+	border: 1px solid #666;
 }
 
 /* news */
