@@ -28,7 +28,7 @@
 <section id="ef-badger" class="uk-column-1-2@l">
 	<div>
 		<h2>Eurofurence Badger Addon</h2>
-		<p>This brand-new browser addon will enhance your visit to the Eurofurence website by adding <span class="ef-badger-demo-new">new</span> badges to pages that have been updated since you last viewed them!</p>
+		<p>This brand-new browser addon will enhance your visit to the Eurofurence website by adding <span class="ef-new"></span> badges to pages that have been updated since you last viewed them!</p>
 		<p>Available for <a href="https://addons.mozilla.org/firefox/addon/eurofurence-badger/" target="_blank">Mozilla Firefox</a> and <a href="https://chrome.google.com/" target="_blank">Google Chrome</a>.</p>
 	</div>
 	<div>

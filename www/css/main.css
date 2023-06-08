@@ -177,6 +177,38 @@ span.ef-uk-icon-lift {
 	color: white;
 }
 
+/* ef-badger */
+.ef-new::after {
+	content: "new";
+	display: inline-block;
+	height: .9em;
+	line-height: .6em;
+	font-size: .8em;
+	font-weight: bold;
+	padding: 0 4px;
+	margin-left: 3px;
+	background-color: #f00;
+	color: #fff;
+	border-radius: 3px;
+}
+#ef-badger a[href^="https://chrome.google.com"]::before,
+#ef-badger a[href^="https://addons.mozilla.org"]::before {
+	display: inline-block;
+	position: relative;
+	top: 2px;
+	content: " ";
+	width: 1em;
+	height: 1em;
+	background-size: contain;
+	margin: 0 3px;
+}
+#ef-badger a[href^="https://chrome.google.com"]::before {
+	background-image: url(../img/chrome.png);
+}
+#ef-badger a[href^="https://addons.mozilla.org"]::before {
+	background-image: url(../img/firefox.png);
+}
+
 /* administrative */
 .debug {
 	display: block;
