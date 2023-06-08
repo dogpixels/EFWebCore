@@ -310,37 +310,36 @@ class EFWebCore
 		if ($this->config->staticOut->lastModifiedEnabled)
 		{
 			// do not trigger on error pages, to avoid adding missing resources to lastModifiedMapFile
-			if (in_array($this->current->key, 
+			if (!in_array($this->current->key, 
 					[
 						$this->current->key === $this->config->defaults->notFoundPage,
 						$this->current->key === $this->config->defaults->notAccessiblePage
 					]
 				))
 			{
-				return;
-			}
 
-			// read last modified map file
-			$map = json_decode(file_get_contents($this->config->staticOut->lastModifiedMapFile), false);
-			if (is_null($map)) 
-			{
-				debug("[warning] Failed to parse " . $this->config->staticOut->lastModifiedMapFile . ", reason: " . json_last_error_msg());
-			}
-
-			// read last modified timestamp from file system
-			$timestamp = filemtime($this->config->defaults->pagesDirectory . $this->config->pages->{$this->path}->uri);
-
-			// if timestamp not yet present or outdated, update it
-			if 
-			(
-				!property_exists($map, $this->path) ||
-				$map->{$this->path} !== $timestamp
-			)
-			{
-				$map->{$this->path} = $timestamp;
-				if (file_put_contents($this->config->staticOut->lastModifiedMapFile, json_encode($map, JSON_PRETTY_PRINT)) === false)
+				// read last modified map file
+				$map = json_decode(file_get_contents($this->config->staticOut->lastModifiedMapFile), false);
+				if (is_null($map)) 
 				{
-					debug("[warning] staticOut.lastModifiedEnabled behavior enabled, but writing to {$this->config->staticOut->lastModifiedMapFile} failed.");
+					debug("[warning] Failed to parse " . $this->config->staticOut->lastModifiedMapFile . ", reason: " . json_last_error_msg());
+				}
+
+				// read last modified timestamp from file system
+				$timestamp = filemtime($this->config->defaults->pagesDirectory . $this->config->pages->{$this->path}->uri);
+
+				// if timestamp not yet present or outdated, update it
+				if 
+				(
+					!property_exists($map, $this->path) ||
+					$map->{$this->path} !== $timestamp
+				)
+				{
+					$map->{$this->path} = $timestamp;
+					if (file_put_contents($this->config->staticOut->lastModifiedMapFile, json_encode($map, JSON_PRETTY_PRINT)) === false)
+					{
+						debug("[warning] staticOut.lastModifiedEnabled behavior enabled, but writing to {$this->config->staticOut->lastModifiedMapFile} failed.");
+					}
 				}
 			}
 		}
