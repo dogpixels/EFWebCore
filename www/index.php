@@ -154,44 +154,43 @@
 
 	<body>
 		<header>
+			<input type="checkbox" id="nav-state" />
+			<label for="nav-state" id="nav-button"></label>
 			<h1><span class="ef-logo"></span>Eurofurence <?= $core->current->number ?></h1>
+			<nav id="nav">
+				<a href="home" id="ef-homelink">&lt; Home Page</a>
+				<hr />
+				<?= $core->get_menu() ?>
+				<hr />
+				<h3>News</h3>
+				<div id="news" class="uk-grid-small uk-child-width-1-3@s uk-child-width-1-6@m uk-grid-divider" uk-grid>
+					<div>JavaScript required to view the latest announcements from Eurofurence.</div>
+				</div>
+				<hr />
+				<h3>Countdown</h3>
+				<div class="uk-grid-small uk-child-width-auto" uk-grid uk-countdown="date: <?= $core->config->convention->opening ?>">
+					<div>
+						<div class="uk-countdown-number uk-countdown-days"></div>
+						<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Days</div>
+					</div>
+					<div class="uk-countdown-separator">:</div>
+					<div>
+						<div class="uk-countdown-number uk-countdown-hours"></div>
+						<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Hours</div>
+					</div>
+					<div class="uk-countdown-separator">:</div>
+					<div>
+						<div class="uk-countdown-number uk-countdown-minutes"></div>
+						<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Minutes</div>
+					</div>
+					<div class="uk-countdown-separator">:</div>
+					<div>
+						<div class="uk-countdown-number uk-countdown-seconds"></div>
+						<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Seconds</div>
+					</div>
+				</div>
+			</nav>
 		</header>
-
-		<input type="checkbox" id="nav-state" />
-		<label for="nav-state" id="nav-button"></label>
-		<nav id="nav">
-			<a href="home" id="ef-homelink">&lt; Home Page</a>
-			<hr />
-			<?= $core->get_menu() ?>
-			<hr />
-			<h3>News</h3>
-			<div id="news" class="uk-grid-small uk-child-width-1-3@s uk-child-width-1-6@m uk-grid-divider" uk-grid>
-				<div>JavaScript required to view the latest announcements from Eurofurence.</div>
-			</div>
-			<hr />
-			<h3>Countdown</h3>
-			<div class="uk-grid-small uk-child-width-auto" uk-grid uk-countdown="date: <?= $core->config->convention->opening ?>">
-				<div>
-					<div class="uk-countdown-number uk-countdown-days"></div>
-					<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Days</div>
-				</div>
-				<div class="uk-countdown-separator">:</div>
-				<div>
-					<div class="uk-countdown-number uk-countdown-hours"></div>
-					<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Hours</div>
-				</div>
-				<div class="uk-countdown-separator">:</div>
-				<div>
-					<div class="uk-countdown-number uk-countdown-minutes"></div>
-					<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Minutes</div>
-				</div>
-				<div class="uk-countdown-separator">:</div>
-				<div>
-					<div class="uk-countdown-number uk-countdown-seconds"></div>
-					<div class="uk-countdown-label uk-margin-small uk-text-center uk-visible@s">Seconds</div>
-				</div>
-			</div>
-		</nav>
 
 		<main id="main"<?= ($core->current->menuText === 'Home'? ' class="ef-landingpage"' : '') ?>>
 			<div id="content">
