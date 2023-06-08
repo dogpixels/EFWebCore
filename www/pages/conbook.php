@@ -2,7 +2,7 @@
 <section>
 	<p>As every year, we will have a con book as guide through the convention and its events, as map, and as souvenir. If you're interested in contributing content, here are the guidelines.</p>
 	<p>All contributions, requests, and notes should be sent to our <a href="https://help.eurofurence.org/contact/conbook" target="_blank">Conbook department</a>.
-	<p><b>Deadline:</b> Finished contributions need to be submitted before <em><strong>June 30th</strong></em>.</p>
+	<p><b>Deadline:</b> July 9th</p>
 </section>
 
 <hr />
@@ -16,13 +16,13 @@
 		<li>We are looking for full page illustrations as well as smaller fillers.</li>
 		<br/>
 		<li>The format for full page illustrations is A4, upright (210 x 297mm) plus 3mm cropping area along all edges, adding up to a total of 216 x 303 mm or 2551 x 3578 pixels at 300 dpi.<br /><br />
-			<img src="pages/conbook/How-to-conbook_1.jpg" alt="How to Conbook" />
+			<img src="img/pages/conbook/How-to-conbook_1.jpg" alt="How to Conbook" />
 		</li>
 		<br/>
 		<li>File format should be JPG set to highest quality (low information loss). Other formats are acceptable too but may cause issues due to the resulting file size.</li><br/>
 		<li>For a full page illustration, do not draw anything important into the cropping area. Please avoid symmetrical motifs or motifs that rely on exact cutting of the page &ndash; for technical reasons, the cropping of the finished book may occur anywhere in the cropping area of each page.</li><br/>
 		<li>Fillers that do not have an illustrated background (extracted cutouts) need to have a fully transparent image background, since the pages themselves will have their own color background. The foreground needs to be intransparent (opaque). Be careful about holes in the foreground (transparent) and white foreground elements (opaque)!<br /><br />
-			<img src="pages/conbook/How-to-conbook_2.jpg" alt="How to Fillers" /> 
+			<img src="img/pages/conbook/How-to-conbook_2.jpg" alt="How to Fillers" /> 
 		</li>
 		<br/>
 		<li>To submit illustrations that contain transparency, please use the PNG format.</li>
