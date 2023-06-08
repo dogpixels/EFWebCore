@@ -44,7 +44,14 @@
             "nav": "<div role=\"list\" class=\"uk-grid-small uk-child-width-1-3@s uk-child-width-1-6@m uk-grid-divider\" uk-grid>{categories}</div>"
         }
     },
-    "pages": {
+    "staticOut": {
+        "enabled": true,
+        "lastModifiedEnabled": true,
+        "lastModifiedMapFile": "modified.json",
+        "path": "_deploy/",
+        "targetBase": "https://wwwtest.eurofurence.org/EF00/"
+    },
+	"pages": {
         "404": {
             "accessible": true,
             "category": "",
@@ -497,12 +504,5 @@
             "title": "Website Banner Exchange Program",
             "uri": "website.banner.php"
         }
-    },
-    "staticOut": {
-        "enabled": true,
-        "lastModifiedEnabled": true,
-        "lastModifiedMapFile": "modified.json",
-        "path": "_deploy/",
-        "targetBase": "https://www.eurofurence.org/ef100"
     }
 }
