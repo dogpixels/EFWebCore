@@ -103,10 +103,33 @@ nav li {
 
 /* body area */
 main {
+	position: relative;
 	margin-top: var(--header-height);
 	min-height: calc(100vh - var(--header-height));
-	padding: 20px;
 	overflow: hidden;
+}
+.landingpage-content-start {
+	position: relative;
+}
+main.ef-landingpage {
+	padding-top: 100vh;
+}
+#home {
+	position: absolute;
+	top: 0;
+	padding: 20px;
+	padding-left: 20px;
+	padding-left: var(--menu-button-width, 100);
+}
+#scrolldown {
+	position: absolute;
+	width: 100%;
+	top: -200px;
+	text-align: center;
+}
+#content {
+	background: rgba(0, 0, 0, 0.9);
+	padding: 20px;
 }
 [class^="uk-card-media-"] a:hover img,
 [uk-lightbox] a:hover img,
