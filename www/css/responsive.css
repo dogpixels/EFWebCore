@@ -1,3 +1,10 @@
+/*
+	--uk-breakpoint-s: 640px;
+	--uk-breakpoint-m: 960px;
+	--uk-breakpoint-l: 1200px;
+	--uk-breakpoint-xl: 1600px;
+*/
+  
 @media (max-width: 1080px) {
 	:root {
 		--header-height: 46px;
