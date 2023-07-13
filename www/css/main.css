@@ -111,6 +111,17 @@ main {
 .landingpage-content-start {
 	position: relative;
 }
+#scrolldown:hover {
+	text-decoration: none;
+}
+#scrolldown span[uk-icon] {
+    position: relative;
+    transition: top .2s;
+    top: -10px;
+}
+#scrolldown:hover span[uk-icon] {
+    top: -5px
+}
 main.ef-landingpage {
 	padding-top: 100vh;
 }
