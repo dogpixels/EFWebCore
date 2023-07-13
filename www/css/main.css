@@ -105,7 +105,6 @@ nav li {
 main {
 	position: relative;
 	margin-top: var(--header-height);
-	min-height: calc(100vh - var(--header-height));
 	overflow: hidden;
 }
 .landingpage-content-start {
@@ -139,6 +138,7 @@ main.ef-landingpage {
 	text-align: center;
 }
 #content {
+    min-height: calc(100vh - var(--header-height));
 	background: rgba(0, 0, 0, 0.9);
 	padding: 20px;
 }
