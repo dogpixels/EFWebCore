@@ -254,6 +254,7 @@
 		<script src="js/uikit-icons.min.js"></script>
 		<script src="js/newsagent.js"></script>
 		<script src="js/partners.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
 <?php $core->end(); ?>
