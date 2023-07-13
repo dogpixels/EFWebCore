@@ -192,7 +192,7 @@
 			</nav>
 		</header>
 
-		<main id="main"<?= ($core->current->menuText === 'Home'? ' class="ef-landingpage"' : '') ?>>
+		<main <?= ($core->current->menuText === 'Home'? ' class="ef-landingpage"' : '') ?>>
 			<div id="content">
 				<?= $core->get_content() ?>
 			</div>
