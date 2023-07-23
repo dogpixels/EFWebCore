@@ -49,7 +49,7 @@ label#nav-button {
 	cursor: pointer;
 	z-index: 8;
 }
-label#nav-button:hover ~ * .ef-logo {
+label#nav-button:hover ~ * .ef-menubutton {
 	background: url(../img/menu.png) no-repeat;
 	background-size: contain;
 }
@@ -60,7 +60,7 @@ header h1 {
 	letter-spacing: 2px;
 	overflow: hidden;
 }
-.ef-logo {
+.ef-menubutton {
 	display: inline-block;
 	position: relative;
 	top: 2px;
