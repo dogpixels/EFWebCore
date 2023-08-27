@@ -204,6 +204,19 @@
             "title": "Dealers' Den",
             "uri": "dealersden.php"
         },
+		"dealersden/visiting":
+		{
+			"accessible": true,
+			"inMenu": true,
+			"menuText": "Visiting the Dealers' Den",
+			"category": "Program",
+			"uri": "dealersden.visiting.php",
+			"title": "Visiting the Dealers' Den",
+			"description": "The Dealers' Den is the place for you to browse and buy all kinds of arts and fine products for your favorite merchants and artists.",
+			"keywords": "Dealers' Den, Buying, Merchants, Artists, Dealers, Merchandise, Artwork, Sketches, Shirts, Shopping, Souvenirs",
+			"ogpImage": "",
+			"robots": ""
+		},
         "dealersden/alley": {
             "accessible": false,
             "category": "Artists",
