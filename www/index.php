@@ -226,7 +226,7 @@
 					<div id="links">
 						<div uk-slideshow="autoplay: true; autoplay-interval: 3000; animation: pull; ratio: 5:2">
 							<ul class="uk-slideshow-items js-disabled" id="partners">
-								</li>JavaScript required to view links to other conventions.</li>
+								<li>JavaScript required to view links to other conventions.</li>
 							</ul>
 						</div>
 					</div>
