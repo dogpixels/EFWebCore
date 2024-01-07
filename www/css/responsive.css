@@ -8,9 +8,10 @@
 /* mobile browser do not support 
    background-attachment: fixed for performance reasons,
    the following fix enables it only on desktop */
-   @media only screen and (min-width: 64.063em) {
+   @media only screen and (min-width: 1080px) {
 	main {
 		background-attachment: fixed;
+		background-size: cover;
 		background-position-y: var(--header-height);
 		background-position-x: center;
 	}
