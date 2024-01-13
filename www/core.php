@@ -163,7 +163,7 @@ class EFWebCore
 		// sort pages into categories ($categorized_pages)
 		foreach ($this->config->pages as $key => $page)
 		{
-			if ($page->inMenu && $page->accessible)
+			if ($page->inMenu)
 			{
 				// if category is not listed in config.menu.categoryOrder, append to end
 				if (!array_key_exists($page->category, $categorized_pages))
