@@ -89,7 +89,7 @@
             "uri": "https://archive.eurofurence.org/"
         },
         "artshow": {
-            "accessible": true,
+            "accessible": false,
             "category": "Artists",
             "description": "The Eurofurence Art Show is a large art exhibition. It is your chance to display your works and/or purchase a fine piece of art for your home.",
             "inMenu": true,
@@ -143,7 +143,7 @@
             "uri": "artshow.rules.php"
         },
         "artshow/signup": {
-            "accessible": true,
+            "accessible": false,
             "category": "Artists",
             "description": "Find out how and when to sign-up in order to exhibit your art in the Eurofurence Art Show.",
             "inMenu": true,
@@ -193,7 +193,7 @@
             "uri": "daily.php"
         },
         "dealersden": {
-            "accessible": true,
+            "accessible": false,
             "category": "Artists",
             "description": "The Dealers' Den is the place for all you merchants and artists for selling your fine products.",
             "inMenu": true,
@@ -206,7 +206,7 @@
         },
 		"dealersden/visiting":
 		{
-			"accessible": true,
+			"accessible": false,
 			"inMenu": true,
 			"menuText": "Visiting the Dealers' Den",
 			"category": "Program",
