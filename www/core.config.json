@@ -361,18 +361,6 @@
             "title": "Jobs at Eurofurence",
             "uri": "jobs.php"
         },
-        "liability": {
-            "accessible": true,
-            "category": "Policies",
-            "description": "",
-            "inMenu": true,
-            "keywords": "",
-            "menuText": "Liability Waiver",
-            "ogpImage": "",
-            "robots": "",
-            "title": "",
-            "uri": "https://help.eurofurence.org/legal/liability/"
-        },
         "nosecount": {
             "accessible": false,
             "category": "Membership",
@@ -402,7 +390,7 @@
             "category": "Policies",
             "description": "The necessary rules and guidelines you need to know before attending Eurofurence.",
             "inMenu": true,
-            "keywords": "Policies, Rules, Waiver, Conditions",
+            "keywords": "Policies, Rules, Conditions",
             "menuText": "Policies",
             "ogpImage": "",
             "robots": "",
