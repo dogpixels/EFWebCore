@@ -32,12 +32,15 @@ class EFWebCore
 		$this->config->staticOut->targetBase = trim($this->config->staticOut->targetBase, "/") . "/";
 		$this->config->defaults->pagesDirectory = trim($this->config->defaults->pagesDirectory, "/") . "/";
 
+		// subtract directory from request URI
+		$request_uri = substr($_SERVER["REQUEST_URI"], strlen(dirname($_SERVER["SCRIPT_NAME"])));
+
 		// determine page property key
 		$this->path =
-			$_SERVER["REQUEST_URI"] === "/" ?
+			in_array($request_uri,["", "/"]) ?
 			$this->config->defaults->rootPage :
-			trim(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH), "/");
-		
+			trim(parse_url($request_uri, PHP_URL_PATH), "/");
+
 		// construct base url
 		$this->base = $this->get_base();
 
