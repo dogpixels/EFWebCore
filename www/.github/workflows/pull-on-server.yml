@@ -1,0 +1,14 @@
+name: pull on server
+
+on:
+  - workflow_dispatch
+#  - push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: load key
+        run: echo "${{ secrets.KEY }}" > key && chmod 600 key
+      - name: git pull on host
+        run: ssh -i key -oStrictHostKeyChecking=no ${{ secrets.USER }}@${{ vars.HOST }} "cd ${{ vars.PATH }} && git fetch --all && git reset --hard origin/main"

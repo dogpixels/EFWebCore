@@ -4,7 +4,7 @@
  * Includes debug(), dirmtime(), dircopy() and is_external() as global functions
  * @author	draconigen@gmail.com
  * @since 	11/2015
- * @version	4.00
+ * @version	4.1
  * @license	MIT
  */
 class EFWebCore
