@@ -6,6 +6,7 @@
 	box-sizing: border-box;
 }
 html {
+    overflow-y:scroll;
 	background: #333;
 	color: #fff;
 }
