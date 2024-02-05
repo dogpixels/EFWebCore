@@ -20,7 +20,7 @@
 		<meta name="author" content="web@eurofurence.org" />
 		<meta name="rating" content="general" />
 		<meta name="theme-color" content="<?= $core->current->themeColor ?>" />
-		<meta name="google" content="notranslate" /><!-- prevent Edge/Bing from translating this page -->
+		<meta name="google" content="notranslate" /><!-- prevent Edge/Bing from "translating" this page -->
 
 		<base href="<?= $core->base; ?>" />
 
@@ -118,17 +118,18 @@
 			"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
 			"image": "<?= $core->base . $core->current->ogpImage ?>",
 			"location": {
-			"@type": "Place",
-			"name": "Estrel Hotel",
-			"sameAs": "http://www.estrel.com",
-			"address": {
-				"@type": "PostalAddress",
-				"streetAddress": "Sonnenallee 225",
-				"addressLocality": "Berlin",
-				"postalCode": "12057",
-				"addressCountry": "Germany"
+				"@type": "Place",
+				"name": "CCH Hamburg",
+				"sameAs": "https://www.cch.de/",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Congresspl. 1",
+					"addressLocality": "Hamburg",
+					"postalCode": "20355",
+					"addressCountry": "Germany"
+				}
+			}
 		}
-		}}
 		</script>
 
 		<script type="application/ld+json">
