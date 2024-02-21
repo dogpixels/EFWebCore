@@ -1,40 +1,49 @@
 # Eurofurence Website
 
-Core verison: 4.1
-Last update: 2024-01-17
+Core verison: 4.2
+Last update: 2024-02-21
 
 ## Requirements
 
 either
-* docker / docker-compose, or
+* docker, or
 * Apache Web Server with PHP 7.4 + modrewrite
 
 ## Setup
 
-* Navigate a cli to the root directory and run `docker-compose up -d`, or
-* deploy all files from www to /var/html to be served through Apache Web Server.
+* Navigate a cli to the root directory and run `docker compose up`, or
+* deploy all files from `www` to `/var/html` to be served through Apache Web Server.
 
-## Automatic Deployment
+## Continuous Deployment
 
-A workflow described in `.github/workflows/pull-on-server.yml` allows for automatic updates to the EF Server. To enable that, the following steps are necessary:
+GitHub Workflows described in `.github/workflows/` allows for automatic updates to the EF Server. To enable that, the following steps are necessary:
 
-* Find all necessary secrets and tokens:
-> Note to self: to be found in $storage/private/auth/github.com-eurofurence/deployment-setup.md
+> Note to self: details to be found in `$storage/private/auth/github.com-eurofurence/deployment-setup.md`
 
-* Initialize directory on EF server with `git clone https://${{ secrets.ACCESS_TOKEN }}@github.com/dogpixels/ef__ && mv ef__ EF__`
-> This writes the access token into the .git subdirectory for later use in automated `git pull`.
+* Initialize directory on EF server.
 
-* Let the server point to the freshly created directory, **but the *www* subdirectory!**
+* Set up the following [Action Secrets and Variables](https://github.com/dogpixels/efXX/settings/secrets/actions):
 
-* Set up the following [Action secrets and Variables](https://github.com/dogpixels/efXX/settings/secrets/actions):
-    * secret *KEY*
-    * secret *USER*
-    * var *HOST* = `www.eurofurence.org`
-    * var *PATH* = `~/sites/www.eurofurence.org/EF__`
+| type     | name                  |
+| ---      | ---                   |
+| variable | `PROD_PATH`           |
+| variable | `STAGE_PATH`          |
+| secret   | `DEPLOY_KEY_WWW`      |
+| secret   | `DEPLOY_KEY_WWWTEST`  |
 
-* Finally, enable auto-triggering the workflow by editing `.github/workflow/pull-on-server.yml`.
 
-## Usage
+Finally, when a stable routine has been established, enable auto-triggering the workflow for **production** by editing `.github/workflow/deploy_www.yml`:
+```yml
+on:
+  push:
+      branches: [main]
+  workflow_dispatch:
+```
 
-* To use the static site generation feature, enable "staticOut" option in core.config.json.
-* To automate an export of all pages, call any page with ?export attached to the url.
+> `on push branches` is triggered on pushes to the listed branch(es), while `workflow_dispatch` allows manual running of the workflow.
+
+## Static Site Generation
+
+* To use the static site generation feature, toggle the `staticOut.enabled` option in core.config.json.
+* To automate an export of all pages, call any page with [?export](http://localhost/?export) attached to the url.
+* The static html output will be saved to the path configured under `staticOut.path`.

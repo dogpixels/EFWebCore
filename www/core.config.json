@@ -45,11 +45,11 @@
         }
     },
     "staticOut": {
-        "enabled": true,
+        "enabled": false,
         "lastModifiedEnabled": true,
         "lastModifiedMapFile": "modified.json",
-        "path": "_deploy/",
-        "targetBase": "https://wwwtest.eurofurence.org/EF00/"
+        "path": "_archive/",
+        "targetBase": "https://archive.eurofurence.org/EF__/"
     },
 	"pages": {
         "404": {
