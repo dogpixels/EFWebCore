@@ -1,7 +1,6 @@
 # Eurofurence Website
 
-Core verison: 4.2
-Last update: 2024-02-21
+Version 4.2, last updated: 2024-02-21
 
 ## Requirements
 
