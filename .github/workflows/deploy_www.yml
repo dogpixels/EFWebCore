@@ -23,4 +23,4 @@ jobs:
           --exclude 'modified.json' \
           --exclude 'pages/nosecount.php' \
           --exclude 'img/pages/nosecount' \
-          www/ ef-web@$www.eurofurence.org:${{ vars.PROD_PATH }}
+          www/ ef-web@www.eurofurence.org:${{ vars.PROD_PATH }}
