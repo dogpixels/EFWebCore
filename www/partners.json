@@ -117,6 +117,18 @@
                 "hash": "2141f550d06105565c87eedbfc2e7a1d"
             },
             "file": "img\/cons\/silverfang.png"
+        },
+        "slofluffcon": {
+            "enable": true,
+            "source": "https:\/\/slofluffcon.org\/assets\/banners\/sfc-2023.png",
+            "target": "https:\/\/slofluffcon.org\/",
+            "country": "si",
+            "file": "img\/cons\/slofluffcon.png",
+            "data": {
+                "timestamp": 1686858864,
+                "status": 200,
+                "hash": "4f91044fb28ce3d2c10c971194c680cd"
+            }
         }
     }
 }
