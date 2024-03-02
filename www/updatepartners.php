@@ -42,18 +42,28 @@ foreach ($data['conventions'] as $key => $con)
         ];
     }
 
-    // The source url better ends in a simple extension, not something like .png?w=200&h=80, or else
-    // we'll need to utilize parse_url(), which does not provide simple access to file extensions.
-    $destination = str_replace('{key}', $key, $data['path']) . '.' . pathinfo($con['source'])['extension'];
+    // download banner
+    if (!empty($con['source']))
+    {
+        // The source url better ends in a simple extension, not something like .png?w=200&h=80, or else
+        // we'll need to utilize parse_url(), which does not provide simple access to file extensions.
+        $destination = str_replace('{key}', $key, $data['path']) . '.' . pathinfo($con['source'])['extension'];
 
-    echo "\nsource      : {$con['source']}";
-    echo "\ndestination : {$destination}";
+        echo "\nsource      : {$con['source']}";
+        echo "\ndestination : {$destination}";
 
-    curl_setopt($ch, CURLOPT_URL, $con['source']);
+        curl_setopt($ch, CURLOPT_URL, $con['source']);
 
-    $payload = curl_exec($ch);
+        $payload = curl_exec($ch);
+        $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    }
+    else
+    {
+        $payload = null;
+        $status = -1;
+    }
 
-    $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
     $timestamp = $con['data']['timestamp'];
     $hash = md5($payload);
 
@@ -65,7 +75,7 @@ foreach ($data['conventions'] as $key => $con)
     }
     
     // check if last update is older than 365 days    
-    if ($now - $timestamp > 31536000)
+    if ($status > 0 && $now - $timestamp > 31536000)
     {
         $msg .= "\nLast update was seen " . round(($now - $timestamp) / 86400) . " days ago, disabling entry.";
     }
@@ -80,7 +90,12 @@ foreach ($data['conventions'] as $key => $con)
         file_put_contents($destination, $payload);
         $new_data['conventions'][$key]['file'] = $destination;
     }
-    else {
+    else if ($status === 0)
+    {
+        $msg .= "\nNo source url, skipping status assessment.";
+    }
+    else
+    {
         $msg .= "\nError downloading file, disabling entry.";
         $new_data['conventions'][$key]['enable'] = false;
     }
