@@ -409,6 +409,18 @@
             "title": "",
             "uri": "https://reg.eurofurence.org/"
         },
+        "reg/stats": {
+            "accessible": true,
+            "category": "Membership",
+            "description": "Registration statistics visualized.",
+            "inMenu": false,
+            "keywords": "Statistic, Stats, Nosecount, Registration, Reg, Sign-Up, Diagram, Chart",
+            "menuText": "Reg Stats",
+            "ogpImage": "",
+            "robots": "",
+            "title": "Registration Statistics",
+            "uri": "regstats.php"
+        },
         "roc": {
             "accessible": true,
             "category": "Policies",
