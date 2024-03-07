@@ -30,7 +30,6 @@ GitHub Workflows described in `.github/workflows/` allows for automatic updates 
 | secret   | `DEPLOY_KEY_WWW`      |
 | secret   | `DEPLOY_KEY_WWWTEST`  |
 
-
 Finally, when a stable routine has been established, enable auto-triggering the workflow for **production** by editing `.github/workflow/deploy_www.yml`:
 ```yml
 on:
