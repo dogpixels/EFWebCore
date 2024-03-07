@@ -215,6 +215,7 @@
 					<div class="uk-button-group">
 						<!-- <a href="home" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Homepage" uk-icon="home"></a> -->
 						<a target="_blank" href="https://app.eurofurence.org/" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="iOS & Android" uk-icon="phone"></a>
+						<a target="_blank" href="https://t.me/s/efnotifications" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Telegram" uk-icon="telegram"></a>
 						<a target="_blank" href="https://www.x.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="X" uk-icon="x"></a>
 						<a target="_blank" href="https://www.facebook.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Facebook" uk-icon="facebook"></a>
 						<a target="_blank" href="https://vimeo.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:bottom" title="Vimeo" uk-icon="vimeo"></a>
