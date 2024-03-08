@@ -1,9 +1,12 @@
+const regStatConfig = {
+    year: 2024,
+    state: 'open',
+    // data: 'https://www.eurofurence.org/data/reg/{year}.json',
+    data: 'http://localhost/_workfiles/temp/{year}.json'
+}
+
 class RegStats
 {
-    datasource = 'https://www.eurofurence.org/data/reg/{year}.json';
-    // datasource = 'http://localhost/_workfiles/temp/{year}.json';
-    regopening  = 'open' // open | staff | closed
-
     colors = {
         ci: {
             100: '#005953',
@@ -26,6 +29,16 @@ class RegStats
             fursuiter: '#ff9d08',
             musician: '#08e5bd'
         }
+    }
+    
+    /**
+     * @param {String} datasource // json url, {year} is substituted by update()
+     * @param {String} regstate   // open | staff | closed
+     */
+    constructor(datasource, regstate)
+    {
+        this.datasource = datasource;
+        this.regstate = regstate;
     }
 
     async init()
@@ -85,7 +98,7 @@ class RegStats
         const text = document.getElementById('ef-rs-reg-opening');
         const indicator = document.getElementById('ef-rs-reg-opening-indicator');
         indicator.classList.remove('ef-rs-reg-opening-indicator-animation');
-        switch (this.regopening)
+        switch (this.regstate)
         {
             case 'closed':
                 indicator.style.color = this.colors.lanyard.director;
@@ -388,13 +401,13 @@ class RegStats
             data = await (await fetch(url)).json();
             if (!data)
             {
-                console.info("[ef-nosecount] data", data);
+                console.info("[ef-regstats] data", data);
                 throw "malformed data";
             }
         }
         catch(ex)
         {
-            console.error(`[ef-nosecount] failed to load ${url}, reason: ${ex}`);
+            console.error(`[ef-regstats] failed to load ${url}, reason: ${ex}`);
             return;
         }
 
@@ -538,3 +551,21 @@ const htmlLegendPlugin = {
         container.appendChild(table);
     }
 };
+
+const regstats = new RegStats(regStatConfig.data, regStatConfig.state);
+
+regstats.init();
+regstats.update(regStatConfig.year);
+
+const timer_set = 10; // seconds
+var timer_cur = timer_set;
+const timer_div = document.getElementById('ef-rs-update');
+
+setInterval(() => {
+    if (--timer_cur < 0)
+    {
+        regstats.update(regStatConfig.year);
+        timer_cur = timer_set;
+    }
+    timer_div.innerText = timer_cur;
+}, 1000);

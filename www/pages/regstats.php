@@ -183,24 +183,5 @@
 	</div>
 </div>
 
-
-<script src="../js/chart.js"></script>
-<script src="../js/regstats.js"></script>
-<script>
-	nc = new RegStats();
-	nc.init();
-	nc.update("<?= $this->config->convention->year ?>");
-
-	timer_set = 10; // seconds
-	timer_cur = timer_set;
-	timer_div = document.getElementById('ef-rs-update');
-
-	setInterval(() => {
-		if (--timer_cur < 0)
-		{
-			nc.update("<?= $this->config->convention->year ?>");
-			timer_cur = timer_set;
-		}
-		timer_div.innerText = timer_cur;
-	}, 1000);
-</script>
+<script src="js/chart.js"></script>
+<script src="js/regstats.min.js"></script>
