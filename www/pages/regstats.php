@@ -73,7 +73,7 @@
 </style>
 
 <section id="ef-regstats">
-	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@l uk-child-width-1-2@s uk-margin-bottom" uk-grid>
+	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@l uk-child-width-1-2@m uk-margin-bottom" uk-grid>
 		<div>
 			<div class="uk-card uk-card-default uk-card-body">
 				<h3 class="uk-card-title">Total Registrations</h3>
@@ -129,13 +129,6 @@
 				<span uk-icon="microphone"></span>Musicians
 			</div>
 		</div>
-
-		<!-- <div>
-			<div class="uk-card uk-card-default uk-card-body">
-				<h3 class="uk-card-title"><span id="ef-rs-reg-interests-writers"></span></h3>
-				<span uk-icon="quote-right"></span>Writers
-			</div>
-		</div> -->
 	</div>
 
 	<div class="uk-card uk-card-default uk-card-body uk-margin-bottom uk-width-1-1">
@@ -146,10 +139,10 @@
 	<div class="uk-card uk-card-default uk-card-body uk-margin-bottom uk-width-1-1">
 		<h3 class="uk-card-title uk-margin-bottom">Origins by Country</h3>
 		<div class="ef-rs-barchart"><canvas id="ef-rs-country"></canvas></div>
-		<button class="uk-icon-button" onclick="nc.zoomCountry()" uk-icon="search" uk-tooltip="pos:left" title="Toggle Zoom"></button>
+		<button class="uk-icon-button" id="ef-rs-country-zoom" uk-icon="search" uk-tooltip="pos:left" title="Toggle Zoom"></button>
 	</div>
 
-	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@l uk-child-width-1-2@s uk-margin-bottom" uk-grid>
+	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@l uk-child-width-1-2@m uk-margin-bottom" uk-grid>
 		<div>
 			<div class="uk-card uk-card-default uk-card-body">
 				<h3 class="uk-card-title">Shirt Sizes</h3>

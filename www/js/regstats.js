@@ -1,8 +1,9 @@
 const regStatConfig = {
-    year: 2024,
+    year: new Date().getFullYear(),
     state: 'open',
-    // data: 'https://www.eurofurence.org/data/reg/{year}.json',
-    data: 'http://localhost/_workfiles/temp/{year}.json'
+    data: 'https://www.eurofurence.org/data/reg/{year}.json',
+    // data: 'https://wwwtest.eurofurence.org/data/reg/{year}.json',
+    // data: 'http://localhost/_workfiles/temp/{year}.json'
 }
 
 class RegStats
@@ -285,6 +286,29 @@ class RegStats
 
     initCountry()
     {
+        document.getElementById('ef-rs-country-zoom').addEventListener('click', () => {
+            // undefined == auto
+            if (this.charts.country.options.scales.y.max == undefined) 
+            {
+                const values = Object.values(this.data.country);
+                const vhighi = values.indexOf(Math.max(...values));
+                
+                // remove highest value, so the 2nd takes its place
+                values[vhighi] = 0; 
+
+                // add 20% ontop of max value and round to steps of 10
+                this.charts.country.options.scales.y.max =
+                    Math.ceil(Math.max(...values) * 1.2 / 10) * 10;
+            }
+            else
+            {
+                // let chartjs handle y axis scale automatically
+                this.charts.country.options.scales.y.max = undefined;
+            }
+            
+            this.charts.country.update();
+        });
+
         return new Chart(document.getElementById('ef-rs-country'),
         {
             type: 'bar',
@@ -312,30 +336,6 @@ class RegStats
     {
         this.charts.country.data.labels = Object.keys(this.data.country);
         this.charts.country.data.datasets[0].data = Object.values(this.data.country);
-        this.charts.country.update();
-    }
-
-    zoomCountry()
-    {
-        // undefined == auto
-        if (this.charts.country.options.scales.y.max == undefined) 
-        {
-            const values = Object.values(this.data.country);
-            const vhighi = values.indexOf(Math.max(...values));
-            
-            // remove highest value, so the 2nd takes its place
-            values[vhighi] = 0; 
-
-            // add 20% ontop of max value and round to steps of 10
-            this.charts.country.options.scales.y.max =
-                Math.ceil(Math.max(...values) * 1.2 / 10) * 10;
-        }
-        else
-        {
-            // let chartjs handle y axis scale automatically
-            this.charts.country.options.scales.y.max = undefined;
-        }
-        
         this.charts.country.update();
     }
     
