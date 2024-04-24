@@ -171,13 +171,13 @@
         "conbook": {
             "accessible": true,
             "category": "Artists",
-            "description": "The con book is the number one guide for every attendee of Eurofurence. Event information, floor plans and more.",
+            "description": "The Conbook is the number one guide for every attendee of Eurofurence. Event information, floor plans and more.",
             "inMenu": true,
-            "keywords": "Conbook, Con Book, Guide",
-            "menuText": "Con Book",
+            "keywords": "Conbook, Guide",
+            "menuText": "Conbook",
             "ogpImage": "conbook.jpg",
             "robots": "",
-            "title": "Con Book",
+            "title": "Conbook",
             "uri": "conbook.php"
         },
         "daily": {

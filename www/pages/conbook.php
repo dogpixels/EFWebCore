@@ -1,8 +1,8 @@
-<h1>Con Book</h1>
+<h1>Conbook</h1>
 <section>
-	<p>As every year, we will have a con book as guide through the convention and its events, as map, and as souvenir. If you're interested in contributing content, here are the guidelines.</p>
+	<p>As every year, we will have a Conbook as guide through the convention and its events, as map, and as souvenir. If you're interested in contributing content, here are the guidelines.</p>
 	<p>All contributions, requests, and notes should be sent to our <a href="https://help.eurofurence.org/contact/conbook" target="_blank">Conbook department</a>.
-	<p><b>Deadline:</b> July 9th</p>
+	<p><b>Deadline:</b> TBA</p>
 </section>
 
 <hr />
@@ -11,7 +11,7 @@
 <h3 class="uk-margin-remove-top">(If you're an artist, this one is for you!)</h3>
 <section>
 	<ul class="uk-column-1-2@l">
-		<li>The con book is in full color, so we prefer color illustrations as well.</li>
+		<li>The Conbook is in full color, so we prefer color illustrations as well.</li>
 		<br/>
 		<li>We are looking for full page illustrations as well as smaller fillers.</li>
 		<br/>
@@ -35,7 +35,7 @@
 <section class="uk-column-1-2@l">
 	<p>While there is no ongoing contest (the book's cover and centerfold have been assigned), there's still a challenge in getting into the book! Acceptance depends on quality, total number of images submitted, layout requirements, and the implementation of the con's topic! We will not be able to tell you immediately whether your submission makes the cut; this can be decided only in the final layout, so please be patient.</p>
 	<p>If you have graphic ideas other than illustrations which fit with the topic, you're welcome to submit them as well!</p>
-	<p>Even if your artwork does not get featured in the conbook itself, we will always try to include it if applicable in various media across the convention (e.g. banners, dance visuals ect.)</p>
+	<p>Even if your artwork does not get featured in the Conbook itself, we will always try to include it if applicable in various media across the convention (e.g. banners, dance visuals ect.)</p>
 	<p>Please provide following information along with your submission:</p>
 	<ul>
 		<li>Artist Name</li>
@@ -45,22 +45,9 @@
 	</ul>
 </section>
 
-
-<hr />
-
-<h2>Advertising</h2>
-<section class="uk-column-1-2@l">
-	<p>Eurofurence supports fellow conventions! Ads for conventions are run free of charge, preferrably as ad exchange. The number of available spots for such ads are limited (and subject to layout needs), so let us know your interest early on!</p>
-	<p>We are aware that date requirements do not always allow a meaningful swap, so please add your convention's dates (including the con book deadlines) with your request.</p>
-	<p>Full color ads are supported. Formats compatible with the European norm A4 (A5, A6) are preferred. (See also the formatting hints under "Illustrations".)</p>
-	<p>The con book does not accept paid ads at this time due to mandatory taxes and other required overhead.
-	The editorial department will run occasional ads by EF crew as a complimentary service and thank-you. These ads are selected at the discretion of the editor (and if necessary the con chair). Please send in your application early.</p>
-</section>
-
 <hr />
 
 <section>
 	<h2>Texts</h2>
-	<p>Due to space issues, we currently do not include stories or articles with the con book.</p>
+	<p>Due to space issues, we currently do not include stories or articles with the Conbook.</p>
 </section>
-<br />
