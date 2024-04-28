@@ -212,7 +212,6 @@
 				
 				<div>
 					<h3>Find us on</h3>
-					<div class="uk-button-group">
 					<div class="uk-button-group uk-width-1-1 uk-margin-small-bottom">
 						<!-- <a href="home" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Homepage" uk-icon="home"></a> -->
 						<a target="_blank" href="https://app.eurofurence.org/" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="iOS & Android" uk-icon="phone"></a>
