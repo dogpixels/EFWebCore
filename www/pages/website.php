@@ -1,7 +1,37 @@
 <section>
-	<h1>
-		Featured Artist: To be Announced
-	</h1>
+	<h1>Featured Artist: Rudzik</h1>
+</section>
+<section class="uk-column-1-2@l">
+	<div>
+		<p class="uk-text-italic">Hey there, fellow travelers of imagination! I'm Rudzik, a digital artist hailing from Germany. 
+		<p class="uk-text-italic">I'm all about furry and fantasy art - think adorable fur creatures and majestic dragons! 
+		<p class="uk-text-italic">Since 2020, Rudzik's been making magic happen full-time. </p>
+		<p class="uk-text-italic">Let's embark on this creative journey together and explore the wonders of imagination in my enchanting art! </p>
+	
+		<h2>Links &amp; Projects</h2>
+		<ul>
+			<li><a href="https://rudzik.art/" target="_blank">Rudzik's Homepage</a></li>
+			<li><a href="https://coffeehousecreatures.com" target="_blank">Coffee House Creatures</a></li>
+		</ul>
+	</div>
+
+	<div>
+		<?php
+			$images = [
+				"ef2024_sample1_by_rudzik.jpg",
+				"ef2024_sample2_by_rudzik.jpg",
+				"ef2024_sample3_by_rudzik.jpg",
+				"ef2024_sample4_by_rudzik.jpg"
+			]
+		?>
+		<div uk-slideshow="autoplay: true; autoplay-interval: 5000; animation: pull; ratio: 3:1">
+			<ul class="uk-slideshow-items" uk-lightbox>
+			<?php foreach ($images as $img) { ?>
+				<li><a href="img/art/<?= $img ?>"><img src="img/art/thumbs/<?= $img ?>" width="600" height="315" alt="Art by Rudzik" /></a></li>
+			<?php } ?>
+			</ul>
+		</div>
+	</div>
 </section>
 
 <hr />
@@ -16,6 +46,7 @@
 		<h2>Third Party Attributions</h2>
 		<ul>
 			<li><a href="https://getuikit.com" target="_blank">UIkit</a> by <a href="https://yootheme.com/" target="_blank">YOOtheme GmbH</a> (<a href="https://github.com/uikit/uikit/blob/develop/LICENSE.md" target="_blank">license</a>)</li>
+			<li><a href="http://www.myfont.de/fonts/infos/3586-Hemi-Head-426.html" target="_blank">Hemi Head 426</a> by Larabie Fonts (<a href="fonts/read_me.html" target="_blank">license</a>)</li>
 		</ul>
 	</div>
 </section>
@@ -30,18 +61,22 @@
 	<?php
 		$members = [
 			// ['Name', 'Title', 'Image', 'Link'],
-			['draconigen', 'Director, Main Website, Help Center', 'draconigen.png', 'https://www.dogpixels.net/draconigen/'],
+			['draconigen', 'Director &amp; Main Website', 'draconigen.png', 'https://www.dogpixels.net/draconigen/'],
 			['fafnyr', 'Vice Director &amp; System Administration', 'fafnyr.png', 'https://www.furaffinity.net/user/fafnyr/'],
+			['Alex Dax', 'Writing', 'sithy.png', 'https://twitter.com/MxSithy'],
 			['Fenmar', 'Archive', 'fenmar.png', 'https://fenmar.de/'],
 			['Fenrikur', 'Nosecounter', 'fenrikur.png', 'https://twitter.com/Fenrikur/'],
 			['Fleeks', 'Logo Design', 'fleeks.png', 'https://fleeks.art/'],
-			['Sebin', 'Feedback Management', 'sebin.png', 'https://twitter.com/SebinNyshkim'],
-			['Sithy', 'Writing', 'sithy.png', 'https://twitter.com/MxSithy'],
-			['Vinaru', 'Banner Exchange', 'vinaru.png', 'https://twitter.com/Vinaru'],
+			['Lio', 'Writing', 'lio.jpg', 'https://lio.cat/'],
+			['OxySynth', 'Fursuit Photoshoot Gallery', 'oxy.png', 'https://bsky.app/profile/oxysynth.bsky.social'],
+			['Rig', 'HelpCenter', 'rig.jpg', ''],
+			['Sebin', 'Accessibility', 'sebin.png', 'https://twitter.com/SebinNyshkim'],
+			['Vinaru', 'Banner Exchange', 'vinaru.png', 'https://www.furaffinity.net/user/vinaru'],
+			['Xenor', 'Survey', 'xenor.png', 'https://twitter.com/XenorThesergal'],
 		];
 
 		foreach ($members as $m) { ?>
-			<a href="<?= $m[3] ?>" target="_blank" class="ef-hide-ext uk-width-medium">
+			<a href="<?= $m[3] ?>" target="_blank" class="ef-hide-ext uk-width-medium"<?= empty($m[3])? 'onclick="return false;"' : '' ?>>
 				<div>
 					<img src="img/pages/website/<?= $m[2] ?>" alt="<?= $m[2] ?>" />
 					<h3><?= $m[0] ?></h3>
