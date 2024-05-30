@@ -67,7 +67,7 @@
 			['Fenmar', 'Archive', 'fenmar.png', 'https://fenmar.de/'],
 			['Fenrikur', 'Nosecounter', 'fenrikur.png', 'https://twitter.com/Fenrikur/'],
 			['Fleeks', 'Logo Design', 'fleeks.png', 'https://fleeks.art/'],
-			['Lio', 'Writing', 'lio.jpg', 'https://lio.cat/'],
+			['Lio', 'Writing', 'lio.jpg', 'https://lio.to/'],
 			['OxySynth', 'Fursuit Photoshoot Gallery', 'oxy.png', 'https://bsky.app/profile/oxysynth.bsky.social'],
 			['Rig', 'HelpCenter', 'rig.jpg', ''],
 			['Sebin', 'Accessibility', 'sebin.png', 'https://twitter.com/SebinNyshkim'],
