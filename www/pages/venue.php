@@ -4,6 +4,7 @@
 		<p>In the center of Hamburg, Germany, amidst  lots of green and between Alster lake and a beatiful park to your leisure, lies the Congress Center Hamburg (CCH).</p>
 		<p>The Dammtor mainline train station and several other public transportation connections within walking distance allow for an easy travel.</p>
 		<p>Countless hotels, bars and restaurants around the neighborhood enrich the experience with a vast number of options to cater any taste and leave no desire unanswered.</p>
+		<p>The barrier-free architectural design concept of the CCH supports the accessibility of our events for all people, regardless of whether they have disabilities or not. You can find more information about their <a href="https://www.cch.de/en/visit/barrier-free-access" target="_blank">barrier-free access</a> on their website.</p>
 		
 		<h2>Features</h2>
 		<p>These impressive numbers allow for growth beyond many years to come</p>

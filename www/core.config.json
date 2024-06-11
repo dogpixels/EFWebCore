@@ -76,6 +76,18 @@
             "title": "Page Not Available Yet",
             "uri": "501.php"
         },
+        "accessibility": {
+            "accessible": true,
+            "category": "Policies",
+            "description": "People have the right to participate in public life and society. Here we provide information on how we make our convention more accessible.",
+            "inMenu": true,
+            "keywords": "Accessibility, Accessible, Help, Disability, Disadvantage, Impairment",
+            "menuText": "Accessibility",
+            "ogpImage": "",
+            "robots": "",
+            "title": "Accessibility",
+            "uri": "accessibility.php"
+        },
         "archive": {
             "accessible": true,
             "category": "Website",
