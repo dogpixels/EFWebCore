@@ -150,23 +150,23 @@
 <h2>Glossary and Terms</h2>
 <section>
 	<div>
-		<h3 class="reset-font">Dealer</h3>
+		<h3>Dealer</h3>
 		<p>The dealer is the single person ultimately responsible for the dealership and the authority for questions from staff. A dealer can only run one dealership. A dealer needs a valid Eurofurence event registration for the on-site Dealers’ Den Check-In.</p>
 	</div>
 
 	<div>
-		<h3 class="reset-font">Dealer Assistant</h3>
+		<h3>Dealer Assistant</h3>
 		<p>Any person working in a dealership needs to be registered as a dealer assistant. A dealer assistant is supporting the dealer, while holding the same access and sales privileges as the respective dealer himself. Dealer assistant status is particularly important during setup and teardown, as only dealers and dealer assistants are granted access into the Dealers’ Den during those times. Dealerships may have multiple dealer assistants, based on the size of the dealership. Each dealer assistant can only be assigned to one dealership, while still being permitted to support other dealerships. Dealer assistants need a valid Eurofurence event registration for the on-site Dealers’ Den Check-In.</p>
 	</div>
 
 	<div>
-		<h3 class="reset-font">Dealership</h3>
+		<h3>Dealership</h3>
 		<p>A dealership consists of one or more tables under the exclusive control of a single dealer, supported by dealer assistants, to display, give away, advertise, offer or sell items, merchandise or services.</p>
 	</div>
 
 	<div class="uk-overflow-auto">
 		<table class="uk-table uk-margin-bottom ef-table-borders">
-			<caption><h3 class="reset-font">Types and Sizes</h3></caption>
+			<caption><h3>Types and Sizes</h3></caption>
 			<thead>
 				<tr>
 					<th>Dealership Package</th>
@@ -178,7 +178,7 @@
 				</tr>
 			<tbody>
 				<tr>
-					<td><h4 class="reset-font">Dimensions</h4></td>
+					<td><h4>Dimensions</h4></td>
 					<td class="uk-text-center">65&nbsp;cm x 65&nbsp;cm</td>
 					<td class="uk-text-center">130&nbsp;cm x 65&nbsp;cm</td>
 					<td class="uk-text-center">260&nbsp;cm x 65&nbsp;cm</td>
@@ -186,11 +186,11 @@
 					<td class="uk-text-center">260&nbsp;cm x 130&nbsp;cm</td>
 				</tr>
 				<tr>
-					<td><h4 class="reset-font">Height</h4></td>
+					<td><h4>Height</h4></td>
 					<td class="uk-text-center" colspan="5">69&nbsp;cm &ndash; 71.5&nbsp;cm<br/>(bottom of table to top of the table)</td>
 				</tr>
 				<tr>
-					<td><h4 class="reset-font">Seats</h4></td>
+					<td><h4>Seats</h4></td>
 					<td class="uk-text-center">1</td>
 					<td class="uk-text-center">2</td>
 					<td class="uk-text-center">4</td>
@@ -198,7 +198,7 @@
 					<td class="uk-text-center">4</td>
 				</tr>
 				<tr>
-					<td><h4 class="reset-font">Maximum Dealer Assistants</h4></td>
+					<td><h4>Maximum Dealer Assistants</h4></td>
 					<td class="uk-text-center">1</td>
 					<td class="uk-text-center">1</td>
 					<td class="uk-text-center">3</td>
@@ -206,7 +206,7 @@
 					<td class="uk-text-center">3</td>
 				</tr>
 				<tr>
-					<td><h4 class="reset-font">Price for all 3 days</h4></td>
+					<td><h4>Price for all 3 days</h4></td>
 					<td class="uk-text-center">50&nbsp;&euro;</td>
 					<td class="uk-text-center">100&nbsp;&euro;</td>
 					<td class="uk-text-center">200&nbsp;&euro;</td>
@@ -234,17 +234,17 @@
 	</div>
 
 	<div>
-		<h3 class="reset-font">Joint Dealership</h3>
+		<h3>Joint Dealership</h3>
 		<p>A joint dealership is a venture of a dealer registered for a dealership above the type “Half”, sharing their dealership space with an authorized dealer without dealership space.</p>
 	</div>
 
 	<div>
-		<h3 class="reset-font">Dealers’ Den Registration</h3>
+		<h3>Dealers’ Den Registration</h3>
 		<p>The dealer registration and application for a dealership made in the Dealers’ Den registration System available at <a href="https://dealers.eurofurence.org" target="_blank">https://dealers.eurofurence.org</a></p>
 	</div>
 
 	<div>
-		<h3 class="reset-font">Eurofurence Registration</h3>
+		<h3>Eurofurence Registration</h3>
 		<p>The attendee registration for the Eurofurence event available at <a href="https://identity.eurofurence.org" target="_blank">https://identity.eurofurence.org</a></p>
 	</div>
 </section>
@@ -254,7 +254,7 @@
 <h2>Obtaining a Dealership</h2>
 <section class="uk-column-1-2@l">
 	<div>
-		<h3 class="reset-font">Step I: Application</h3>
+		<h3>Step I: Application</h3>
 		<p>The dealership application period is planned to start in March 2023. It will be open for at least four weeks.</p>
 		<p>To be eligible for registration as a dealer or dealer assistant, a previous registration for Eurofurence (the event) via the Eurofurence <a href="https://identity.eurofurence.org" target="_blank">Registration System</a> is mandatory. After registering for the event a dealership application can be submitted on the Dealers’ Den website <a href="https://dealers.eurofurence.org" target="_blank">https://dealers.eurofurence.org</a>. During Dealers’ Den registration, the desired size and table configuration for the dealership can be applied for.</p>
 		<p>Dealership applications without valid previous event registration will be canceled.</p>
@@ -264,7 +264,7 @@
 	</div>
 
 	<div>
-		<h3 class="reset-font">Step II: Approval</h3>
+		<h3>Step II: Approval</h3>
 		<p>Dealerships at Eurofurence will be approved on a curated basis.</p>
 		<p>Curation will be performed by Dealers’ Den Management. Dealerships will be assigned based on a variety of factors, including, but not limited to:
 			<ul>
@@ -279,26 +279,26 @@
 	</div>
 
 	<div>
-		<h3 class="reset-font">Step III: Payment</h3>
+		<h3>Step III: Payment</h3>
 		<p>After dealership approval, the dealer’s Eurofurence event registration will be updated to include the fee for the assigned dealership. The dealer is required to pay the fee at the same time as their respective Eurofurence event registration fee, using their preferred payment method.</p>
 		<p>Placement of dealerships with fees still due on their Eurofurence registration is not possible. If payment is overdue, Dealers’ Den Management may cancel an application and offer the space to the next dealer on the waiting list.</p>
 		<p>Eurofurence e.V. handles all transactions in Euro (€). Fees must be paid via credit or debit cards. Eurofurence e.V. does not accept PayPal, cash payment or any other method of payment. All payments must be handled through the Eurofurence Registration System. Do never send any credit card information via email!</p>
 	</div>
 
 	<div>
-		<h3 class="reset-font">Step IV: Placement</h3>
+		<h3>Step IV: Placement</h3>
 		<p>Upon completion of payment, Dealers’ Den Management will commence dealership placement, based on requests and space availability. Although dealership placements are not final until the start of the event, an email containing the preliminary dealership placement will be sent to each dealer for information. Dealers’ Den management is open for any suggestions any dealer may offer about alternative placement.</p>
 	</div>
 
 	<div>
-		<h3 class="reset-font">Waiting List</h3>
+		<h3>Waiting List</h3>
 		<p>Any dealerships not initially accepted in Step II will be placed on a waiting list curated under the same factors. Information about this status will also be sent to the respective dealer after Step IV is completed. Changes to the original application (including requests for different dealership sizes) via email reply to the waiting list information might lead to a re-evaluation of the application on the waiting list.</p>
 		<p>If a dealership space becomes re-available due to cancellation of another dealer, the first dealer on the waiting list will be contacted. There will be limited time to respond, usually only about a week. Once the dealer has confirmed their newly assigned dealership size, the corresponding dealership package will be added to the dealer’s Eurofurence registration, and the payment will be due immediately.</p>
 		<p>There might be last-minute sales of canceled dealership spaces on a first-come, first-serve basis at the convention itself, starting 12:00 (noon) on Monday for unclaimed dealerships.</p>
 	</div>
 
 	<div>
-		<h3 class="reset-font">Cancellations</h3>
+		<h3>Cancellations</h3>
 		<p>If a dealer can no longer make use of their dealership, they are asked to contact Dealers’ Den Management via email in a timely manner. <span class="uk-text-italic">Not doing so is considered unfair to dealers who are on the waiting list and will lead to a lower priority during curation on future events for the dealer.</span></p>
 		<p><strong>It is not possible to cancel and refund a dealership package but the dealership package can be transferred from one dealer to another dealer on the waiting list.</strong> Please notify the Dealers’ Den Management about a desired  transfer of a dealership package in a timely manner to work out the necessary arrangements.</p>
 </section>
@@ -315,7 +315,7 @@
 <hr />
 
 <h2>Dealers’ Den Setup</h2>
-<h3 class="reset-font">On Site Dealers’ Check-In</h3>
+<h3>On Site Dealers’ Check-In</h3>
 <section>
 	<p>
 		<ul>
@@ -335,13 +335,13 @@
 <section class="uk-column-1-2@l">
 	<p>Dealers’ Den will open to attendees at the time scheduled in the ConBook. An initial admission period is reserved for Sponsors and Super Sponsors before general admission begins.</p>
 
-	<h3 class="reset-font">Guidelines on Dealerships</h3>
+	<h3>Guidelines on Dealerships</h3>
 	<p>All dealerships include approximately one meter of space behind them. Each dealership is required to maintain sufficient walking space to enable other dealers to move in and out. Pre-arranged safety paths for exit and emergency evacuation in between dealerships must not be obstructed; merchandise must not reach into these paths. Tables shall not be moved without approval of Dealers’ Den Management.</p>
 	<p>Upon request, tables and chairs may be removed from a dealership.</p>
 	<p>With the exception of “Half”, all dealership packages can be shared with another authorized dealer. The dealer sharing the dealership is solely responsible for the joint dealership and payment therefore. A potential distribution of costs for the joint dealership between the dealers lies in the responsibility of the dealers involved in the joint dealership.</p>
 	<p>Any change of a joint dealership or a dealership of the type “Half” requires the consent of all dealers involved, as well as the notification and approval of the Dealers’ Den Management.</p>
 	
-	<h3 class="reset-font">Guidelines on Merchandise</h3>
+	<h3>Guidelines on Merchandise</h3>
 	<p>
 		<ul>
 			<li>
@@ -378,7 +378,7 @@
 	</p>
 	<p>Any item that is deemed inappropriate may be banned from display or sale on the sole discretion of the Dealers’ Den Management or their deputies, namely the Dealers’ Den staff.</p>
 	
-	<h3 class="reset-font">Guidelines on Sales</h3>
+	<h3>Guidelines on Sales</h3>
 	<p>The Eurofurence Dealers’ Den is separated into a general area which is rated PG-13 (natural nudity without sexual focus) and an “After Dark” section which is considered “Rated R”.</p>
 	<p>
 		<ul>
@@ -388,7 +388,7 @@
 		</ul>
 	</p>
 
-	<h3 class="reset-font">Guidelines on Activities</h3>
+	<h3>Guidelines on Activities</h3>
 	<p>
 		<ul>
 			<li>In no event shall Eurofurence e.V. be liable for damages, injuries, breakage, or loss incurred to or caused by any Dealer or Attendee.</li>
@@ -411,7 +411,7 @@
 
 <h2>Dealers’ Den Teardown</h2>
 <section>
-	<h3 class="reset-font">Closing, Cleanup, Check-out</h3>
+	<h3>Closing, Cleanup, Check-out</h3>
 	<ul>
 		<li>Dealers’ Den closes on Wednesday at 18:00. After that time only dealers and their assistants are permitted entry to and presence in the Dealers’ Den.</li>
 		<li>Teardown begins immediately after closing. Dealers are expected to dismount their displays, pack up their belongings and clear the room before 20:00.</li>

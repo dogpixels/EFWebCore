@@ -50,7 +50,7 @@
 					</div>
 				</div>
 				<div class="uk-card-body">
-					<h3 class="uk-card-title reset-font">Ground Floor</h3>
+					<h3 class="uk-card-title">Ground Floor</h3>
 					<ul>
 						<li>Entrance</li>
 						<li>Registration</li>
@@ -72,7 +72,7 @@
 					</div>
 				</div>
 				<div class="uk-card-body">
-					<h3 class="uk-card-title reset-font">1st Floor</h3>
+					<h3 class="uk-card-title">1st Floor</h3>
 					<ul>
 						<li>To Be Announced</li>
 					</ul>
@@ -92,7 +92,7 @@
 					</div>
 				</div>
 				<div class="uk-card-body">
-					<h3 class="uk-card-title reset-font">2nd Floor</h3>
+					<h3 class="uk-card-title">2nd Floor</h3>
 					<ul>
 						<li>To Be Announced</li>
 					</ul>
@@ -112,7 +112,7 @@
 					</div>
 				</div>
 				<div class="uk-card-body">
-					<h3 class="uk-card-title reset-font">3rd Floor</h3>
+					<h3 class="uk-card-title">3rd Floor</h3>
 					<ul>
 						<li>To Be Announced</li>
 					</ul>
