@@ -158,7 +158,7 @@
 			<input type="checkbox" id="nav-state" />
 			<label for="nav-state" id="nav-button"></label>
 			<h1><span class="ef-menubutton"></span>Eurofurence <?= $core->current->number ?></h1>
-			<nav id="nav">
+			<nav>
 				<a href="home" id="ef-homelink">&lt; Home Page</a>
 				<hr />
 				<?= $core->get_menu() ?>
