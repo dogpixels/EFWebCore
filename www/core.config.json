@@ -277,6 +277,18 @@
             "title": "Fursuit Support",
             "uri": "fursuits.php"
         },
+        "fursuitlounge": {
+            "accessible": true,
+            "category": "Program",
+            "description": "",
+            "inMenu": true,
+            "keywords": "Fursuit, Fursuits, Suiter, Fursuit Lounge, Lounge, Headless Lounge",
+            "menuText": "Fursuit Lounge",
+            "ogpImage": "",
+            "robots": "",
+            "title": "Fursuit Lounge",
+            "uri": "fursuitlounge.php"
+        },
         "fursuits/photoshoot": {
             "accessible": true,
             "category": "Program",
