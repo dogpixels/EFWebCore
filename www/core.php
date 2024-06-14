@@ -32,6 +32,13 @@ class EFWebCore
 		$this->config->staticOut->targetBase = trim($this->config->staticOut->targetBase, "/") . "/";
 		$this->config->defaults->pagesDirectory = trim($this->config->defaults->pagesDirectory, "/") . "/";
 
+		// replace EF number in base url
+		$this->config->staticOut->targetBase = str_replace(
+			'{number}',
+			$this->config->convention->number,
+			$this->config->staticOut->targetBase
+		);
+
 		// subtract directory from request URI
 		$request_uri = substr($_SERVER["REQUEST_URI"], strlen(dirname($_SERVER["SCRIPT_NAME"])));
 
@@ -479,6 +486,7 @@ class EFWebCore
 			"index.php",
 			"core.php",
 			"core.config.json",
+			"updatepartners.php",
 			trim($this->config->defaults->pagesDirectory, "/"),
 			trim($this->config->staticOut->path, "/")
 		];

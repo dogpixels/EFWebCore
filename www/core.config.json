@@ -49,7 +49,7 @@
         "lastModifiedEnabled": true,
         "lastModifiedMapFile": "modified.json",
         "path": "_archive/",
-        "targetBase": "https://archive.eurofurence.org/EF__/"
+        "targetBase": "https://archive.eurofurence.org/EF{number}"
     },
 	"pages": {
         "404": {
