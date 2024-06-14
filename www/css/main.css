@@ -6,9 +6,9 @@
 	box-sizing: border-box;
 }
 html {
-    overflow-y:scroll;
 	background: #333;
 	color: #fff;
+    overflow-y: scroll;
 }
 main {
 	background-color: #333;
