@@ -113,6 +113,15 @@ nav li {
 	position: relative;
 	list-style: none;
 }
+nav li a {
+	display: inline-block;
+}
+@media (max-width: 960px) {
+	nav li a {
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+}
 
 /* body area */
 main {
