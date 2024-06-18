@@ -8,13 +8,28 @@
 html {
 	background: #333;
 	color: #fff;
-    overflow-y: scroll;
 }
 main {
 	background-color: #333;
 	background-image: none;
 	background-repeat: no-repeat;
-	background-attachment: scroll;
+}
+/* mobile browser do not support 
+   background-attachment: fixed for performance reasons,
+   the following fix enables it only on desktop */
+   @media only screen and (min-width: 1080px) {
+	main {
+		background-attachment: fixed;
+		background-size: cover;
+		background-position-y: var(--header-height);
+		background-position-x: center;
+	}
+}
+@media only screen and (max-width: 1080px) {
+	main {
+		background-attachment: scroll;
+		background-position-y: 0;
+	}
 }
 h1, h2, h3, h4, h5, h6 {
 	color: #fff;
