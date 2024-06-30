@@ -1,6 +1,6 @@
 <h1>Accessibility</h1>
 
-<p>People have the right to participate in public life and society, and no one should be disadvantaged because of their disability. Here we provide information on what we are doing to make our convention more accessible and provide a better experience.</p>
+<p>Everyone has the right to participate in public life and society, and no one should be disadvantaged because of their disability. Here we provide information on what we are doing to make our convention more accessible and provide a better experience for all attendees.</p>
 
 <section class="uk-column-1-2@l">
 	<div>
@@ -10,16 +10,21 @@
 		<p>Example for Handicapped ID: German "Behindertenausweis" with signs außergewöhnlich gehbehindert ("<strong>aG</strong>"), blind ("<strong>Bl</strong>") or hilflos ("<strong>H</strong>")</p>
 
 		<h2>Seating</h2>
-		<p>Every Show and Event accessible with wheelchair.</p>
-		<p>We normally have special seats/places reserved for physically handicapped Attendees and persons with wheelchair. Please ask any member of the Queue Management Security Group about them at the respective event. If you want to know more about the accessibility of the venue, please check their website we linked in the next topic "Venue".</p>
+		<p>Every Show and Event is accessible with a wheelchair.</p>
+		<p>We normally have special seats/places reserved for physically handicapped Attendees and wheelchair users. Please ask any member of the Queue Management Security Group about them at the respective event. If you want to know more about the accessibility of the venue, please visit <a href="https://www.cch.de/en/visit/barrier-free-access" target="_blank">their website</a>.</p>
 
 		<h2>Flashing lights</h2>
-		<p>Some of our events like the dances and the main shows (like opening ceremony) (can) include flashing lights.</p>
+		<p>Some of our events, like the dances and the main shows (i.e. opening ceremony), may include flashing lights.</p> 
 	</div>
 
 	<div>
 		<h2>Venue</h2>
 		<p>The Congress Center Hamburg provides barrier-free access. Every room is accessible by wheelchair and there are 18 disabled parking spaces in total. You can find more detailed information about the <a href="https://www.cch.de/en/visit/barrier-free-access" target="_blank">accessibility of the CCH</a> on their website.</p>
+	</div>
+
+	<div>
+		<h2>The Dealers' Den</h2>
+		<p>The Dealers’ Den is a lively and bustling area with priority access for attendees with mobility and standing limitations. However, the Dealers' Den can sometimes be crowded, noisy, and filled with various scents. If you need assistance, please reach out to the Dealers' Den Team at the Dealers' Den Help Desk or the Eurofurence Security near the entrance. For more information on how we are striving to make the Dealers' Den' a wonderful experience for everyone, including those with specific needs, visit our <a href="dealersden/visiting">Visiting Dealers Den'</a> page.</p>
 	</div>
 
 	<div>
@@ -43,19 +48,19 @@
 	<div>
 		<h2>Sign language interpretation</h2>
 		<p>Currently, we cannot provide sign language interpretation for our events. If you are in need of interpretation, please let us know anyway, so we can work on it in the future. Send an e-mail to <a href="mailto:awareness@eurofurence.org" target="_blank">awareness@eurofurence.org</a>.</p>
-		<p>We try to have subtitles for some of our main shows. But we cannot guarantee yet.</p>
+		<p>We try to have subtitles for some of our main shows. But we cannot guarantee them for every event yet.</p>
 	</div>
 
 	<div>
 		<h2>Website</h2>
-		<p>Eurofurence endeavors to make its websites accessible.</p>
+		<p>Eurofurence strives to make its websites accessible.</p>
 		<p>This website is predominantly accessible. The requirements of WCAG 2.2 AA are largely met from a technical point of view.</p>
 		<p>
-			Still, we have some points, that are not accessible or hardly accessible. We are endeavoring to eliminate the remaining barriers.
+			Still, we have some points, that are not accessible or hardly accessible. We strive to eliminate those remaining barriers.
 			<ul>
-				<li>Modals are not accessible via keyboard navigation only.</li>
-				<li>Menu does not expand while using keyboard navigation only.</li>
-				<li>The graphics for the nose count are not accessible for some people with disabilities.</li>
+				<li>Modals are not accessible using only keyboard navigation.</li>
+				<li>Menu does not expand while only using keyboard navigation.</li>
+				<li>The graphics for the nose count are not accessible for some people with certain disabilities.</li>
 			</ul>
 		</p>
 	</div>
@@ -65,6 +70,6 @@
 
 <section>
 	<h2>Feedback and contact</h2>
-	<p>You can inform us of any shortcomings with regard to compliance with accessibility requirements by sending an e-mail to <a href="mailto:awareness@eurofurence.org" target="_blank">awareness@eurofurence.org</a></p>
+	<p>You can inform us of any issues in regards to our compliance with accessibility requirements by sending an e-mail to <a href="mailto:awareness@eurofurence.org" target="_blank">awareness@eurofurence.org</a></p>
 	<p>At the convention, you can always ask a staff member. Staff member have orange (staff), red (director) or blue and yellow (security) lanyards and badge marks. We also provide call boxes with direct communication to Con Ops and/or Security.</p>
 </section>
