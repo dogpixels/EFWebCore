@@ -142,7 +142,7 @@ nav li a {
 /* body area */
 main {
 	position: relative;
-	margin-top: var(--header-height);
+	padding: calc(var(--header-height) + 20px) 0 20px;
 	overflow: hidden;
 }
 .landingpage-content-start {
@@ -160,7 +160,8 @@ main {
     top: -5px
 }
 main.ef-landingpage {
-	padding-top: 100vh;
+	/* latter span being the "scroll down" div height */
+	padding-top: calc(100vh - var(--header-height) - 50px);
 }
 #ef-condetails {
 	position: absolute;
