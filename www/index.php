@@ -1,7 +1,7 @@
 <?php
 	header("Content-Type: text/html; charset=UTF-8");
-	include("core.php");
-	$core = new EFWebCore("core.config.json");
+	include("src/core.php");
+	$core = new EFWebCore("config/core.json");
 ?>
 
 <!DOCTYPE html>

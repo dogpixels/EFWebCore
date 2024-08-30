@@ -5,7 +5,7 @@ class Partners
         var partners_data = null;
 
         try {
-            partners_data = await (await fetch("partners.json")).json();
+            partners_data = await (await fetch("config/partners.json")).json();
             if (!partners_data)
             {
                 console.info("[ef-partners] partners_data", partners_data);
