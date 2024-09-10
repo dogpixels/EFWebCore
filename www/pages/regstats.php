@@ -39,7 +39,6 @@
 	#ef-rs-country-list > article {
 		position: relative;
 		overflow: hidden;
-		width: calc(100% / 4);
 		padding: 0 6px 1px;
 		border: 2px solid #fff;
 		border-radius: 6px;
@@ -193,7 +192,7 @@
 					<span uk-filter-control="sort: data-name"><a href="#">Country Name</a></span> |
 					<span uk-filter-control="sort: data-count; order: desc"><a href="#">Attendee Count</a></span>
 				</p>
-				<div id="ef-rs-country-list"></div>
+				<div id="ef-rs-country-list" class="uk-child-width-1-3@m uk-child-width-1-2@s"></div>
 			</div>
 		</div>
 		<div class="uk-width-1-3@l">
