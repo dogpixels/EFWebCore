@@ -231,4 +231,4 @@
 </div>
 
 <script src="js/chart.js"></script>
-<script src="js/regstats.js"></script>
+<script src="js/regstats.min.js"></script>
