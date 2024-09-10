@@ -1,6 +1,8 @@
 <h1>Registration Statistics</h1>
 
 <style>
+	@import url('css/countries.css');
+
 	#ef-regstats a {
 		color: #000;
 		text-decoration: none;
@@ -29,6 +31,44 @@
 	}
 	.ef-rs-barchart {
 		height: 200px;
+	}
+	#ef-rs-country-list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#ef-rs-country-list > article {
+		position: relative;
+		overflow: hidden;
+		width: calc(100% / 4);
+		padding: 0 6px 1px;
+		border: 2px solid #fff;
+		border-radius: 6px;
+		background-color: #ddd;
+		background-position: top left;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	#ef-rs-country-list > article > div {
+		display: inline-block;
+		position: relative;
+		top: 2px;
+		width: 1.66em;
+		background-position: top left;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	#ef-rs-country-list > article > h4 {
+		display: inline;
+		margin: 0;
+		font-size: 1em;
+		font-family: monospace;
+		font-weight: bold;
+		color: #999;
+	}
+	
+	#ef-rs-country-list > article > span {
+		float: right;
+		font-weight: bold;
 	}
 
 	/* looks better without step-end, 
@@ -136,34 +176,49 @@
 		<div class="ef-rs-barchart"><canvas id="ef-rs-age"></canvas></div>
 	</div>
 
+	<!--
 	<div class="uk-card uk-card-default uk-card-body uk-margin-bottom uk-width-1-1">
 		<h3 class="uk-card-title uk-margin-bottom">Origins by Country</h3>
-		<div class="ef-rs-barchart"><canvas id="ef-rs-country"></canvas></div>
+		<div class="ef-rs-barchart"><canvas id="ef-rs-country-chart"></canvas></div>
 		<button class="uk-icon-button" id="ef-rs-country-zoom" uk-icon="search" uk-tooltip="pos:left" title="Toggle Zoom"></button>
 	</div>
+	-->
 
-	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@l uk-child-width-1-2@m uk-margin-bottom" uk-grid>
-		<div>
-			<div class="uk-card uk-card-default uk-card-body">
-				<h3 class="uk-card-title">Shirt Sizes</h3>
-				<div class="ef-rs-legend uk-flex">
-					<div class="ef-rs-piechart"><canvas id="ef-rs-reg-size"></canvas></div>
-					<div id="ef-rs-reg-size-legend"></div>
+	<div class="uk-grid-small" uk-grid>
+		<div class="uk-width-2-3@l">
+			<div class="uk-card uk-card-default uk-card-body uk-margin-bottom uk-width-1-1" uk-filter="#ef-rs-country-list">
+				<h3 class="uk-card-title uk-margin-bottom">Origins by Country</h3>
+				<p>sort by:
+					<span uk-filter-control="sort: data-iso"><a href="#">ISO 3361 Alpha-2</a></span> |
+					<span uk-filter-control="sort: data-name"><a href="#">Country Name</a></span> |
+					<span uk-filter-control="sort: data-count; order: desc"><a href="#">Attendee Count</a></span>
+				</p>
+				<div id="ef-rs-country-list"></div>
+			</div>
+		</div>
+		<div class="uk-width-1-3@l">
+			<div class="uk-grid-small uk-child-width-1-1" uk-grid>
+				<div>
+					<div class="uk-card uk-card-default uk-card-body">
+						<h3 class="uk-card-title">Shirt Sizes</h3>
+						<div class="ef-rs-legend uk-flex">
+							<div class="ef-rs-piechart"><canvas id="ef-rs-reg-size"></canvas></div>
+							<div id="ef-rs-reg-size-legend"></div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-body">
+						<p class="uk-text-right">
+							data timestamp: <span id="ef-rs-timestamp"></span><br />
+							next update in: <span id="ef-rs-update">-</span> seconds<br />
+							<a href="regstats#raw" uk-toggle>show raw data</a>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</section>
-
-<hr />
-
-<section>
-	<p class="uk-text-right">
-		data timestamp: <span id="ef-rs-timestamp"></span><br />
-		next update in: <span id="ef-rs-update">-</span> seconds<br />
-		<a href="regstats#raw" uk-toggle>show raw data</a>
-	</p>
-			
 </section>
 
 <div id="raw" class="uk-modal-container" uk-modal>
@@ -177,4 +232,4 @@
 </div>
 
 <script src="js/chart.js"></script>
-<script src="js/regstats.min.js"></script>
+<script src="js/regstats.js"></script>
