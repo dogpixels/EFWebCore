@@ -754,67 +754,85 @@ const htmlLegendPlugin = {
         // reuse the built-in legendItems generator
         const items = chart.options.plugins.legend.labels.generateLabels(chart);
 
-        const table = document.createElement('table');
-
-        const numColumns = chart.options.plugins.htmlLegend.columns || 1;
-        const numRows = Math.ceil(items.length / numColumns);
-
-        for (let row = 0; row < numRows; row++)
+        let numColumns = chart.options.plugins.htmlLegend.columns || 1;
+        
+        // if numColumns > 1, run this code twice to create a single column view
+        for (let tablev = 0; tablev < Math.min(numColumns, 2); tablev++)
         {
-            const tr = document.createElement('tr');
-            
-            for (let col = 0; col < numColumns; col++)
+            const table = document.createElement('table');
+
+            if (numColumns > 1)
             {
-                const i = row + col * numRows; // determine current item index
-                if (i < items.length)
-                {
-                    const item = items[i];
-
-                    // color box
-                    const td1 = document.createElement('td');
-                    td1.onclick = () => {
-                        chart.toggleDataVisibility(item.index);
-                        chart.update();
-                    };
-                    const div = document.createElement('div');
-                    div.style.background = item.fillStyle;
-                    div.style.borderColor = item.strokeStyle;
-                    div.style.borderWidth = item.lineWidth + 'px';
-                    td1.appendChild(div);
-                    tr.appendChild(td1);
-
-                    // value
-                    const td2 = document.createElement('td');
-                    td2.onclick = () => {
-                        chart.toggleDataVisibility(item.index);
-                        chart.update();
-                    };
-                    const value = document.createElement('span');
-                    value.style.color = item.fontColor;
-                    value.style.textDecoration = item.hidden ? 'line-through' : '';
-                    value.innerText = chart.options.plugins.htmlLegend.values[i];
-                    td2.appendChild(value);
-                    tr.appendChild(td2);
-
-                    // text
-                    const td3 = document.createElement('td');
-                    td3.onclick = () => {
-                        chart.toggleDataVisibility(item.index);
-                        chart.update();
-                    };
-                    const text = document.createElement('span');
-                    text.style.color = item.fontColor;
-                    text.style.textDecoration = item.hidden ? 'line-through' : '';
-                    text.innerText = item.text;
-                    td3.appendChild(text);
-                    tr.appendChild(td3);
+                switch (tablev) {
+                    case 0: // original table version with numColumns
+                        table.classList.add('uk-visible@s');
+                        break;
+                    case 1: // second table version with one column
+                        table.classList.add('uk-hidden@s');
+                        numColumns = 1;
+                        break;
                 }
             }
 
-            table.appendChild(tr);
-        }
+            const numRows = Math.ceil(items.length / numColumns);
 
-        container.appendChild(table);
+            for (let row = 0; row < numRows; row++)
+            {
+                const tr = document.createElement('tr');
+                
+                for (let col = 0; col < numColumns; col++)
+                {
+                    const i = row + col * numRows; // determine current item index
+                    if (i < items.length)
+                    {
+                        const item = items[i];
+
+                        // color box
+                        const td1 = document.createElement('td');
+                        td1.onclick = () => {
+                            chart.toggleDataVisibility(item.index);
+                            chart.update();
+                        };
+                        const div = document.createElement('div');
+                        div.style.background = item.fillStyle;
+                        div.style.borderColor = item.strokeStyle;
+                        div.style.borderWidth = item.lineWidth + 'px';
+                        td1.appendChild(div);
+                        tr.appendChild(td1);
+
+                        // value
+                        const td2 = document.createElement('td');
+                        td2.onclick = () => {
+                            chart.toggleDataVisibility(item.index);
+                            chart.update();
+                        };
+                        const value = document.createElement('span');
+                        value.style.color = item.fontColor;
+                        value.style.textDecoration = item.hidden ? 'line-through' : '';
+                        value.innerText = chart.options.plugins.htmlLegend.values[i];
+                        td2.appendChild(value);
+                        tr.appendChild(td2);
+
+                        // text
+                        const td3 = document.createElement('td');
+                        td3.onclick = () => {
+                            chart.toggleDataVisibility(item.index);
+                            chart.update();
+                        };
+                        const text = document.createElement('span');
+                        text.style.color = item.fontColor;
+                        text.style.textDecoration = item.hidden ? 'line-through' : '';
+                        text.innerText = item.text;
+                        td3.appendChild(text);
+                        tr.appendChild(td3);
+                    }
+                }
+
+                table.appendChild(tr);
+            }
+
+            container.appendChild(table);
+        }
     }
 };
 
@@ -834,4 +852,4 @@ setInterval(() => {
         timer_cur = timer_set;
     }
     timer_div.innerText = timer_cur;
-}, 1000);
+}, 100000);

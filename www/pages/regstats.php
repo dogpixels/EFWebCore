@@ -43,18 +43,15 @@
 		border: 2px solid #fff;
 		border-radius: 6px;
 		background-color: #ddd;
-		background-position: top left;
-		background-repeat: no-repeat;
-		background-size: contain;
 	}
 	#ef-rs-country-list > article > div {
 		display: inline-block;
 		position: relative;
 		top: 2px;
 		width: 1.66em;
-		background-position: top left;
+		margin-right: .33em;
+		background-position: center left;
 		background-repeat: no-repeat;
-		background-size: contain;
 	}
 	#ef-rs-country-list > article > h4 {
 		display: inline;
@@ -92,6 +89,7 @@
 	}
 	.ef-rs-legend td {
 		padding: 0 1px;
+		vertical-align: top;
 	}
 	.ef-rs-legend td:nth-of-type(2),
 	.ef-rs-legend td:nth-of-type(5) {
@@ -101,7 +99,7 @@
 	}
 	.ef-rs-legend table div {
 		position: relative;
-		top: 2px;
+		top: 6px;
 		width: 20px;
 		height: 1em;
 		margin-right: 4px;
@@ -169,12 +167,7 @@
 			</div>
 		</div>
 	</div>
-
-	<div class="uk-card uk-card-default uk-card-body uk-margin-bottom uk-width-1-1">
-		<h3 class="uk-card-title uk-margin-bottom">Age Distribution</h3>
-		<div class="ef-rs-barchart"><canvas id="ef-rs-age"></canvas></div>
-	</div>
-
+	
 	<!--
 	<div class="uk-card uk-card-default uk-card-body uk-margin-bottom uk-width-1-1">
 		<h3 class="uk-card-title uk-margin-bottom">Origins by Country</h3>
@@ -183,38 +176,38 @@
 	</div>
 	-->
 
-	<div class="uk-grid-small" uk-grid>
+	<div class="uk-card uk-card-default uk-card-body uk-margin-bottom" uk-filter="#ef-rs-country-list">
+		<h3 class="uk-card-title">Origins by Country</h3>
+		<p>sort by:
+			<span uk-filter-control="sort: data-iso"><a href="#">country code</a></span> |
+			<span uk-filter-control="sort: data-name"><a href="#">country name</a></span> |
+			<span uk-filter-control="sort: data-count; order: desc"><a href="#">attendee count</a></span>
+		</p>
+		<div id="ef-rs-country-list" class="uk-child-width-1-4@l uk-child-width-1-3@m uk-child-width-1-2@s"></div>
+	</div>
+
+	<div class="uk-card uk-card-default uk-card-body uk-margin-bottom uk-width-1-1">
+		<h3 class="uk-card-title uk-margin-bottom">Age Distribution</h3>
+		<div class="ef-rs-barchart"><canvas id="ef-rs-age"></canvas></div>
+	</div>
+
+	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@l uk-child-width-1-2@m uk-margin-bottom" uk-grid>
 		<div class="uk-width-2-3@l">
-			<div class="uk-card uk-card-default uk-card-body uk-margin-bottom uk-width-1-1" uk-filter="#ef-rs-country-list">
-				<h3 class="uk-card-title uk-margin-bottom">Origins by Country</h3>
-				<p>sort by:
-					<span uk-filter-control="sort: data-iso"><a href="#">ISO 3361 Alpha-2</a></span> |
-					<span uk-filter-control="sort: data-name"><a href="#">Country Name</a></span> |
-					<span uk-filter-control="sort: data-count; order: desc"><a href="#">Attendee Count</a></span>
-				</p>
-				<div id="ef-rs-country-list" class="uk-child-width-1-3@m uk-child-width-1-2@s"></div>
+			<div class="uk-card uk-card-default uk-card-body">
+				<h3 class="uk-card-title">Shirt Sizes</h3>
+				<div class="ef-rs-legend uk-flex">
+					<div class="ef-rs-piechart"><canvas id="ef-rs-reg-size"></canvas></div>
+					<div id="ef-rs-reg-size-legend"></div>
+				</div>
 			</div>
 		</div>
-		<div class="uk-width-1-3@l">
-			<div class="uk-grid-small uk-child-width-1-1" uk-grid>
-				<div>
-					<div class="uk-card uk-card-default uk-card-body">
-						<h3 class="uk-card-title">Shirt Sizes</h3>
-						<div class="ef-rs-legend uk-flex">
-							<div class="ef-rs-piechart"><canvas id="ef-rs-reg-size"></canvas></div>
-							<div id="ef-rs-reg-size-legend"></div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="uk-card uk-card-default uk-card-body">
-						<p class="uk-text-right">
-							data timestamp: <span id="ef-rs-timestamp"></span><br />
-							next update in: <span id="ef-rs-update">-</span> seconds<br />
-							<a href="regstats#raw" uk-toggle>show raw data</a>
-						</p>
-					</div>
-				</div>
+		<div>
+			<div class="uk-card uk-card-default uk-card-body">
+				<p class="uk-text-right">
+					data timestamp: <span id="ef-rs-timestamp"></span><br />
+					next update in: <span id="ef-rs-update">-</span> seconds<br />
+					<a href="regstats#raw" uk-toggle>show raw data</a>
+				</p>
 			</div>
 		</div>
 	</div>
