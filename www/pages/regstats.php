@@ -32,13 +32,8 @@
 	.ef-rs-barchart {
 		height: 200px;
 	}
-	#ef-rs-country-list {
-		display: flex;
-		flex-wrap: wrap;
-	}
+
 	#ef-rs-country-list > article {
-		position: relative;
-		overflow: hidden;
 		padding: 0 6px 1px;
 		border: 2px solid #fff;
 		border-radius: 6px;
@@ -61,7 +56,6 @@
 		font-weight: bold;
 		color: #999;
 	}
-	
 	#ef-rs-country-list > article > span {
 		float: right;
 		font-weight: bold;
@@ -183,7 +177,7 @@
 			<span uk-filter-control="sort: data-name"><a href="#">country name</a></span> |
 			<span uk-filter-control="sort: data-count; order: desc"><a href="#">attendee count</a></span>
 		</p>
-		<div id="ef-rs-country-list" class="uk-child-width-1-4@l uk-child-width-1-3@m uk-child-width-1-2@s"></div>
+		<div id="ef-rs-country-list" class="uk-column-1-4@l uk-columns-1-3@m uk-column-1-2@s"></div>
 	</div>
 
 	<div class="uk-card uk-card-default uk-card-body uk-margin-bottom uk-width-1-1">

@@ -852,4 +852,4 @@ setInterval(() => {
         timer_cur = timer_set;
     }
     timer_div.innerText = timer_cur;
-}, 100000);
+}, 1000);
