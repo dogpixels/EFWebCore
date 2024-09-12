@@ -611,7 +611,7 @@ class RegStats
         {
             type: 'doughnut',
             data: {
-                labels: ['XS', 'S', 'M', 'L', 'XL', 'XXL+', 'None'],
+                labels: ['XS', 'S', 'M', 'L', 'XL', 'XXL+'/*, 'None'*/],
                 datasets: [
                     {
                         data: [0, 0, 0, 0, 0, 0, 0],
@@ -621,8 +621,8 @@ class RegStats
                             this.colors.ci[50],
                             this.colors.ci[60],
                             this.colors.ci[80],
-                            this.colors.ci[100],
-                            '#dddddd'
+                            this.colors.ci[100]
+                            // '#dddddd' // for 'None'
                         ]
                     }
                 ]
@@ -647,10 +647,14 @@ class RegStats
     updateSize()
     {
         const values = Object.values(this.data.shirtsize);
-        const rest = this.data.totalcount - values.reduce((s, a) => s + a, 0);
 
-        this.charts.size.data.datasets[0].data = [...values, rest];
-        this.charts.size.options.plugins.htmlLegend.values = [...values, rest];
+        // const none = this.data.totalcount - values.reduce((s, a) => s + a, 0);
+        // this.charts.size.data.datasets[0].data = [...values, none];
+        // this.charts.size.options.plugins.htmlLegend.values = [...values, none];
+
+        this.charts.size.data.datasets[0].data = values;
+        this.charts.size.options.plugins.htmlLegend.values = values;
+
         this.charts.size.update();
     }
 

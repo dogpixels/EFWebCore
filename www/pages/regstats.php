@@ -188,7 +188,7 @@
 	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@l uk-child-width-1-2@m uk-margin-bottom" uk-grid>
 		<div class="uk-width-2-3@l">
 			<div class="uk-card uk-card-default uk-card-body">
-				<h3 class="uk-card-title">Shirt Sizes</h3>
+				<h3 class="uk-card-title">Shirt Preorders</h3>
 				<div class="ef-rs-legend uk-flex">
 					<div class="ef-rs-piechart"><canvas id="ef-rs-reg-size"></canvas></div>
 					<div id="ef-rs-reg-size-legend"></div>
