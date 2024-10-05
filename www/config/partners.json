@@ -1,5 +1,5 @@
 {
-    "path": "img\/cons\/{key}",
+    "path": "..\/img\/cons\/{key}",
     "conventions": {
         "bayern-furs": {
             "enable": true,
