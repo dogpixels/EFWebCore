@@ -340,7 +340,7 @@
         "home": {
             "accessible": true,
             "category": "Website",
-            "description": "Eurofurence {number} will take place from {dates}. Eurofurence is Europe's largest and longest-running annual gathering, celebrating the furry community across the continent..",
+            "description": "Eurofurence {number} will take place from {dates}. Eurofurence is Europe's largest and longest-running annual gathering, celebrating the furry community across the continent.",
             "inMenu": true,
             "keywords": "",
             "menuText": "Home",
