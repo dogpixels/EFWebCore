@@ -23,7 +23,7 @@
         "pagesDirectory": "pages/",
         "robots": "index, follow, noodp",
         "rootPage": "home",
-        "titlePrefix": "Eurofurence {number}: ",
+        "titlePrefix": "Eurofurence: ",
         "titleSuffix": ""
     },
     "menu": {
@@ -340,13 +340,13 @@
         "home": {
             "accessible": true,
             "category": "Website",
-            "description": "Eurofurence {number} will take place from {start} - {end}, {year}. Eurofurence is Europe's largest annual gathering of the European furry community.",
+            "description": "Eurofurence {number} will take place from {dates}. Eurofurence is Europe's largest and longest-running annual gathering, celebrating the furry community across the continent..",
             "inMenu": true,
             "keywords": "",
             "menuText": "Home",
             "ogpImage": "",
             "robots": "",
-            "title": "Welcome",
+            "title": "Home",
             "uri": "home.php"
         },
         "hotels": {
