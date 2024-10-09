@@ -206,7 +206,7 @@
 					<span><?= $core->current->theme ?></span>
 					<p>
 						<?= $core->current->location ?><br />
-						<?= $core->current->dates ?>
+						<?= $core->current->dates ?> <span class="ef-uk-icon-lift" uk-icon="question" uk-tooltip="<?= $core->current->datesAnnotation ?>"></span>
 					</p>
 				</div>
 				
