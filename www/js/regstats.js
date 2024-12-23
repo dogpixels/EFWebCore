@@ -329,12 +329,11 @@ class RegStats
     {
         this.data = await this.fetch(year);
 
-        this.initTotal();
-        this.initInterests();
+        this.updateTotal();
+        this.updateInterests();
         this.updateStatus();
         this.updateTypes();
         this.updateAge();
-        // this.updateCountryChart();
         this.updateCountryList();
         this.updateSize();
         
@@ -344,7 +343,7 @@ class RegStats
             document.getElementById('ef-rs-intro-timestamp').innerText = this.data.lastchangedatetimeutc;
     }
 
-    initTotal()
+    updateTotal()
     {
         // total registrations
         document.getElementById('ef-rs-reg-total').innerText = this.data.totalcount;
@@ -496,7 +495,7 @@ class RegStats
         this.charts.types.update();
     }
 
-    initInterests()
+    updateInterests()
     {
         document.getElementById('ef-rs-reg-interests-animators').innerText = this.data.specialinterest.animator;
         document.getElementById('ef-rs-reg-interests-artists').innerText = this.data.specialinterest.artist;
@@ -592,13 +591,6 @@ class RegStats
                 }
             }
         });
-    }
-
-    updateCountryChart()
-    {
-        this.charts.countryChart.data.labels = Object.keys(this.data.country);
-        this.charts.countryChart.data.datasets[0].data = Object.values(this.data.country);
-        this.charts.countryChart.update();
     }
 
     updateCountryList()
