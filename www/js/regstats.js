@@ -340,12 +340,16 @@ class RegStats
         
         this.timestampContainer.innerText = this.data.lastchangedatetimeutc;
         this.rawContainer.innerText = JSON.stringify(this.data, null, 4);
+        if (document.getElementById('ef-rs-intro-timestamp'))
+            document.getElementById('ef-rs-intro-timestamp').innerText = this.data.lastchangedatetimeutc;
     }
 
     initTotal()
     {
         // total registrations
         document.getElementById('ef-rs-reg-total').innerText = this.data.totalcount;
+        if (document.getElementById('ef-rs-intro-total'))
+            document.getElementById('ef-rs-intro-total').innerText = this.data.totalcount;
         
         // reg open indicator
         const text = document.getElementById('ef-rs-reg-opening');
@@ -427,6 +431,17 @@ class RegStats
         this.charts.status.options.plugins.htmlLegend.values = values;
 
         this.charts.status.update();
+
+        if (document.getElementById('ef-rs-intro-new'))
+            document.getElementById('ef-rs-intro-new').innerText = this.data.status.new || 0;
+        if (document.getElementById('ef-rs-intro-approved'))
+            document.getElementById('ef-rs-intro-approved').innerText = this.data.status.approved || 0;
+        if (document.getElementById('ef-rs-intro-partially-paid'))
+            document.getElementById('ef-rs-intro-partially-paid').innerText = this.data['partially paid'] || 0;
+        if (document.getElementById('ef-rs-intro-paid'))
+            document.getElementById('ef-rs-intro-paid').innerText = this.data.status.paid || 0;
+        if (document.getElementById('ef-rs-intro-checked-in'))
+            document.getElementById('ef-rs-intro-checked-in').innerText = this.data.status['checked in'] || 0;
     }
 
     initTypes()
