@@ -214,16 +214,16 @@
 					<h3>Find us on</h3>
 					<div class="uk-button-group uk-width-1-1 uk-margin-small-bottom">
 						<!-- <a href="home" class="uk-icon-button uk-icon" uk-tooltip="pos:top" title="Homepage" uk-icon="home"></a> -->
-						<a target="_blank" href="https://app.eurofurence.org/" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="iOS & Android" uk-icon="phone"></a>
-						<a target="_blank" href="https://t.me/s/efnotifications" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Telegram" uk-icon="telegram"></a>
-						<a target="_blank" href="https://meow.social/@eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Mastodon" uk-icon="mastodon" rel="me"></a>
-						<a target="_blank" href="https://www.x.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="X" uk-icon="x"></a>
+						<a target="_blank" href="https://app.eurofurence.org/" class="hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="iOS & Android" uk-icon="phone"></a>
+						<a target="_blank" href="https://t.me/s/efnotifications" class="hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Telegram" uk-icon="telegram"></a>
+						<a target="_blank" href="https://meow.social/@eurofurence" class="hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Mastodon" uk-icon="mastodon" rel="me"></a>
+						<a target="_blank" href="https://www.x.com/eurofurence" class="hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="X" uk-icon="x"></a>
 					</div>
 					<div class="uk-button-group uk-width-1-1">
-						<a target="_blank" href="https://bsky.app/profile/eurofurence.bsky.social" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Bluesky" uk-icon="bluesky"></a>
-						<a target="_blank" href="https://www.facebook.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Facebook" uk-icon="facebook"></a>
-						<a target="_blank" href="https://vimeo.com/eurofurence" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Vimeo" uk-icon="vimeo"></a>
-						<a target="_blank" href="https://discord.com/invite/VMESBMM" class="ef-hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Discord" uk-icon="discord"></a>
+						<a target="_blank" href="https://bsky.app/profile/eurofurence.bsky.social" class="hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Bluesky" uk-icon="bluesky"></a>
+						<a target="_blank" href="https://www.facebook.com/eurofurence" class="hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Facebook" uk-icon="facebook"></a>
+						<a target="_blank" href="https://vimeo.com/eurofurence" class="hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Vimeo" uk-icon="vimeo"></a>
+						<a target="_blank" href="https://discord.com/invite/VMESBMM" class="hide-ext uk-icon-button uk-icon" uk-tooltip="pos:top" title="Discord" uk-icon="discord"></a>
 					</div>
 				</div>
 

@@ -76,7 +76,7 @@
 		];
 
 		foreach ($members as $m) { ?>
-			<a href="<?= $m[3] ?>" target="_blank" class="ef-hide-ext uk-width-medium"<?= empty($m[3])? 'onclick="return false;"' : '' ?>>
+			<a href="<?= $m[3] ?>" target="_blank" class="hide-ext uk-width-medium"<?= empty($m[3])? 'onclick="return false;"' : '' ?>>
 				<div>
 					<img src="img/pages/website/<?= $m[2] ?>" alt="<?= $m[2] ?>" />
 					<h3><?= $m[0] ?></h3>

@@ -28,7 +28,7 @@ class Partners
             if (!items[key].enable)
                 continue;
 
-            partners.innerHTML += `<li><a href="${items[key].target}" target="_blank" class="ef-hide-ext"><img src="${items[key].file}" alt="${items[key].target}" /></a></li>`
+            partners.innerHTML += `<li><a href="${items[key].target}" target="_blank" class="hide-ext"><img src="${items[key].file}" alt="${items[key].target}" /></a></li>`
         }
     }
 }

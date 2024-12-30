@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #333;
 }
 
-a[href^="http"]:not([class^="ef-hide-ext"]):after {
+a[href^="http"]:not(.hide-ext):after {
     display: inline-block;
     width: 14px;
     height: 10px;
