@@ -1,6 +1,5 @@
 const regStatConfig = {
     year: new Date().getFullYear(),
-    state: 'open',
     // data: 'https://www.eurofurence.org/data/reg/{year}.json',
     // data: 'https://wwwtest.eurofurence.org/data/reg/{year}.json',
     data: 'http://localhost/_workfiles/temp/{year}.json'
@@ -288,12 +287,10 @@ class RegStats
     
     /**
      * @param {String} datasource // json url, {year} is substituted by update()
-     * @param {String} regstate   // open | staff | closed
      */
-    constructor(datasource, regstate)
+    constructor(datasource)
     {
         this.datasource = datasource;
-        this.regstate = regstate;
     }
 
     async init()
@@ -332,43 +329,41 @@ class RegStats
     {
         this.data = await this.fetch(year);
 
-        this.initTotal();
-        this.initInterests();
+        this.updateTotal();
+        this.updateInterests();
         this.updateStatus();
         this.updateTypes();
         this.updateAge();
-        // this.updateCountryChart();
         this.updateCountryList();
         this.updateSize();
         
         this.timestampContainer.innerText = this.data.lastchangedatetimeutc;
         this.rawContainer.innerText = JSON.stringify(this.data, null, 4);
+        if (document.getElementById('ef-rs-intro-timestamp'))
+            document.getElementById('ef-rs-intro-timestamp').innerText = this.data.lastchangedatetimeutc;
     }
 
-    initTotal()
+    updateTotal()
     {
         // total registrations
         document.getElementById('ef-rs-reg-total').innerText = this.data.totalcount;
+        if (document.getElementById('ef-rs-intro-total'))
+            document.getElementById('ef-rs-intro-total').innerText = this.data.totalcount;
         
         // reg open indicator
         const text = document.getElementById('ef-rs-reg-opening');
         const indicator = document.getElementById('ef-rs-reg-opening-indicator');
-        indicator.classList.remove('ef-rs-reg-opening-indicator-animation');
-        switch (this.regstate)
+
+        if (this.data.open)
         {
-            case 'closed':
-                indicator.style.color = this.colors.lanyard.director;
-                text.innerText = 'Registrations closed';
-                break;
-            case 'staff':
-                indicator.style.color = this.colors.lanyard.staff;
-                text.innerText = 'Staff registering';
-                break;
-            case 'open':
-                indicator.style.color = this.colors.lanyard.normal;
-                indicator.classList.add('ef-rs-reg-opening-indicator-animation');
-                text.innerHTML = '<a href="https://identity.eurofurence.org" target="_blank">Registrations open</a>';
-                break
+            indicator.style.color = this.colors.lanyard.normal;
+            indicator.classList.add('ef-rs-reg-opening-indicator-animation');
+            text.innerHTML = '<a href="https://identity.eurofurence.org" target="_blank">Registrations open</a>';
+        }
+        else {
+            indicator.style.color = this.colors.lanyard.director;
+            indicator.classList.remove('ef-rs-reg-opening-indicator-animation');
+            text.innerText = 'Registrations closed';
         }
     }
 
@@ -435,6 +430,17 @@ class RegStats
         this.charts.status.options.plugins.htmlLegend.values = values;
 
         this.charts.status.update();
+
+        if (document.getElementById('ef-rs-intro-new'))
+            document.getElementById('ef-rs-intro-new').innerText = this.data.status.new || 0;
+        if (document.getElementById('ef-rs-intro-approved'))
+            document.getElementById('ef-rs-intro-approved').innerText = this.data.status.approved || 0;
+        if (document.getElementById('ef-rs-intro-partially-paid'))
+            document.getElementById('ef-rs-intro-partially-paid').innerText = this.data['partially paid'] || 0;
+        if (document.getElementById('ef-rs-intro-paid'))
+            document.getElementById('ef-rs-intro-paid').innerText = this.data.status.paid || 0;
+        if (document.getElementById('ef-rs-intro-checked-in'))
+            document.getElementById('ef-rs-intro-checked-in').innerText = this.data.status['checked in'] || 0;
     }
 
     initTypes()
@@ -489,7 +495,7 @@ class RegStats
         this.charts.types.update();
     }
 
-    initInterests()
+    updateInterests()
     {
         document.getElementById('ef-rs-reg-interests-animators').innerText = this.data.specialinterest.animator;
         document.getElementById('ef-rs-reg-interests-artists').innerText = this.data.specialinterest.artist;
@@ -585,13 +591,6 @@ class RegStats
                 }
             }
         });
-    }
-
-    updateCountryChart()
-    {
-        this.charts.countryChart.data.labels = Object.keys(this.data.country);
-        this.charts.countryChart.data.datasets[0].data = Object.values(this.data.country);
-        this.charts.countryChart.update();
     }
 
     updateCountryList()
@@ -840,7 +839,7 @@ const htmlLegendPlugin = {
     }
 };
 
-const regstats = new RegStats(regStatConfig.data, regStatConfig.state);
+const regstats = new RegStats(regStatConfig.data);
 
 regstats.init();
 regstats.update(regStatConfig.year);
