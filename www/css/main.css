@@ -229,6 +229,11 @@ span.ef-uk-icon-lift {
 	height: 80px;
 }
 
+/* Apps */
+.ef-app-badge img {
+	height: 36px;
+}
+
 /* utility classes */
 .ef-people img {
 	display: inline;
