@@ -154,7 +154,7 @@
 		<div>
 			<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid uk-scrollspy="cls:uk-animation-fade">
 				<div class="uk-card-media-left uk-cover-container">
-					<a href="https://www.cch.de/en/visit/arrival" target="_blank" class="ef-hide-ext"><img src="img/pages/venue/thumbs/Luftaufnahme_01.jpg" alt="" uk-cover /></a>
+					<a href="https://www.cch.de/en/visit/arrival" target="_blank" class="hide-ext"><img src="img/pages/venue/thumbs/Luftaufnahme_01.jpg" alt="" uk-cover /></a>
 				</div>
 				<div>
 					<div class="uk-card-body">
@@ -168,7 +168,7 @@
 		<div>
 			<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid uk-scrollspy="cls:uk-animation-fade">
 				<div class="uk-card-media-left uk-cover-container">
-					<a href="https://www.cch.de/en/visit/hotels" target="_blank" class="ef-hide-ext"><img src="img/pages/venue/thumbs/Taktiles_Bodenleitsystem.jpg" alt="" uk-cover /></a>
+					<a href="https://www.cch.de/en/visit/hotels" target="_blank" class="hide-ext"><img src="img/pages/venue/thumbs/Taktiles_Bodenleitsystem.jpg" alt="" uk-cover /></a>
 				</div>
 				<div>
 					<div class="uk-card-body">
@@ -182,7 +182,7 @@
 		<div>
 			<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid uk-scrollspy="cls:uk-animation-fade">
 				<div class="uk-card-media-left uk-cover-container">
-					<a href="https://www.cch.de/en/venue/sustainability" target="_blank" class="ef-hide-ext"><img src="img/pages/venue/thumbs/Planten_un_Blomen_6.jpg" alt="" uk-cover /></a>
+					<a href="https://www.cch.de/en/venue/sustainability" target="_blank" class="hide-ext"><img src="img/pages/venue/thumbs/Planten_un_Blomen_6.jpg" alt="" uk-cover /></a>
 				</div>
 				<div>
 					<div class="uk-card-body">

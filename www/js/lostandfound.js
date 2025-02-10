@@ -3,7 +3,7 @@
     <div class="uk-card uk-card-default" uk-scrollspy="cls:uk-animation-fade">
         <div class="uk-card-media-top">
             <div uk-lightbox>
-                <a href="${item.image}" class="ef-hide-ext"><img class="uk-height-max-medium" src="${item.thumb}" alt="${item.title}" /></a>
+                <a href="${item.image}" class="hide-ext"><img class="uk-height-max-medium" src="${item.thumb}" alt="${item.title}" /></a>
             </div>
         </div>
         <div class="uk-card-body">
@@ -55,7 +55,7 @@ class LostAndFound
 
             const a = document.createElement('a');
             a.href = item.image? `${this.#config.baseUrl}/image/${item.image}` : '#';
-            a.classList.add('ef-hide-ext');
+            a.classList.add('hide-ext');
             lightbox.appendChild(a);
 
             const img = document.createElement('img');
