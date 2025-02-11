@@ -541,8 +541,15 @@ class RegStats
             values.length,
             vhighi
         );
-        
+
         this.charts.age.update();
+
+        let wsum = 0;
+        for (const [age, n] of Object.entries(this.data.age))
+            wsum += age * n;
+        const avg = Math.round(wsum / this.data.totalcount);
+
+        document.getElementById('ef-rs-age-avg').innerText = avg;     
     }
 
     initCountryChart()
