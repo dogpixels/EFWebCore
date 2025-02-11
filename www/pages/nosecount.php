@@ -178,19 +178,19 @@
 				<h3 class="uk-card-title uk-margin-bottom">Interests</h3>
 				<table>
 					<tr>
-						<td><span id="ef-rs-reg-interests-art" class="uk-text-bold"></span></td>
+						<td class="uk-text-right"><span id="ef-rs-reg-interests-art" class="uk-text-bold"></span></td>
 						<td><span uk-icon="image"></span>Art</td>
 					</tr>
 					<tr>
-						<td><span id="ef-rs-reg-interests-animation" class="uk-text-bold"></span></td>
+						<td class="uk-text-right"><span id="ef-rs-reg-interests-animation" class="uk-text-bold"></span></td>
 						<td><span uk-icon="play-circle"></span>Animation</td>
 					</tr>
 					<tr>
-						<td><span id="ef-rs-reg-interests-fursuiting" class="uk-text-bold"></span></td>
+						<td class="uk-text-right"><span id="ef-rs-reg-interests-fursuiting" class="uk-text-bold"></span></td>
 						<td><span uk-icon="users"></span>Fursuiting</td>
 					</tr>
 					<tr>
-						<td><span id="ef-rs-reg-interests-music" class="uk-text-bold"></span></td>
+						<td class="uk-text-right"><span id="ef-rs-reg-interests-music" class="uk-text-bold"></span></td>
 						<td><span uk-icon="microphone"></span>Music</td>
 					</tr>
 				</table>
