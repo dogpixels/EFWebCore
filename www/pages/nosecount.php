@@ -164,7 +164,7 @@
 	</div>
 
 	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@l uk-child-width-1-2@m uk-margin-bottom" uk-grid>
-		<div class="uk-width-2-3@l">
+		<div class="uk-width-2-3@m">
 			<div class="uk-card uk-card-default uk-card-body">
 				<h3 class="uk-card-title">Shirt Preorders</h3>
 				<div class="ef-rs-legend uk-flex">
@@ -173,15 +173,27 @@
 				</div>
 			</div>
 		</div>
-		<div>
+		<div class="uk-width-1-3@m">
 			<div class="uk-card uk-card-default uk-card-body">
 				<h3 class="uk-card-title uk-margin-bottom">Interests</h3>
-				<ul class="uk-list">
-					<li><span id="ef-rs-reg-interests-art" class="uk-text-bold"></span> <span uk-icon="image"></span>Art</li>
-					<li><span id="ef-rs-reg-interests-animation" class="uk-text-bold"></span> <span uk-icon="play-circle"></span>Animation</li>
-					<li><span id="ef-rs-reg-interests-fursuiting" class="uk-text-bold"></span> <span uk-icon="users"></span>Fursuiting</li>
-					<li><span id="ef-rs-reg-interests-music" class="uk-text-bold"></span> <span uk-icon="microphone"></span>Music</li>
-				</ul>
+				<table>
+					<tr>
+						<td><span id="ef-rs-reg-interests-art" class="uk-text-bold"></span></td>
+						<td><span uk-icon="image"></span>Art</td>
+					</tr>
+					<tr>
+						<td><span id="ef-rs-reg-interests-animation" class="uk-text-bold"></span></td>
+						<td><span uk-icon="play-circle"></span>Animation</td>
+					</tr>
+					<tr>
+						<td><span id="ef-rs-reg-interests-fursuiting" class="uk-text-bold"></span></td>
+						<td><span uk-icon="users"></span>Fursuiting</td>
+					</tr>
+					<tr>
+						<td><span id="ef-rs-reg-interests-music" class="uk-text-bold"></span></td>
+						<td><span uk-icon="microphone"></span>Music</td>
+					</tr>
+				</table>
 			</div>
 		</div>
 	</div>
