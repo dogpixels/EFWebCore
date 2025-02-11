@@ -399,16 +399,16 @@
 			"robots": ""
 		},
         "nosecount": {
-            "accessible": false,
+            "accessible": true,
             "category": "Membership",
-            "description": "Check out how many folks already decided to join this years Eurofurence - nice statistics included!",
+            "description": "Registration statistics visualized.",
             "inMenu": false,
-            "keywords": "Statistics, Stats, Nosecount, Registration, Reg, Sign-Up",
-            "menuText": "Nosecount",
-            "ogpImage": "",
+            "keywords": "Statistics, Stats, Nosecount, Registration, Reg, Sign-Up, Diagram, Chart",
+            "menuText": "Registration Statistics",
+            "ogpImage": "nosecount.png",
             "robots": "",
-            "title": "Nosecount",
-            "uri": "nosecount/index.html"
+            "title": "Registration Statistics",
+            "uri": "nosecount.php"
         },
         "photography": {
             "accessible": true,
@@ -445,18 +445,6 @@
             "robots": "",
             "title": "",
             "uri": "https://reg.eurofurence.org/"
-        },
-        "reg/stats": {
-            "accessible": true,
-            "category": "Membership",
-            "description": "Registration statistics visualized.",
-            "inMenu": false,
-            "keywords": "Statistic, Stats, Nosecount, Registration, Reg, Sign-Up, Diagram, Chart",
-            "menuText": "Reg Stats",
-            "ogpImage": "",
-            "robots": "",
-            "title": "Registration Statistics",
-            "uri": "regstats.php"
         },
         "roc": {
             "accessible": true,

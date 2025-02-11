@@ -65,7 +65,7 @@
 			['fafnyr', 'Vice Director &amp; System Administration', 'fafnyr.png', 'https://www.furaffinity.net/user/fafnyr/'],
 			['Alex Dax', 'Writing', 'sithy.png', 'https://twitter.com/MxSithy'],
 			['Fenmar', 'Archive', 'fenmar.png', 'https://fenmar.de/'],
-			['Fenrikur', 'Nosecounter', 'fenrikur.png', 'https://twitter.com/Fenrikur/'],
+			['Fenrikur', 'Nosecount Intro', 'fenrikur.png', 'https://twitter.com/Fenrikur/'],
 			['Fleeks', 'Logo Design', 'fleeks.png', 'https://fleeks.art/'],
 			['Lio', 'Writing', 'lio.jpg', 'https://lio.to/'],
 			['OxySynth', 'Fursuit Photoshoot Gallery', 'oxy.png', 'https://bsky.app/profile/oxysynth.bsky.social'],

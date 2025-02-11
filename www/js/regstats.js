@@ -24,10 +24,10 @@ class RegStats
             director: '#dc333d'
         },
         interests: {
-            animator: '#be89f3',
-            artist: '#96c6fb',
-            fursuiter: '#ff9d08',
-            musician: '#08e5bd'
+            animation: '#be89f3',
+            art: '#96c6fb',
+            fursuiting: '#ff9d08',
+            music: '#08e5bd'
         }
     };
     countryCodes = {
@@ -497,10 +497,10 @@ class RegStats
 
     updateInterests()
     {
-        document.getElementById('ef-rs-reg-interests-animators').innerText = this.data.specialinterest.animator;
-        document.getElementById('ef-rs-reg-interests-artists').innerText = this.data.specialinterest.artist;
-        document.getElementById('ef-rs-reg-interests-fursuiters').innerText = this.data.specialinterest.fursuiter;
-        document.getElementById('ef-rs-reg-interests-musicians').innerText = this.data.specialinterest.musician;
+        document.getElementById('ef-rs-reg-interests-animation').innerText = this.data.specialinterest.animator;
+        document.getElementById('ef-rs-reg-interests-art').innerText = this.data.specialinterest.artist;
+        document.getElementById('ef-rs-reg-interests-fursuiting').innerText = this.data.specialinterest.fursuiter;
+        document.getElementById('ef-rs-reg-interests-music').innerText = this.data.specialinterest.musician;
     }
 
     initAge()

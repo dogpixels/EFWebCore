@@ -148,40 +148,10 @@
 		</div>
 	</div>
 
-	<div class="uk-grid-small uk-grid-match uk-child-width-1-4@l uk-child-width-1-2@s uk-margin-bottom" uk-grid>
-		<div>
-			<div class="uk-card uk-card-default uk-card-body">
-				<h3 class="uk-card-title"><span id="ef-rs-reg-interests-animators"></span></h3>
-				<span uk-icon="play-circle"></span>Animators
-			</div>
-		</div>
-		<div>
-			<div class="uk-card uk-card-default uk-card-body">
-				<h3 class="uk-card-title"><span id="ef-rs-reg-interests-artists"></span></h3>
-				<span uk-icon="image"></span>Artists
-			</div>
-		</div>
-		<div>
-			<div class="uk-card uk-card-default uk-card-body">
-				<h3 class="uk-card-title"><span id="ef-rs-reg-interests-fursuiters"></span></h3>
-				<span uk-icon="users"></span>Fursuiters
-			</div>
-		</div>
-		<div>
-			<div class="uk-card uk-card-default uk-card-body">
-				<h3 class="uk-card-title"><span id="ef-rs-reg-interests-musicians"></span></h3>
-				<span uk-icon="microphone"></span>Musicians
-			</div>
-		</div>
-	</div>
-	
-	<!--
 	<div class="uk-card uk-card-default uk-card-body uk-margin-bottom uk-width-1-1">
-		<h3 class="uk-card-title uk-margin-bottom">Origins by Country</h3>
-		<div class="ef-rs-barchart"><canvas id="ef-rs-country-chart"></canvas></div>
-		<button class="uk-icon-button" id="ef-rs-country-zoom" uk-icon="search" uk-tooltip="pos:left" title="Toggle Zoom"></button>
+		<h3 class="uk-card-title uk-margin-bottom">Age Distribution</h3>
+		<div class="ef-rs-barchart"><canvas id="ef-rs-age"></canvas></div>
 	</div>
-	-->
 
 	<div class="uk-card uk-card-default uk-card-body uk-margin-bottom" uk-filter="#ef-rs-country-list">
 		<h3 class="uk-card-title">Origins by Country</h3>
@@ -191,11 +161,6 @@
 			<span uk-filter-control="sort: data-count; order: desc"><a href="#">attendee count</a></span>
 		</p>
 		<div id="ef-rs-country-list" class="uk-column-1-4@l uk-columns-1-3@m uk-column-1-2@s"></div>
-	</div>
-
-	<div class="uk-card uk-card-default uk-card-body uk-margin-bottom uk-width-1-1">
-		<h3 class="uk-card-title uk-margin-bottom">Age Distribution</h3>
-		<div class="ef-rs-barchart"><canvas id="ef-rs-age"></canvas></div>
 	</div>
 
 	<div class="uk-grid-small uk-grid-match uk-child-width-1-3@l uk-child-width-1-2@m uk-margin-bottom" uk-grid>
@@ -210,14 +175,24 @@
 		</div>
 		<div>
 			<div class="uk-card uk-card-default uk-card-body">
-				<p class="uk-text-right">
-					data timestamp: <span id="ef-rs-timestamp"></span><br />
-					next update in: <span id="ef-rs-update">-</span> seconds<br />
-					<a href="regstats#raw" uk-toggle>show raw data</a>
-				</p>
+				<h3 class="uk-card-title uk-margin-bottom">Interests</h3>
+				<ul class="uk-list">
+					<li><span id="ef-rs-reg-interests-art" class="uk-text-bold"></span> <span uk-icon="image"></span>Art</li>
+					<li><span id="ef-rs-reg-interests-animation" class="uk-text-bold"></span> <span uk-icon="play-circle"></span>Animation</li>
+					<li><span id="ef-rs-reg-interests-fursuiting" class="uk-text-bold"></span> <span uk-icon="users"></span>Fursuiting</li>
+					<li><span id="ef-rs-reg-interests-music" class="uk-text-bold"></span> <span uk-icon="microphone"></span>Music</li>
+				</ul>
 			</div>
 		</div>
 	</div>
+</section>
+
+<section>
+	<p class="uk-text-right">
+		data timestamp: <span id="ef-rs-timestamp"></span><br />
+		next update in: <span id="ef-rs-update">-</span> seconds<br />
+		<a href="regstats#raw" uk-toggle>show raw data</a>
+	</p>
 </section>
 
 <div id="raw" class="uk-modal-container" uk-modal>
