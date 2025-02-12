@@ -101,6 +101,9 @@
 	.ef-rs-legend table tr:has(> :last-child:nth-child(6)) > :nth-child(3) {
 		border-right: 1em solid transparent;
 	}
+	#ef-rs-age-avg-container {
+		margin-top: calc(30px + .33em);
+	}
 </style>
 
 <section>
@@ -150,7 +153,11 @@
 
 	<div class="uk-card uk-card-default uk-card-body uk-margin-bottom uk-width-1-1">
 		<h3 class="uk-card-title uk-margin-bottom">Age Distribution</h3>
-		<div class="uk-position-right uk-margin-medium-top uk-margin-medium-right">average: <span id="ef-rs-age-avg" class="uk-text-bold"></span></div>
+		<div id="ef-rs-age-avg-container" class="uk-position-right uk-margin-medium-right">
+			<span class="uk-visible@s">average:</span>
+			<span class="uk-hidden@s">avg:</span>
+			<span id="ef-rs-age-avg" class="uk-text-bold"></span>
+		</div>
 		<div class="ef-rs-barchart"><canvas id="ef-rs-age"></canvas></div>
 	</div>
 
