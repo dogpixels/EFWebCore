@@ -358,12 +358,12 @@ class RegStats
         {
             indicator.style.color = this.colors.lanyard.normal;
             indicator.classList.add('ef-rs-reg-opening-indicator-animation');
-            text.innerHTML = '<a href="https://identity.eurofurence.org" target="_blank">Registrations open</a>';
+            text.innerHTML = '<a href="https://identity.eurofurence.org" target="_blank">Online registrations open</a>';
         }
         else {
             indicator.style.color = this.colors.lanyard.director;
             indicator.classList.remove('ef-rs-reg-opening-indicator-animation');
-            text.innerText = 'Registrations closed';
+            text.innerText = 'Online registrations closed';
         }
     }
 
@@ -438,7 +438,7 @@ class RegStats
         if (document.getElementById('ef-rs-intro-partially-paid'))
             document.getElementById('ef-rs-intro-partially-paid').innerText = this.data['partially paid'] || 0;
         if (document.getElementById('ef-rs-intro-paid'))
-            document.getElementById('ef-rs-intro-paid').innerText = this.data.status.paid || 0;
+            document.getElementById('ef-rs-intro-paid').innerText = (this.data.status['partially paid'] || 0) + (this.data.status.paid || 0);
         if (document.getElementById('ef-rs-intro-checked-in'))
             document.getElementById('ef-rs-intro-checked-in').innerText = this.data.status['checked in'] || 0;
     }
