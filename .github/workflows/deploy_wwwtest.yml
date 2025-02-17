@@ -2,7 +2,7 @@ name: deploy to wwwtest.eurofurence.org
 
 on:
   push:
-      branches: [main]
+      branches: [preview]
   workflow_dispatch:
 
 jobs:
