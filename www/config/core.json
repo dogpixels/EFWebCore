@@ -374,18 +374,18 @@
 			"title": "",
 			"uri": "https://help.eurofurence.org/legal/imprint/"
 		},
-		"jobs": {
-			"accessible": true,
-			"category": "Membership",
-			"description": "You want to volunteer at Eurofurence and become staff at Europe's biggest furry convention? Read on for currently open positions.",
-			"inMenu": true,
-			"keywords": "Jobs, Volunteer, Staff, Crew, Help, Gopher",
-			"menuText": "Jobs",
-			"ogpImage": "",
-			"robots": "",
-			"title": "Jobs at Eurofurence",
-			"uri": "jobs.php"
-		},
+        "jobs": {
+            "accessible": true,
+            "category": "Membership",
+            "description": "You want to help Eurofurence and become staff at Europe's biggest furry convention? Read on for currently open positions.",
+            "inMenu": true,
+            "keywords": "Jobs, Volunteer, Staff, Crew, Help, Gopher",
+            "menuText": "Open Staff Positions",
+            "ogpImage": "",
+            "robots": "",
+            "title": "Open Staff Positions at Eurofurence",
+            "uri": "jobs.php"
+        },
 		"lostandfound": {
 			"accessible": true,
 			"inMenu": true,
