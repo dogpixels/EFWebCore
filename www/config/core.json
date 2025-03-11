@@ -254,18 +254,6 @@
 			"title": "Events",
 			"uri": "events.php"
 		},
-		"forum": {
-			"accessible": true,
-			"category": "Membership",
-			"description": "",
-			"inMenu": true,
-			"keywords": "",
-			"menuText": "Forum",
-			"ogpImage": "",
-			"robots": "",
-			"title": "",
-			"uri": "https://forum.eurofurence.org/"
-		},
 		"fursuits": {
 			"accessible": true,
 			"category": "Program",
